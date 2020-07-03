@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3A052F824AF276E00FB801B /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A052F424AF276900FB801B /* ResearchKit.framework */; };
+		B3A052F924AF276F00FB801B /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3A052F424AF276900FB801B /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3C4111724AF26AC00442787 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4111624AF26AC00442787 /* AppDelegate.swift */; };
 		B3C4111924AF26AC00442787 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4111824AF26AC00442787 /* SceneDelegate.swift */; };
 		B3C4111B24AF26AC00442787 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4111A24AF26AC00442787 /* ViewController.swift */; };
@@ -16,7 +18,39 @@
 		B3C4112624AF26AE00442787 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C4112424AF26AE00442787 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B3A052F324AF276900FB801B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3A052ED24AF276800FB801B /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		B3A052F524AF276900FB801B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3A052ED24AF276800FB801B /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B3A052FA24AF276F00FB801B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B3A052F924AF276F00FB801B /* ResearchKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B3A052ED24AF276800FB801B /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../../Downloads/ResearchKit-master-2/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
 		B3C4111324AF26AC00442787 /* Masterthesis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Masterthesis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C4111624AF26AC00442787 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3C4111824AF26AC00442787 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,17 +67,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3A052F824AF276E00FB801B /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3A052EE24AF276800FB801B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3A052F424AF276900FB801B /* ResearchKit.framework */,
+				B3A052F624AF276900FB801B /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3A052F724AF276E00FB801B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B3C4110A24AF26AC00442787 = {
 			isa = PBXGroup;
 			children = (
+				B3A052ED24AF276800FB801B /* ResearchKit.xcodeproj */,
 				B3C4111524AF26AC00442787 /* Masterthesis */,
 				B3C4111424AF26AC00442787 /* Products */,
+				B3A052F724AF276E00FB801B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +133,7 @@
 				B3C4110F24AF26AC00442787 /* Sources */,
 				B3C4111024AF26AC00442787 /* Frameworks */,
 				B3C4111124AF26AC00442787 /* Resources */,
+				B3A052FA24AF276F00FB801B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -116,12 +170,35 @@
 			mainGroup = B3C4110A24AF26AC00442787;
 			productRefGroup = B3C4111424AF26AC00442787 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B3A052EE24AF276800FB801B /* Products */;
+					ProjectRef = B3A052ED24AF276800FB801B /* ResearchKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B3C4111224AF26AC00442787 /* Masterthesis */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B3A052F424AF276900FB801B /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = B3A052F324AF276900FB801B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B3A052F624AF276900FB801B /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = B3A052F524AF276900FB801B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B3C4111124AF26AC00442787 /* Resources */ = {
