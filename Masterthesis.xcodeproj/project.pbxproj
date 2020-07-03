@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B3A052F824AF276E00FB801B /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A052F424AF276900FB801B /* ResearchKit.framework */; };
 		B3A052F924AF276F00FB801B /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3A052F424AF276900FB801B /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B3A052FD24AF292100FB801B /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A052FC24AF292100FB801B /* ConsentTask.swift */; };
+		B3A052FF24AF2B1200FB801B /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A052FE24AF2B1200FB801B /* ConsentDocument.swift */; };
 		B3C4111724AF26AC00442787 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4111624AF26AC00442787 /* AppDelegate.swift */; };
 		B3C4111924AF26AC00442787 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4111824AF26AC00442787 /* SceneDelegate.swift */; };
 		B3C4111B24AF26AC00442787 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4111A24AF26AC00442787 /* ViewController.swift */; };
@@ -50,7 +52,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B39B1C3B24AF5BA700DEF452 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		B39B1C3F24AF5BA700DEF452 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		B3A052ED24AF276800FB801B /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../../Downloads/ResearchKit-master-2/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
+		B3A052FC24AF292100FB801B /* ConsentTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
+		B3A052FE24AF2B1200FB801B /* ConsentDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 		B3C4111324AF26AC00442787 /* Masterthesis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Masterthesis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C4111624AF26AC00442787 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3C4111824AF26AC00442787 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +120,8 @@
 				B3C4111624AF26AC00442787 /* AppDelegate.swift */,
 				B3C4111824AF26AC00442787 /* SceneDelegate.swift */,
 				B3C4111A24AF26AC00442787 /* ViewController.swift */,
+				B3A052FC24AF292100FB801B /* ConsentTask.swift */,
+				B3A052FE24AF2B1200FB801B /* ConsentDocument.swift */,
 				B3C4111C24AF26AC00442787 /* Main.storyboard */,
 				B3C4112224AF26AE00442787 /* Assets.xcassets */,
 				B3C4112424AF26AE00442787 /* LaunchScreen.storyboard */,
@@ -166,6 +174,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = B3C4110A24AF26AC00442787;
 			productRefGroup = B3C4111424AF26AC00442787 /* Products */;
@@ -219,7 +228,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C4111B24AF26AC00442787 /* ViewController.swift in Sources */,
+				B3A052FF24AF2B1200FB801B /* ConsentDocument.swift in Sources */,
 				B3C4112124AF26AC00442787 /* Masterthesis.xcdatamodeld in Sources */,
+				B3A052FD24AF292100FB801B /* ConsentTask.swift in Sources */,
 				B3C4111724AF26AC00442787 /* AppDelegate.swift in Sources */,
 				B3C4111924AF26AC00442787 /* SceneDelegate.swift in Sources */,
 			);
@@ -232,6 +243,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B3C4111D24AF26AC00442787 /* Base */,
+				B39B1C3B24AF5BA700DEF452 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -240,6 +252,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B3C4112524AF26AE00442787 /* Base */,
+				B39B1C3F24AF5BA700DEF452 /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -251,6 +264,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -311,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
