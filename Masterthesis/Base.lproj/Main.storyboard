@@ -79,19 +79,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dl-Tf-Z0r">
-                                <rect key="frame" x="158.5" y="433" width="97" height="30"/>
-                                <state key="normal" title="Studie starten"/>
+                                <rect key="frame" x="20" y="245" width="374" height="56"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="HHe-oq-ubK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="UMFRAGE STARTEN">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="startStudyButtonTapped:" destination="W2b-dS-TWQ" eventType="touchUpInside" id="Dti-tn-haL"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danke für deine Mithilfe!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJr-WU-I2i">
+                                <rect key="frame" x="20" y="172" width="374" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="2dl-Tf-Z0r" firstAttribute="centerX" secondItem="rWV-FZ-aEW" secondAttribute="centerX" id="Eij-7g-Esq"/>
-                            <constraint firstItem="2dl-Tf-Z0r" firstAttribute="centerY" secondItem="rWV-FZ-aEW" secondAttribute="centerY" id="gv2-rN-ytH"/>
+                            <constraint firstItem="ZJr-WU-I2i" firstAttribute="top" secondItem="aaF-sN-sRh" secondAttribute="top" constant="128" id="7eo-Tp-Vcs"/>
+                            <constraint firstItem="ZJr-WU-I2i" firstAttribute="leading" secondItem="aaF-sN-sRh" secondAttribute="leading" constant="20" id="8Vj-M7-UPe"/>
+                            <constraint firstItem="aaF-sN-sRh" firstAttribute="trailing" secondItem="ZJr-WU-I2i" secondAttribute="trailing" constant="20" id="Qh0-lD-ERl"/>
+                            <constraint firstItem="2dl-Tf-Z0r" firstAttribute="top" secondItem="ZJr-WU-I2i" secondAttribute="bottom" constant="32" id="eBl-30-4TP"/>
+                            <constraint firstItem="2dl-Tf-Z0r" firstAttribute="leading" secondItem="aaF-sN-sRh" secondAttribute="leading" constant="20" id="mke-O1-xZS"/>
+                            <constraint firstItem="aaF-sN-sRh" firstAttribute="trailing" secondItem="2dl-Tf-Z0r" secondAttribute="trailing" constant="20" id="t1T-0A-yXM"/>
+                            <constraint firstItem="2dl-Tf-Z0r" firstAttribute="top" secondItem="aaF-sN-sRh" secondAttribute="top" constant="32" id="wfd-L8-nbX"/>
+                            <constraint firstItem="2dl-Tf-Z0r" firstAttribute="centerY" secondItem="rWV-FZ-aEW" secondAttribute="centerY" id="wux-XU-eUO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aaF-sN-sRh"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wfd-L8-nbX"/>
+                                <exclude reference="wux-XU-eUO"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Umfrage" image="doc.text" catalog="system" id="FHL-nd-mHa"/>
                     <navigationItem key="navigationItem" id="UKf-0L-B5N"/>
+                    <connections>
+                        <outlet property="startStudyButton" destination="2dl-Tf-Z0r" id="aTX-wo-y53"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xuy-AE-MKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
