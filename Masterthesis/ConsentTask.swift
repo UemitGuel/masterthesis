@@ -8,7 +8,7 @@ public var ConsentTask: ORKOrderedTask {
     //WelcomeStep
     let instructionStep = ORKInstructionStep(identifier: "InstructionStepIdentifier")
     instructionStep.title = "Willkommen!"
-    instructionStep.detailText = "Vielen Dank, dass Sie an unserer Studie teilnehmen. Im Folgenden werden ihnen die Einzelheiten der Studie erklärt. Falls es Fragen geben sollte, könnne Sie mir jederzeit eine Email schreiben."
+    instructionStep.detailText = "Vielen Dank, dass Sie an unserer Studie teilnehmen."
     steps += [instructionStep]
 
     
@@ -27,13 +27,13 @@ public var ConsentTask: ORKOrderedTask {
                                     learnMoreItem: nil,
                                     bodyItemStyle: .image)
     
-    let signatureItem = ORKBodyItem(text: "Bevor Sie beitreten, werden wir Sie bitten, eine Einverständniserklärung zu unterzeichnen.",
+    let signatureItem = ORKBodyItem(text: "Bevor Sie beitreten, werden wir Sie bitten, eine Einverständniserklärung zu unterzeichnen",
                                     detailText: nil,
                                     image: UIImage(systemName: "signature"),
                                     learnMoreItem: nil,
                                     bodyItemStyle: .image)
     
-    let privacyItem = ORKBodyItem(text: "Ihre Daten werden nur auf deutschen Servern verarbeitet und unterliegen der DSGVO. Es werden keine persönlichen Daten erfasst oder verwertet.",
+    let privacyItem = ORKBodyItem(text: "Ihre Daten werden nur auf deutschen Servern verarbeitet und unterliegen der DSGVO. Es werden keine persönlichen Daten erfasst oder verwertet",
                                     detailText: nil,
                                     image: UIImage(systemName: "lock.fill"),
                                     learnMoreItem: nil,

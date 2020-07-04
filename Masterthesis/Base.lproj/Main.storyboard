@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yit-sp-VPL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BZj-Qk-xTr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -15,21 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Willkommen zu einer Umfrage um die psychische Gesundheit von Studenten zu evaluieren" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fj2-ii-aeW">
-                                <rect key="frame" x="20" y="155" width="374" height="82.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IN COOPERATION MIT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNI-3w-eNl">
-                                <rect key="frame" x="118.5" y="269.5" width="177" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rwthLogo" translatesAutoresizingMaskIntoConstraints="NO" id="VyP-07-S6Z">
-                                <rect key="frame" x="60" y="306.5" width="294" height="326"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvy-ar-nhK">
                                 <rect key="frame" x="20" y="726" width="374" height="56"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -44,20 +29,46 @@
                                     <action selector="consentTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AjW-cg-BLd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dies ist eine Umfrage um die psychische Gesundheit von Studenten zu evaluieren" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fj2-ii-aeW">
+                                <rect key="frame" x="32" y="225" width="350" height="82.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IN COOPERATION MIT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNI-3w-eNl">
+                                <rect key="frame" x="118.5" y="339.5" width="177" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wilkommen!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxS-vb-bQD">
+                                <rect key="frame" x="116" y="152" width="182" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rwthLogo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VyP-07-S6Z">
+                                <rect key="frame" x="64" y="392.5" width="286" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="qaf-PJ-1Dm"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="wNI-3w-eNl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4v3-6B-e9F"/>
-                            <constraint firstItem="wNI-3w-eNl" firstAttribute="top" secondItem="Fj2-ii-aeW" secondAttribute="bottom" constant="32" id="7aX-7O-jSr"/>
-                            <constraint firstItem="Fj2-ii-aeW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="WHV-0g-Egy"/>
+                            <constraint firstItem="Fj2-ii-aeW" firstAttribute="top" secondItem="TxS-vb-bQD" secondAttribute="bottom" constant="32" id="HXl-44-Blp"/>
+                            <constraint firstItem="VyP-07-S6Z" firstAttribute="top" secondItem="wNI-3w-eNl" secondAttribute="bottom" constant="32" id="O6z-cr-Llg"/>
+                            <constraint firstItem="TxS-vb-bQD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ODg-Z6-Ma2"/>
+                            <constraint firstItem="VyP-07-S6Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="RoW-PR-yUM"/>
                             <constraint firstItem="nvy-ar-nhK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Zd4-Ne-CvG"/>
-                            <constraint firstItem="VyP-07-S6Z" firstAttribute="top" secondItem="wNI-3w-eNl" secondAttribute="bottom" constant="16" id="asJ-js-ViF"/>
-                            <constraint firstItem="VyP-07-S6Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="b0Q-5f-9X2"/>
-                            <constraint firstItem="Fj2-ii-aeW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cZU-mF-YTo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VyP-07-S6Z" secondAttribute="trailing" constant="60" id="kae-BT-7M2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fj2-ii-aeW" secondAttribute="trailing" constant="32" id="bgu-0d-4iY"/>
+                            <constraint firstItem="wNI-3w-eNl" firstAttribute="top" secondItem="Fj2-ii-aeW" secondAttribute="bottom" constant="32" id="fYb-vz-h3j"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nvy-ar-nhK" secondAttribute="trailing" constant="20" id="mad-cL-fKE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nvy-ar-nhK" secondAttribute="bottom" constant="80" id="p9B-94-rRA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fj2-ii-aeW" secondAttribute="trailing" constant="20" id="qaZ-Jw-8Ro"/>
+                            <constraint firstItem="wNI-3w-eNl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sKc-vI-1oH"/>
+                            <constraint firstItem="TxS-vb-bQD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="uMx-LW-sZO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VyP-07-S6Z" secondAttribute="trailing" constant="64" id="uqm-wx-nHu"/>
+                            <constraint firstItem="Fj2-ii-aeW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="vfo-0o-CDS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -133,7 +144,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BZj-Qk-xTr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kvI-8N-cFN">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kvI-8N-cFN">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -164,7 +175,7 @@
             </objects>
             <point key="canvasLocation" x="2459" y="139"/>
         </scene>
-        <!--Daten-->
+        <!--Account-->
         <scene sceneID="7uK-gZ-GaJ">
             <objects>
                 <viewController id="DAn-Th-Gpp" customClass="PersonalViewController" customModule="Masterthesis" customModuleProvider="target" sceneMemberID="viewController">
@@ -239,7 +250,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Daten" image="person.crop.circle" catalog="system" id="CfT-s6-017"/>
+                    <tabBarItem key="tabBarItem" title="Account" image="person.crop.circle" catalog="system" id="CfT-s6-017"/>
                     <connections>
                         <outlet property="eraseDataButton" destination="4ta-DO-pCu" id="3J7-vd-Y21"/>
                         <outlet property="mailButton" destination="WgA-vC-VvA" id="68A-LH-c9J"/>

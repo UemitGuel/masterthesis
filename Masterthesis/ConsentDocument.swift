@@ -20,8 +20,8 @@ public var ConsentDocument: ORKConsentDocument {
         switch contentSectionType {
         case .overview:
             consentSection.title = "Worum geht es in der Studie?"
-            consentSection.summary = "Unternehmen sind verpflichtet psychische Gesundheitsevaluierung durchzuführen um ihre Arbeitnehmer vor mentalen Erkrankungen zu schützen.\nStudenten sind per Definition keine Arbeitnehmer und bekommen dadurch nicht den selben Schutz, obwohl auch Studenten eine gefährdete Gruppe für diese Art der pysischen Überbelastung darstellen.\nDiese Studie soll der Universität ein Werkzeug in die Hand geben um die psychische Belastung ihrer Studenten zu verstehen und messen zu können."
-            consentSection.content = "Unternehmen sind verpflichtet psychische Gesundheitsevaluierung durchzuführen um ihre Arbeitnehmer vor mentalen Erkrankungen zu schützen. Studenten sind laut Gesetzbuch keine Arbeitnehmer und bekommen dadurch nicht den selben Schutz, obwohl auch Studenten eine gefährdete Gruppe für diese Art der pysischen Überbelastung darstellen.\nDiese Studie soll der Universität ein Werkzeug in die Hand geben um die psychische Belastung ihrer Studenten zu verstehen und messen zu können."
+            consentSection.summary = "Unternehmen sind verpflichtet im Rahmen der betrieblichen Gefährdungsbeurteilung psychische Belastungen und Beanspruchungen ihrer Arbeitnehmer bei der Arbeit zu messen und sie vor mentalen Erkrankungen zu schützen. Studenten bekommen leider nicht den selben Schutz, obwohl auch sie eine gefährdete Gruppe darstellen. Diese Studie soll der Universität ein Werkzeug in die Hand geben um die psychischen Belastungen ihrer Studenten verstehen und messen zu können."
+            consentSection.content = "Unternehmen sind verpflichtet im Rahmen der betrieblichen Gefährdungsbeurteilung psychische Belastungen und Beanspruchungen ihrer Arbeitnehmer bei der Arbeit zu messen und sie vor mentalen Erkrankungen zu schützen. Studenten bekommen leider nicht den selben Schutz, obwohl auch sie eine gefährdete Gruppe darstellen. Diese Studie soll der Universität ein Werkzeug in die Hand geben um die psychischen Belastungen ihrer Studenten verstehen und messen zu können."
         case .privacy:
             consentSection.title = "Datenschutz"
             consentSection.summary = "Deine Daten werden vollständig anonymisert und können nicht zurückgeführt werden. Es werden keinerlei persönliche Daten übergeben. Alle Daten werden auf deutschen Servern gesichert und unterliegen der DSGVO.\nDie gesamte Code-base ist Open Source, sodass jeder nachvollziehen kann was passiert."
@@ -37,13 +37,13 @@ public var ConsentDocument: ORKConsentDocument {
             
         case .studySurvey:
             consentSection.title = "Umfrage der Studie"
-            consentSection.summary = "Es werden Ihnen nur Fragen gestellt. Es gibt keine Aufgaben die Sie bewältigen müssen."
-            consentSection.content = "Es werden Ihnen nur Fragen gestellt. Es gibt keine Aufgaben die Sie bewältigen müssen."
+            consentSection.summary = "Es werden Ihnen nur Fragen gestellt. Es gibt keine Aufgaben die Sie bewältigen müssen. Sie können nach der Einführung unter dem Punkt ‘Account‘ mir jederzeit Fragen zur Studie zusenden."
+            consentSection.content = "Es werden Ihnen nur Fragen gestellt. Es gibt keine Aufgaben die Sie bewältigen müssen. Sie können nach der Einführung unter dem Punkt ‘Account‘ mir jederzeit Fragen zur Studie zusenden."
             
         case .withdrawing:
             consentSection.title = "Rücktritt"
-            consentSection.summary = "Sie können jederzeit aus der Studie zurücktreten. In dem Fall werden schnellstmöglich alle ihre Daten gelöscht."
-            consentSection.content = "Sie können jederzeit aus der Studie zurücktreten. In dem Fall werden schnellstmöglich alle ihre Daten gelöscht."
+            consentSection.summary = "Sie können jederzeit aus der Studie zurücktreten, indem Sie unter dem Punkt ‘Account‘ die Löschung ihre Daten anfordern."
+            consentSection.content = "Sie können jederzeit aus der Studie zurücktreten, indem Sie unter dem Punkt ‘Account‘ die Löschung ihre Daten anfordern."
         default:
             break
         }
