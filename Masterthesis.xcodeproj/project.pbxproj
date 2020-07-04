@@ -11,6 +11,8 @@
 		B3A052F924AF276F00FB801B /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3A052F424AF276900FB801B /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3A052FD24AF292100FB801B /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A052FC24AF292100FB801B /* ConsentTask.swift */; };
 		B3A052FF24AF2B1200FB801B /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A052FE24AF2B1200FB801B /* ConsentDocument.swift */; };
+		B3C182FF24B08D2800FEFC65 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C182FE24B08D2800FEFC65 /* TaskViewController.swift */; };
+		B3C1830124B0B46800FEFC65 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1830024B0B46800FEFC65 /* PersonalViewController.swift */; };
 		B3C4111724AF26AC00442787 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4111624AF26AC00442787 /* AppDelegate.swift */; };
 		B3C4111924AF26AC00442787 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4111824AF26AC00442787 /* SceneDelegate.swift */; };
 		B3C4111B24AF26AC00442787 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4111A24AF26AC00442787 /* ViewController.swift */; };
@@ -57,6 +59,8 @@
 		B3A052ED24AF276800FB801B /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../../Downloads/ResearchKit-master-2/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
 		B3A052FC24AF292100FB801B /* ConsentTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
 		B3A052FE24AF2B1200FB801B /* ConsentDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
+		B3C182FE24B08D2800FEFC65 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		B3C1830024B0B46800FEFC65 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		B3C4111324AF26AC00442787 /* Masterthesis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Masterthesis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C4111624AF26AC00442787 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3C4111824AF26AC00442787 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				B3C4111624AF26AC00442787 /* AppDelegate.swift */,
 				B3C4111824AF26AC00442787 /* SceneDelegate.swift */,
 				B3C4111A24AF26AC00442787 /* ViewController.swift */,
+				B3C182FE24B08D2800FEFC65 /* TaskViewController.swift */,
+				B3C1830024B0B46800FEFC65 /* PersonalViewController.swift */,
 				B3A052FC24AF292100FB801B /* ConsentTask.swift */,
 				B3A052FE24AF2B1200FB801B /* ConsentDocument.swift */,
 				B3C4111C24AF26AC00442787 /* Main.storyboard */,
@@ -228,6 +234,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C4111B24AF26AC00442787 /* ViewController.swift in Sources */,
+				B3C182FF24B08D2800FEFC65 /* TaskViewController.swift in Sources */,
+				B3C1830124B0B46800FEFC65 /* PersonalViewController.swift in Sources */,
 				B3A052FF24AF2B1200FB801B /* ConsentDocument.swift in Sources */,
 				B3C4112124AF26AC00442787 /* Masterthesis.xcdatamodeld in Sources */,
 				B3A052FD24AF292100FB801B /* ConsentTask.swift in Sources */,

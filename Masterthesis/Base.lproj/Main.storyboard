@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BZj-Qk-xTr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -15,9 +15,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Willkommen zu einer Umfrage um die psychische Gesundheit von Studenten zu evaluieren" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fj2-ii-aeW">
+                                <rect key="frame" x="20" y="155" width="374" height="82.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IN COOPERATION MIT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNI-3w-eNl">
+                                <rect key="frame" x="118.5" y="269.5" width="177" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rwthLogo" translatesAutoresizingMaskIntoConstraints="NO" id="VyP-07-S6Z">
+                                <rect key="frame" x="60" y="306.5" width="294" height="326"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvy-ar-nhK">
-                                <rect key="frame" x="147.5" y="433" width="119" height="30"/>
-                                <state key="normal" title="WelcomeScreens"/>
+                                <rect key="frame" x="20" y="742" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal" title="Studie beitreten">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
                                 <connections>
                                     <action selector="consentTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AjW-cg-BLd"/>
                                 </connections>
@@ -25,15 +44,128 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="nvy-ar-nhK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hAl-ab-54M"/>
-                            <constraint firstItem="nvy-ar-nhK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pGw-F7-Uno"/>
+                            <constraint firstItem="wNI-3w-eNl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4v3-6B-e9F"/>
+                            <constraint firstItem="wNI-3w-eNl" firstAttribute="top" secondItem="Fj2-ii-aeW" secondAttribute="bottom" constant="32" id="7aX-7O-jSr"/>
+                            <constraint firstItem="Fj2-ii-aeW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="WHV-0g-Egy"/>
+                            <constraint firstItem="nvy-ar-nhK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Zd4-Ne-CvG"/>
+                            <constraint firstItem="VyP-07-S6Z" firstAttribute="top" secondItem="wNI-3w-eNl" secondAttribute="bottom" constant="16" id="asJ-js-ViF"/>
+                            <constraint firstItem="VyP-07-S6Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="b0Q-5f-9X2"/>
+                            <constraint firstItem="Fj2-ii-aeW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cZU-mF-YTo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VyP-07-S6Z" secondAttribute="trailing" constant="60" id="kae-BT-7M2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nvy-ar-nhK" secondAttribute="trailing" constant="20" id="mad-cL-fKE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nvy-ar-nhK" secondAttribute="bottom" constant="80" id="p9B-94-rRA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fj2-ii-aeW" secondAttribute="trailing" constant="20" id="qaZ-Jw-8Ro"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Cxp-ma-Xg5"/>
+                    <connections>
+                        <outlet property="joinStudyButton" destination="nvy-ar-nhK" id="UbT-Fc-kDy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="139"/>
+            <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
+        </scene>
+        <!--Umfrage-->
+        <scene sceneID="DdK-zR-MP7">
+            <objects>
+                <viewController storyboardIdentifier="TaskViewController" id="W2b-dS-TWQ" customClass="TaskViewController" customModule="Masterthesis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rWV-FZ-aEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dl-Tf-Z0r">
+                                <rect key="frame" x="158.5" y="433" width="97" height="30"/>
+                                <state key="normal" title="Studie starten"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2dl-Tf-Z0r" firstAttribute="centerX" secondItem="rWV-FZ-aEW" secondAttribute="centerX" id="Eij-7g-Esq"/>
+                            <constraint firstItem="2dl-Tf-Z0r" firstAttribute="centerY" secondItem="rWV-FZ-aEW" secondAttribute="centerY" id="gv2-rN-ytH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aaF-sN-sRh"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Umfrage" image="doc.text" catalog="system" id="FHL-nd-mHa"/>
+                    <navigationItem key="navigationItem" id="UKf-0L-B5N"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xuy-AE-MKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3648" y="-145"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="miQ-w4-sc3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BZj-Qk-xTr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kvI-8N-cFN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5WU-9u-m2V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0cf-SC-m84" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="JwZ-tv-59x">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBarController" automaticallyAdjustsScrollViewInsets="NO" id="Yit-sp-VPL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nic-zN-SQd">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="W2b-dS-TWQ" kind="relationship" relationship="viewControllers" id="fHs-wM-GWn"/>
+                        <segue destination="DAn-Th-Gpp" kind="relationship" relationship="viewControllers" id="xCd-bP-7m1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="klR-gS-5v5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2459" y="139"/>
+        </scene>
+        <!--Daten-->
+        <scene sceneID="7uK-gZ-GaJ">
+            <objects>
+                <viewController id="DAn-Th-Gpp" customClass="PersonalViewController" customModule="Masterthesis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YYu-g9-tT7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e89-8z-HzU">
+                                <rect key="frame" x="100" y="433" width="214" height="30"/>
+                                <state key="normal" title="Einverständniserklärung zeigen"/>
+                                <connections>
+                                    <action selector="showConsentDocumentTapped:" destination="DAn-Th-Gpp" eventType="touchUpInside" id="JYg-QO-ImV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="e89-8z-HzU" firstAttribute="centerY" secondItem="YYu-g9-tT7" secondAttribute="centerY" id="2ED-H2-Dzl"/>
+                            <constraint firstItem="e89-8z-HzU" firstAttribute="centerX" secondItem="YYu-g9-tT7" secondAttribute="centerX" id="Tau-wE-QGk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BeG-H8-eWA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Daten" image="person.crop.circle" catalog="system" id="CfT-s6-017"/>
+                    <connections>
+                        <outlet property="showConsentDocument" destination="e89-8z-HzU" id="sbI-be-oaE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FtC-oH-3TE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3648" y="562"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="rwthLogo" width="1200" height="326"/>
+    </resources>
 </document>
