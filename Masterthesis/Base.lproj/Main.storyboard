@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BZj-Qk-xTr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yit-sp-VPL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -31,9 +31,12 @@
                                 <rect key="frame" x="60" y="306.5" width="294" height="326"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvy-ar-nhK">
-                                <rect key="frame" x="20" y="742" width="374" height="40"/>
+                                <rect key="frame" x="20" y="726" width="374" height="56"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="3Hp-MQ-Nps"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Studie beitreten">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
@@ -138,23 +141,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e89-8z-HzU">
-                                <rect key="frame" x="100" y="433" width="214" height="30"/>
-                                <state key="normal" title="Einverständniserklärung zeigen"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e89-8z-HzU">
+                                <rect key="frame" x="20" y="76" width="374" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="veI-Ym-0im"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <state key="normal" title="Einverständniserklärung zeigen" image="doc.fill" catalog="system">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
                                 <connections>
                                     <action selector="showConsentDocumentTapped:" destination="DAn-Th-Gpp" eventType="touchUpInside" id="JYg-QO-ImV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgA-vC-VvA">
+                                <rect key="frame" x="20" y="152" width="374" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="OcE-ps-0XM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <state key="normal" title="Frage zur Studie" image="envelope.fill" catalog="system">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="mailButtonTapped:" destination="DAn-Th-Gpp" eventType="touchUpInside" id="1Q6-Bd-v7L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ta-DO-pCu">
+                                <rect key="frame" x="20" y="228" width="374" height="44"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="wea-3s-obR"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <state key="normal" title="Studie abbrechen&amp; Daten löschen" image="trash.fill" catalog="system">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="eraseDataButtonTapped:" destination="DAn-Th-Gpp" eventType="touchUpInside" id="lpF-bz-7K7"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="e89-8z-HzU" firstAttribute="centerY" secondItem="YYu-g9-tT7" secondAttribute="centerY" id="2ED-H2-Dzl"/>
+                            <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="e89-8z-HzU" secondAttribute="trailing" constant="20" id="7n3-Ke-E6v"/>
+                            <constraint firstItem="4ta-DO-pCu" firstAttribute="top" secondItem="WgA-vC-VvA" secondAttribute="bottom" constant="32" id="KTf-nE-ir6"/>
+                            <constraint firstItem="e89-8z-HzU" firstAttribute="top" secondItem="BeG-H8-eWA" secondAttribute="top" constant="32" id="L5V-dP-VF1"/>
+                            <constraint firstItem="WgA-vC-VvA" firstAttribute="top" secondItem="e89-8z-HzU" secondAttribute="bottom" constant="32" id="TY4-1m-41q"/>
                             <constraint firstItem="e89-8z-HzU" firstAttribute="centerX" secondItem="YYu-g9-tT7" secondAttribute="centerX" id="Tau-wE-QGk"/>
+                            <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="4ta-DO-pCu" secondAttribute="trailing" constant="20" id="Twz-QA-n7H"/>
+                            <constraint firstItem="WgA-vC-VvA" firstAttribute="leading" secondItem="BeG-H8-eWA" secondAttribute="leading" constant="20" id="Y29-TN-NXD"/>
+                            <constraint firstItem="e89-8z-HzU" firstAttribute="leading" secondItem="BeG-H8-eWA" secondAttribute="leading" constant="20" id="eWA-al-5V6"/>
+                            <constraint firstItem="4ta-DO-pCu" firstAttribute="leading" secondItem="BeG-H8-eWA" secondAttribute="leading" constant="20" id="nSC-g5-cZ2"/>
+                            <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="WgA-vC-VvA" secondAttribute="trailing" constant="20" id="ySd-Y1-Ofy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BeG-H8-eWA"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2ED-H2-Dzl"/>
+                                <exclude reference="Tau-wE-QGk"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Daten" image="person.crop.circle" catalog="system" id="CfT-s6-017"/>
                     <connections>
+                        <outlet property="eraseDataButton" destination="4ta-DO-pCu" id="3J7-vd-Y21"/>
+                        <outlet property="mailButton" destination="WgA-vC-VvA" id="68A-LH-c9J"/>
                         <outlet property="showConsentDocument" destination="e89-8z-HzU" id="sbI-be-oaE"/>
                     </connections>
                 </viewController>
@@ -164,8 +221,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="doc.fill" catalog="system" width="115" height="128"/>
         <image name="doc.text" catalog="system" width="115" height="128"/>
+        <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="rwthLogo" width="1200" height="326"/>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
     </resources>
 </document>
