@@ -9,7 +9,9 @@
 import UIKit
 import ResearchKit
 
-class ViewController: UIViewController {
+class StartViewController: UIViewController {
+    
+    let defaults = UserDefaults.standard
     
     @IBAction func consentTapped(sender : AnyObject) {
         let taskViewController = ORKTaskViewController(task: ConsentTask, taskRun: nil)
@@ -26,13 +28,21 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if defaults.bool(forKey: "ConsentGiven") {
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController
+            self.navigationController?.setViewControllers([vc!], animated:true)
+        }
+    }
+    
     func configureButton() {
         joinStudyButton.layer.cornerRadius = 10
     }
     
 }
 
-extension ViewController: ORKTaskViewControllerDelegate {
+extension StartViewController: ORKTaskViewControllerDelegate {
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         switch reason{
         case .completed:
@@ -44,8 +54,9 @@ extension ViewController: ORKTaskViewControllerDelegate {
                 docURL = docURL?.appendingPathComponent("consent.pdf")
                 print(docURL)
                 try? data?.write(to: docURL!, options: .atomicWrite)
-                let defaults = UserDefaults.standard
-                defaults.set(true, forKey: "Permission")
+                
+                self.defaults.set(true, forKey: "ConsentGiven")
+                
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController
                 self.navigationController?.setViewControllers([vc!], animated:true)
             }
