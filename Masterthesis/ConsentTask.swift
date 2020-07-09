@@ -57,5 +57,17 @@ public var ConsentTask: ORKOrderedTask {
 
     steps += [reviewConsentStep]
     
+    let passcodeStep = ORKPasscodeStep(identifier: "Passcode")
+    passcodeStep.text = "Now you will create a passcode to identify yourself to the app and protect access to information you've entered."
+    
+    steps += [passcodeStep]
+    
+    let completionStep = ORKCompletionStep(identifier: "CompletionStep")
+    completionStep.title = "Welcome aboard."
+    completionStep.text = "Thank you for joining this study."
+    
+    steps += [completionStep]
+
+    
     return ORKOrderedTask(identifier: "ConsentTask", steps: steps)
 }
