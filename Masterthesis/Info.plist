@@ -17,9 +17,23 @@
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Brauche Zugriff für gewisse Übungen&amp; Anwendungen</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Brauche Zugriff für gewisse Übungen&amp; Anwendungen</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Brauche Zugriff für gewisse Übungen&amp; Anwendungen</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Brauche Zugriff für gewisse Übungen&amp; Anwendungen</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Brauche Zugriff für gewisse Übungen&amp; Anwendungen</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Brauche Zugriff für gewisse Übungen&amp; Anwendungen</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Brauche Zugriff für gewisse Übungen&amp; Anwendungen</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

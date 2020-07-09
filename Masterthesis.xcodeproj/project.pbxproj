@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B34F50A824B714C200FED5C3 /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F50A724B714C200FED5C3 /* SurveyTask.swift */; };
 		B3A052F824AF276E00FB801B /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A052F424AF276900FB801B /* ResearchKit.framework */; };
 		B3A052F924AF276F00FB801B /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3A052F424AF276900FB801B /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3A052FD24AF292100FB801B /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A052FC24AF292100FB801B /* ConsentTask.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B34F50A724B714C200FED5C3 /* SurveyTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
 		B39B1C3B24AF5BA700DEF452 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		B39B1C3F24AF5BA700DEF452 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		B3A052ED24AF276800FB801B /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../../Downloads/ResearchKit-master-2/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				B3C4111A24AF26AC00442787 /* ViewController.swift */,
 				B3C182FE24B08D2800FEFC65 /* TaskViewController.swift */,
 				B3C1830024B0B46800FEFC65 /* PersonalViewController.swift */,
+				B34F50A724B714C200FED5C3 /* SurveyTask.swift */,
 				B3A052FC24AF292100FB801B /* ConsentTask.swift */,
 				B3A052FE24AF2B1200FB801B /* ConsentDocument.swift */,
 				B3C4111C24AF26AC00442787 /* Main.storyboard */,
@@ -238,6 +241,7 @@
 				B3C1830124B0B46800FEFC65 /* PersonalViewController.swift in Sources */,
 				B3A052FF24AF2B1200FB801B /* ConsentDocument.swift in Sources */,
 				B3C4112124AF26AC00442787 /* Masterthesis.xcdatamodeld in Sources */,
+				B34F50A824B714C200FED5C3 /* SurveyTask.swift in Sources */,
 				B3A052FD24AF292100FB801B /* ConsentTask.swift in Sources */,
 				B3C4111724AF26AC00442787 /* AppDelegate.swift in Sources */,
 				B3C4111924AF26AC00442787 /* SceneDelegate.swift in Sources */,
@@ -389,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = YLGTKU7SLK;
 				INFOPLIST_FILE = Masterthesis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -408,6 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = YLGTKU7SLK;
 				INFOPLIST_FILE = Masterthesis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
