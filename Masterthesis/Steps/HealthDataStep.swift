@@ -6,14 +6,7 @@ class HealthDataStep: ORKInstructionStep {
     // MARK: Properties
     
     let healthDataItemsToRead: Set<HKObjectType> = [
-        HKObjectType.characteristicType(forIdentifier: HKCharacteristicTypeIdentifier.dateOfBirth)!,
-        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.height)!,
-        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!
-    ]
-    
-    let healthDataItemsToWrite: Set<HKSampleType> = [
-        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!,
-        HKObjectType.workoutType()
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
     ]
     
     // MARK: Initialization
@@ -41,7 +34,7 @@ class HealthDataStep: ORKInstructionStep {
         }
         
         // Get authorization to access the data
-        HKHealthStore().requestAuthorization(toShare: healthDataItemsToWrite, read: healthDataItemsToRead) { (success, error) -> Void in
+        HKHealthStore().requestAuthorization(toShare: nil, read: healthDataItemsToRead) { (success, error) -> Void in
             completion(success, error as NSError?)
         }
     }

@@ -1,8 +1,15 @@
 
 import UIKit
 import ResearchKit
+import HealthKit
 
 class TaskViewController: UIViewController {
+    
+    let healthObjectTypes = [
+        HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
+    ]
+    
+    var healthStore: HKHealthStore?
     
     @IBOutlet weak var startStudyButton: UIButton!
     
@@ -18,6 +25,12 @@ class TaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureButton()
+        // Request authrization to query the health objects that need to be shown.
+//        guard let healthStore = healthStore else { fatalError("healhStore not set") }
+//        let typesToRequest = Set<HKObjectType>(healthObjectTypes)
+//        healthStore.requestAuthorization(toShare: nil, read: typesToRequest) { (authorized, _) in
+//            guard authorized else { return }
+//        }
 
     }
     

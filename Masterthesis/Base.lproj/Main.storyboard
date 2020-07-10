@@ -171,14 +171,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="W2b-dS-TWQ" kind="relationship" relationship="viewControllers" id="fHs-wM-GWn"/>
-                        <segue destination="DAn-Th-Gpp" kind="relationship" relationship="viewControllers" id="xCd-bP-7m1"/>
+                        <segue destination="ubX-0G-VkH" kind="relationship" relationship="viewControllers" id="xCd-bP-7m1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="klR-gS-5v5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1088" y="728"/>
         </scene>
-        <!--Account-->
+        <!--Personal View Controller-->
         <scene sceneID="7uK-gZ-GaJ">
             <objects>
                 <viewController id="DAn-Th-Gpp" customClass="PersonalViewController" customModule="Masterthesis" customModuleProvider="target" sceneMemberID="viewController">
@@ -187,7 +187,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e89-8z-HzU">
-                                <rect key="frame" x="20" y="76" width="374" height="44"/>
+                                <rect key="frame" x="20" y="120" width="374" height="44"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="veI-Ym-0im"/>
@@ -202,7 +202,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgA-vC-VvA">
-                                <rect key="frame" x="20" y="152" width="374" height="44"/>
+                                <rect key="frame" x="20" y="196" width="374" height="44"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="OcE-ps-0XM"/>
@@ -217,7 +217,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ta-DO-pCu">
-                                <rect key="frame" x="20" y="228" width="374" height="44"/>
+                                <rect key="frame" x="20" y="272" width="374" height="44"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="wea-3s-obR"/>
@@ -253,7 +253,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" image="person.crop.circle" catalog="system" id="CfT-s6-017"/>
+                    <navigationItem key="navigationItem" id="zTs-Xx-mIW"/>
                     <connections>
                         <outlet property="mailButton" destination="WgA-vC-VvA" id="68A-LH-c9J"/>
                         <outlet property="showConsentDocument" destination="e89-8z-HzU" id="sbI-be-oaE"/>
@@ -264,7 +264,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FtC-oH-3TE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="BPT-Mf-qyP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2180" y="1586"/>
+            <point key="canvasLocation" x="2180" y="2387"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="kbq-Yx-bsJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ubX-0G-VkH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Account" image="person.crop.circle" catalog="system" id="CfT-s6-017"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jml-sr-Owz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DAn-Th-Gpp" kind="relationship" relationship="rootViewController" id="Jdj-40-d0w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dlx-VC-Nuq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2179.7101449275365" y="1585.7142857142856"/>
         </scene>
     </scenes>
     <resources>

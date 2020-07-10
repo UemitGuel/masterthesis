@@ -23,7 +23,6 @@
 		B3C182FF24B08D2800FEFC65 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C182FE24B08D2800FEFC65 /* TaskViewController.swift */; };
 		B3C1830124B0B46800FEFC65 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1830024B0B46800FEFC65 /* PersonalViewController.swift */; };
 		B3C4111724AF26AC00442787 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4111624AF26AC00442787 /* AppDelegate.swift */; };
-		B3C4111924AF26AC00442787 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4111824AF26AC00442787 /* SceneDelegate.swift */; };
 		B3C4111B24AF26AC00442787 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4111A24AF26AC00442787 /* StartViewController.swift */; };
 		B3C4111E24AF26AC00442787 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C4111C24AF26AC00442787 /* Main.storyboard */; };
 		B3C4112124AF26AC00442787 /* Masterthesis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3C4111F24AF26AC00442787 /* Masterthesis.xcdatamodeld */; };
@@ -82,7 +81,6 @@
 		B3C1830024B0B46800FEFC65 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		B3C4111324AF26AC00442787 /* Masterthesis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Masterthesis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C4111624AF26AC00442787 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B3C4111824AF26AC00442787 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B3C4111A24AF26AC00442787 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		B3C4111D24AF26AC00442787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3C4112024AF26AC00442787 /* Masterthesis.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Masterthesis.xcdatamodel; sourceTree = "<group>"; };
@@ -159,9 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				B3A052ED24AF276800FB801B /* ResearchKit.xcodeproj */,
+				B3A052F724AF276E00FB801B /* Frameworks */,
 				B3C4111524AF26AC00442787 /* Masterthesis */,
 				B3C4111424AF26AC00442787 /* Products */,
-				B3A052F724AF276E00FB801B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,7 +176,6 @@
 			children = (
 				B38CF0FE24B7483C00896774 /* Masterthesis.entitlements */,
 				B3C4111624AF26AC00442787 /* AppDelegate.swift */,
-				B3C4111824AF26AC00442787 /* SceneDelegate.swift */,
 				B38CF0E024B7377D00896774 /* ResearchContainerViewController.swift */,
 				B38CF0E524B7384200896774 /* ResearchContainerSegue.swift */,
 				B3C4111A24AF26AC00442787 /* StartViewController.swift */,
@@ -309,7 +306,6 @@
 				B38CF0F224B73DCA00896774 /* HealthDataStep.swift in Sources */,
 				B38CF0E624B7384200896774 /* ResearchContainerSegue.swift in Sources */,
 				B3C4111724AF26AC00442787 /* AppDelegate.swift in Sources */,
-				B3C4111924AF26AC00442787 /* SceneDelegate.swift in Sources */,
 				B38CF0E124B7377D00896774 /* ResearchContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
