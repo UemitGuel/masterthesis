@@ -26,13 +26,7 @@ class PersonalViewController: UIViewController {
         sendEmail(subject: "Frage zur Umfrage um die psychische Gesundheit von Studenten zu evaluieren", body: "<p>Lieber Ümit,ich habe folgende Frage zu deiner Studie:</p>")
     }
     
-    @IBOutlet weak var eraseDataButton: UIButton!
-    
-    @IBAction func eraseDataButtonTapped(_ sender: UIButton) {
-        sendEmail(subject: "Studie aussteigen& Daten löschen", body: "<p>Lieber Ümit, bitte meine Daten umgehend löschen und mich aus der Studie entfernen</p>")
-    }
-    
-    
+    @IBOutlet weak var withdrawStudy: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,10 +43,10 @@ class PersonalViewController: UIViewController {
         mailButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
         mailButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
         mailButton.contentHorizontalAlignment = .left
-        eraseDataButton.layer.cornerRadius = 10
-        eraseDataButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
-        eraseDataButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
-        eraseDataButton.contentHorizontalAlignment = .left
+        withdrawStudy.layer.cornerRadius = 10
+        withdrawStudy.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
+        withdrawStudy.contentEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
+        withdrawStudy.contentHorizontalAlignment = .left
     }
     
     func consentPDFViewerTask() -> ORKOrderedTask{

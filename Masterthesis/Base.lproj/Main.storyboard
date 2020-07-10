@@ -227,7 +227,7 @@
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="eraseDataButtonTapped:" destination="DAn-Th-Gpp" eventType="touchUpInside" id="lpF-bz-7K7"/>
+                                    <segue destination="BPT-Mf-qyP" kind="unwind" unwindAction="unwindToWithdrawl:" id="Jd8-ZO-3lR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -255,12 +255,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="person.crop.circle" catalog="system" id="CfT-s6-017"/>
                     <connections>
-                        <outlet property="eraseDataButton" destination="4ta-DO-pCu" id="3J7-vd-Y21"/>
                         <outlet property="mailButton" destination="WgA-vC-VvA" id="68A-LH-c9J"/>
                         <outlet property="showConsentDocument" destination="e89-8z-HzU" id="sbI-be-oaE"/>
+                        <outlet property="withdrawStudy" destination="4ta-DO-pCu" id="eag-sD-5jd"/>
+                        <segue destination="BPT-Mf-qyP" kind="unwind" unwindAction="unwindToWithdrawl:" id="j5G-zI-bvK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FtC-oH-3TE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="BPT-Mf-qyP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2180" y="1586"/>
         </scene>
