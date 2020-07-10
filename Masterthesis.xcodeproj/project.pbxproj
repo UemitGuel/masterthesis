@@ -12,7 +12,6 @@
 		B38CF0E624B7384200896774 /* ResearchContainerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CF0E524B7384200896774 /* ResearchContainerSegue.swift */; };
 		B38CF0E824B7391A00896774 /* HealthClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CF0E724B7391A00896774 /* HealthClientType.swift */; };
 		B38CF0EA24B7395800896774 /* WithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CF0E924B7395800896774 /* WithdrawViewController.swift */; };
-		B38CF0EC24B73A8F00896774 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CF0EB24B73A8F00896774 /* IntroductionViewController.swift */; };
 		B38CF0EE24B73AD000896774 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CF0ED24B73AD000896774 /* OnboardingViewController.swift */; };
 		B38CF0F224B73DCA00896774 /* HealthDataStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CF0F124B73DCA00896774 /* HealthDataStep.swift */; };
 		B38CF0F724B73DDE00896774 /* HealthDataStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CF0F624B73DDE00896774 /* HealthDataStepViewController.swift */; };
@@ -71,7 +70,6 @@
 		B38CF0E524B7384200896774 /* ResearchContainerSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchContainerSegue.swift; sourceTree = "<group>"; };
 		B38CF0E724B7391A00896774 /* HealthClientType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthClientType.swift; sourceTree = "<group>"; };
 		B38CF0E924B7395800896774 /* WithdrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawViewController.swift; sourceTree = "<group>"; };
-		B38CF0EB24B73A8F00896774 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		B38CF0ED24B73AD000896774 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		B38CF0F124B73DCA00896774 /* HealthDataStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataStep.swift; sourceTree = "<group>"; };
 		B38CF0F624B73DDE00896774 /* HealthDataStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataStepViewController.swift; sourceTree = "<group>"; };
@@ -166,7 +164,6 @@
 				B3A052FE24AF2B1200FB801B /* ConsentDocument.swift */,
 				B38CF0F124B73DCA00896774 /* HealthDataStep.swift */,
 				B38CF0FF24B74D3600896774 /* HKHealthStore+Queries.swift */,
-				B38CF0EB24B73A8F00896774 /* IntroductionViewController.swift */,
 				B3C4111C24AF26AC00442787 /* Main.storyboard */,
 				B3C4112224AF26AE00442787 /* Assets.xcassets */,
 				B3C4112424AF26AE00442787 /* LaunchScreen.storyboard */,
@@ -280,7 +277,6 @@
 				B3C1830124B0B46800FEFC65 /* PersonalViewController.swift in Sources */,
 				B3A052FF24AF2B1200FB801B /* ConsentDocument.swift in Sources */,
 				B38CF0EA24B7395800896774 /* WithdrawViewController.swift in Sources */,
-				B38CF0EC24B73A8F00896774 /* IntroductionViewController.swift in Sources */,
 				B38CF0EE24B73AD000896774 /* OnboardingViewController.swift in Sources */,
 				B3C4112124AF26AC00442787 /* Masterthesis.xcdatamodeld in Sources */,
 				B38CF0F924B746E600896774 /* ConsentDocumentNew.swift in Sources */,
