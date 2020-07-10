@@ -1,6 +1,6 @@
 import ResearchKit
 
-class ConsentDocumentNew: ORKConsentDocument {
+class ConsentDocument: ORKConsentDocument {
     // MARK: Properties
     
     
@@ -20,7 +20,7 @@ class ConsentDocumentNew: ORKConsentDocument {
             .withdrawing
         ]
         
-        var consentSections: [ORKConsentSection] = consentSectionTypes.map { contentSectionType in
+        let consentSections: [ORKConsentSection] = consentSectionTypes.map { contentSectionType in
             let consentSection = ORKConsentSection(type: contentSectionType)
             switch contentSectionType {
             case .overview:

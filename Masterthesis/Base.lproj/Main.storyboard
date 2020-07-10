@@ -29,7 +29,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="Masterthesis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="joinViewController" id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="Masterthesis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,7 +162,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="JwZ-tv-59x">
             <objects>
-                <tabBarController storyboardIdentifier="tabBarController" automaticallyAdjustsScrollViewInsets="NO" id="Yit-sp-VPL" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="studyViewController" automaticallyAdjustsScrollViewInsets="NO" id="Yit-sp-VPL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nic-zN-SQd">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

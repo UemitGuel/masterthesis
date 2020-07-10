@@ -8,21 +8,45 @@
 
 import UIKit
 import CoreData
+import ResearchKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    let healthStore = HKHealthStore()
+
+    var window: UIWindow?
+    
+    var containerViewController: ResearchContainerViewController? {
+        return window?.rootViewController as? ResearchContainerViewController
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let standardDefaults = UserDefaults.standard
+        if standardDefaults.object(forKey: "ORKSampleFirstRun") == nil {
+            ORKPasscodeViewController.removePasscodeFromKeychain()
+            standardDefaults.setValue("ORKSampleFirstRun", forKey: "ORKSampleFirstRun")
+        }
+        
+        // Dependency injection.
+        containerViewController?.injectHealthStore(healthStore)
         return true
     }
 
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        if ORKPasscodeViewController.isPasscodeStoredInKeychain() {
+            // Hide content so it doesn't appear in the app switcher.
+            containerViewController?.contentHidden = true
+        }
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
     }
 
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {

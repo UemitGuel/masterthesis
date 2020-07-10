@@ -6,7 +6,7 @@ class OnboardingViewController: UIViewController {
     // MARK: IB actions
     
     @IBAction func joinButtonTapped(_ sender: UIButton) {
-        let consentDocument = ConsentDocumentNew()
+        let consentDocument = ConsentDocument()
         let consentStep = ORKVisualConsentStep(identifier: "VisualConsentStep", document: consentDocument)
         
         let healthDataStep = HealthDataStep(identifier: "Health")
