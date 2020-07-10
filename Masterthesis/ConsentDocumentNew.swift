@@ -62,9 +62,7 @@ class ConsentDocumentNew: ORKConsentDocument {
             return consentSection
         }
         
-        sections = consentSections
-        
-        addSignature(ORKConsentSignature(forPersonWithTitle: "placeHolderTitle", dateFormatString: nil, identifier: "ConsentDocumentParticipantSignature"))
+        sections = consentSections        
     }
     
     

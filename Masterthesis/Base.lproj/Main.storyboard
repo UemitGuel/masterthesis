@@ -99,7 +99,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="2zL-PE-pEY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1108.6956521739132" y="-296.65178571428572"/>
+            <point key="canvasLocation" x="1116" y="-296"/>
         </scene>
         <!--Umfrage-->
         <scene sceneID="DdK-zR-MP7">
@@ -157,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xuy-AE-MKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="262" y="1459"/>
+            <point key="canvasLocation" x="222" y="1587"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JwZ-tv-59x">
@@ -262,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FtC-oH-3TE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2254" y="1482"/>
+            <point key="canvasLocation" x="2180" y="1586"/>
         </scene>
     </scenes>
     <resources>

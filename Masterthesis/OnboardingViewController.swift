@@ -10,10 +10,8 @@ class OnboardingViewController: UIViewController {
         let consentStep = ORKVisualConsentStep(identifier: "VisualConsentStep", document: consentDocument)
         
         let healthDataStep = HealthDataStep(identifier: "Health")
-        
-        let signature = consentDocument.signatures!.first!
-        
-        let reviewConsentStep = ORKConsentReviewStep(identifier: "ConsentReviewStep", signature: signature, in: consentDocument)
+                
+        let reviewConsentStep = ORKConsentReviewStep(identifier: "ConsentReviewStep", signature: nil ,in: consentDocument)
         
         reviewConsentStep.text = "Review the consent form."
         reviewConsentStep.reasonForConsent = "Consent to join the Developer Health Research Study."
