@@ -18,10 +18,10 @@ class TaskViewController: UIViewController, HealthClientType {
         taskViewController.delegate = self
         present(taskViewController, animated: true, completion: nil)
     }
-
+    
     var task: ORKTask?
     var result: ORKTaskResult?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureButton()
@@ -29,49 +29,124 @@ class TaskViewController: UIViewController, HealthClientType {
         guard let healthStore = healthStore else { fatalError("healhStore not set") }
         let typesToRequest = Set<HKObjectType>(healthObjectTypes)
         healthStore.requestAuthorization(toShare: nil, read: typesToRequest) { (authorized, _) in
-            print(typesToRequest)
             guard authorized else { return }
         }
-        updateSteps { double in
-            print(double)
+        getAverageStepsLast30Days { double in
+            print("30\(double)")
         }
-
+        getAverageSteps60Days { double in
+            print("60\(double)")
+        }
+        getAverageSteps90Days { double in
+            print("90\(double)")
+        }
     }
     
-    func updateSteps(completion: @escaping (Double) -> Void) {
+    func getAverageStepsLast30Days(completion: @escaping (Double) -> Void) {
         let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
-
+        
         let now = Date()
-        let startOfDay = Calendar.current.startOfDay(for: now)
-        let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
-
-        let query = HKStatisticsQuery(quantityType: stepsQuantityType, quantitySamplePredicate: predicate, options: .cumulativeSum) { (_, result, error) in
-            var resultCount = 0.0
-
-            guard let result = result else {
-                print("\(String(describing: error?.localizedDescription)) ")
-                completion(resultCount)
-                return
+        let oneMonthAgo = Calendar.current.date(byAdding: DateComponents(day: -30), to: now)!
+        let startOfoneMonthAgo = Calendar.current.startOfDay(for: oneMonthAgo)
+        let predicate = HKQuery.predicateForSamples(withStart: startOfoneMonthAgo, end: now, options: .strictStartDate)
+        
+        let query = HKStatisticsCollectionQuery.init(quantityType: stepsQuantityType,
+                                                     quantitySamplePredicate: predicate,
+                                                     options: .cumulativeSum,
+                                                     anchorDate: startOfoneMonthAgo,
+                                                     intervalComponents: DateComponents(day: 1))
+        
+        query.initialResultsHandler = { query, results, error in
+            guard let statsCollection = results else {
+                // Perform proper error handling here...
+                fatalError()
             }
-
-            if let sum = result.sumQuantity() {
-                resultCount = sum.doubleValue(for: HKUnit.count())
+            var stepsTotal: Double = 0
+            statsCollection.enumerateStatistics(from: startOfoneMonthAgo, to: now) { statistics, stop in
+                if let quantity = statistics.sumQuantity() {
+                    let stepValue = quantity.doubleValue(for: HKUnit.count())
+                    stepsTotal += stepValue
+                }
             }
-
-            DispatchQueue.main.async {
-                completion(resultCount)
-            }
+            completion(stepsTotal/30)
         }
-
+        
         healthStore?.execute(query)
     }
+    
+    func getAverageSteps60Days(completion: @escaping (Double) -> Void) {
+        let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
+        
+        let now = Date()
+        let oneMonthAgo = Calendar.current.date(byAdding: DateComponents(day: -30), to: now)!
+        let twoMonthAgo = Calendar.current.date(byAdding: DateComponents(day: -60), to: now)!
+        let startOfTwoMonthAgo = Calendar.current.startOfDay(for: twoMonthAgo)
+        let predicate = HKQuery.predicateForSamples(withStart: startOfTwoMonthAgo, end: oneMonthAgo, options: .strictStartDate)
+        
+        let query = HKStatisticsCollectionQuery.init(quantityType: stepsQuantityType,
+                                                     quantitySamplePredicate: predicate,
+                                                     options: .cumulativeSum,
+                                                     anchorDate: startOfTwoMonthAgo,
+                                                     intervalComponents: DateComponents(day: 1))
+        
+        query.initialResultsHandler = { query, results, error in
+            guard let statsCollection = results else {
+                // Perform proper error handling here...
+                fatalError()
+            }
+            var stepsTotal: Double = 0
+            statsCollection.enumerateStatistics(from: startOfTwoMonthAgo, to: oneMonthAgo) { statistics, stop in
+                if let quantity = statistics.sumQuantity() {
+                    let stepValue = quantity.doubleValue(for: HKUnit.count())
+                    stepsTotal += stepValue
+                }
+            }
+            completion(stepsTotal/30)
+        }
+        
+        healthStore?.execute(query)
+    }
+    
+    func getAverageSteps90Days(completion: @escaping (Double) -> Void) {
+        let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
+        
+        let now = Date()
+        let oneMonthAgo = Calendar.current.date(byAdding: DateComponents(day: -60), to: now)!
+        let twoMonthAgo = Calendar.current.date(byAdding: DateComponents(day: -90), to: now)!
+        let startOfTwoMonthAgo = Calendar.current.startOfDay(for: twoMonthAgo)
+        let predicate = HKQuery.predicateForSamples(withStart: startOfTwoMonthAgo, end: oneMonthAgo, options: .strictStartDate)
+        
+        let query = HKStatisticsCollectionQuery.init(quantityType: stepsQuantityType,
+                                                     quantitySamplePredicate: predicate,
+                                                     options: .cumulativeSum,
+                                                     anchorDate: startOfTwoMonthAgo,
+                                                     intervalComponents: DateComponents(day: 1))
+        
+        query.initialResultsHandler = { query, results, error in
+            guard let statsCollection = results else {
+                // Perform proper error handling here...
+                fatalError()
+            }
+            var stepsTotal: Double = 0
+            statsCollection.enumerateStatistics(from: startOfTwoMonthAgo, to: oneMonthAgo) { statistics, stop in
+                if let quantity = statistics.sumQuantity() {
+                    let stepValue = quantity.doubleValue(for: HKUnit.count())
+                    stepsTotal += stepValue
+                }
+            }
+            completion(stepsTotal/30)
+        }
+        
+        healthStore?.execute(query)
+    }
+    
     func configureButton() {
         startStudyButton.layer.cornerRadius = 10
     }
 }
 
 extension TaskViewController: ORKTaskViewControllerDelegate{
-
+    
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         switch reason {
         case .completed:
