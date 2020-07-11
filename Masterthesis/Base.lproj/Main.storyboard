@@ -101,7 +101,7 @@
             </objects>
             <point key="canvasLocation" x="1116" y="-296"/>
         </scene>
-        <!--Umfrage-->
+        <!--Task View Controller-->
         <scene sceneID="DdK-zR-MP7">
             <objects>
                 <viewController storyboardIdentifier="TaskViewController" id="W2b-dS-TWQ" customClass="TaskViewController" customModule="Masterthesis" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,7 +110,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dl-Tf-Z0r">
-                                <rect key="frame" x="20" y="245" width="374" height="56"/>
+                                <rect key="frame" x="20" y="289" width="374" height="56"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="HHe-oq-ubK"/>
@@ -124,7 +124,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danke für deine Mithilfe!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJr-WU-I2i">
-                                <rect key="frame" x="20" y="172" width="374" height="41"/>
+                                <rect key="frame" x="20" y="216" width="374" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -149,7 +149,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Umfrage" image="doc.text" catalog="system" id="FHL-nd-mHa"/>
                     <navigationItem key="navigationItem" id="UKf-0L-B5N"/>
                     <connections>
                         <outlet property="startStudyButton" destination="2dl-Tf-Z0r" id="aTX-wo-y53"/>
@@ -157,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xuy-AE-MKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="222" y="1587"/>
+            <point key="canvasLocation" x="222" y="2429"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JwZ-tv-59x">
@@ -170,7 +169,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="W2b-dS-TWQ" kind="relationship" relationship="viewControllers" id="fHs-wM-GWn"/>
+                        <segue destination="be0-Z5-04A" kind="relationship" relationship="viewControllers" id="fHs-wM-GWn"/>
                         <segue destination="ubX-0G-VkH" kind="relationship" relationship="viewControllers" id="xCd-bP-7m1"/>
                     </connections>
                 </tabBarController>
@@ -264,7 +263,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FtC-oH-3TE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="BPT-Mf-qyP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2180" y="2387"/>
+            <point key="canvasLocation" x="1951" y="2406"/>
         </scene>
         <!--Account-->
         <scene sceneID="kbq-Yx-bsJ">
@@ -283,7 +282,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dlx-VC-Nuq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2179.7101449275365" y="1585.7142857142856"/>
+            <point key="canvasLocation" x="1952" y="1586"/>
+        </scene>
+        <!--Umfrage-->
+        <scene sceneID="BOi-7P-01L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="be0-Z5-04A" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Umfrage" image="doc.text" catalog="system" id="FHL-nd-mHa"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WQa-ep-guV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="W2b-dS-TWQ" kind="relationship" relationship="rootViewController" id="9Mw-Jr-9sb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovD-bp-iD7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221.73913043478262" y="1586.3839285714284"/>
         </scene>
     </scenes>
     <resources>

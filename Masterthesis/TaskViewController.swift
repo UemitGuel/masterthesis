@@ -3,7 +3,7 @@ import UIKit
 import ResearchKit
 import HealthKit
 
-class TaskViewController: UIViewController {
+class TaskViewController: UIViewController, HealthClientType {
     
     let healthObjectTypes = [
         HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
@@ -26,11 +26,11 @@ class TaskViewController: UIViewController {
         super.viewDidLoad()
         configureButton()
         // Request authrization to query the health objects that need to be shown.
-//        guard let healthStore = healthStore else { fatalError("healhStore not set") }
-//        let typesToRequest = Set<HKObjectType>(healthObjectTypes)
-//        healthStore.requestAuthorization(toShare: nil, read: typesToRequest) { (authorized, _) in
-//            guard authorized else { return }
-//        }
+        guard let healthStore = healthStore else { fatalError("healhStore not set") }
+        let typesToRequest = Set<HKObjectType>(healthObjectTypes)
+        healthStore.requestAuthorization(toShare: nil, read: typesToRequest) { (authorized, _) in
+            guard authorized else { return }
+        }
 
     }
     
