@@ -2,13 +2,15 @@
 import UIKit
 import ResearchKit
 
+let defaults = UserDefaults.standard
+
 class ResearchContainerViewController: UIViewController, HealthClientType {
     // MARK: HealthClientType
     
     var healthStore: HKHealthStore?
     
     // MARK: Propertues
-    
+        
     var contentHidden = false {
         didSet {
             guard contentHidden != oldValue && isViewLoaded else { return }
@@ -21,8 +23,7 @@ class ResearchContainerViewController: UIViewController, HealthClientType {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(ORKPasscodeViewController.isPasscodeStoredInKeychain())
-        if ORKPasscodeViewController.isPasscodeStoredInKeychain() {
+        if defaults.bool(forKey: "joinedStudy") == true {
             toStudy()
         } else {
             toOnboarding()
@@ -76,7 +77,7 @@ extension ResearchContainerViewController: ORKTaskViewControllerDelegate {
                 the study and transition to the onboarding view.
             */
             if reason == .completed {
-                ORKPasscodeViewController.removePasscodeFromKeychain()
+                defaults.set(false, forKey: "joinedStudy")
                 toOnboarding()
             }
             

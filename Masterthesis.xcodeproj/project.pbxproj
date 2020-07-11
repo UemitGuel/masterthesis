@@ -23,7 +23,6 @@
 		B3C182FF24B08D2800FEFC65 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C182FE24B08D2800FEFC65 /* TaskViewController.swift */; };
 		B3C1830124B0B46800FEFC65 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1830024B0B46800FEFC65 /* PersonalViewController.swift */; };
 		B3C4111724AF26AC00442787 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4111624AF26AC00442787 /* AppDelegate.swift */; };
-		B3C4111B24AF26AC00442787 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4111A24AF26AC00442787 /* StartViewController.swift */; };
 		B3C4111E24AF26AC00442787 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C4111C24AF26AC00442787 /* Main.storyboard */; };
 		B3C4112124AF26AC00442787 /* Masterthesis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3C4111F24AF26AC00442787 /* Masterthesis.xcdatamodeld */; };
 		B3C4112324AF26AE00442787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C4112224AF26AE00442787 /* Assets.xcassets */; };
@@ -81,7 +80,6 @@
 		B3C1830024B0B46800FEFC65 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		B3C4111324AF26AC00442787 /* Masterthesis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Masterthesis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C4111624AF26AC00442787 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B3C4111A24AF26AC00442787 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		B3C4111D24AF26AC00442787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3C4112024AF26AC00442787 /* Masterthesis.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Masterthesis.xcdatamodel; sourceTree = "<group>"; };
 		B3C4112224AF26AE00442787 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 				B3C4111624AF26AC00442787 /* AppDelegate.swift */,
 				B38CF0E024B7377D00896774 /* ResearchContainerViewController.swift */,
 				B38CF0E524B7384200896774 /* ResearchContainerSegue.swift */,
-				B3C4111A24AF26AC00442787 /* StartViewController.swift */,
 				B3C182FE24B08D2800FEFC65 /* TaskViewController.swift */,
 				B3C1830024B0B46800FEFC65 /* PersonalViewController.swift */,
 				B3B34FC024B8680D00DA2978 /* Onboarding */,
@@ -294,7 +291,6 @@
 			files = (
 				B38CF0E824B7391A00896774 /* HealthClientType.swift in Sources */,
 				B38CF10024B74D3600896774 /* HKHealthStore+Queries.swift in Sources */,
-				B3C4111B24AF26AC00442787 /* StartViewController.swift in Sources */,
 				B38CF0F724B73DDE00896774 /* HealthDataStepViewController.swift in Sources */,
 				B3C182FF24B08D2800FEFC65 /* TaskViewController.swift in Sources */,
 				B3C1830124B0B46800FEFC65 /* PersonalViewController.swift in Sources */,
