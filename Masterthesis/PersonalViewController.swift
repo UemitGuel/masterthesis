@@ -14,6 +14,10 @@ class PersonalViewController: UIViewController, HealthClientType {
     
     var healthStore: HKHealthStore?
     
+    @IBOutlet weak var lineGraph: ORKLineGraphChartView!
+    
+    let lineGraphDataSource = LineGraphDataSource()
+    
     @IBOutlet weak var showConsentDocument: UIButton!
     
     @IBAction func showConsentDocumentTapped(_ sender: UIButton) {
@@ -34,7 +38,12 @@ class PersonalViewController: UIViewController, HealthClientType {
         super.viewDidLoad()
         configureButton()
         sharedStepCalculatorHelper.getAverageStepsLast30Days(healthStore: healthStore) { double in
-            print(double)
+            self.lineGraphDataSource.plotPoints[0][0] = ORKValueRange(value: 1000)
+            self.lineGraphDataSource.plotPoints[0][1] = ORKValueRange(value: 1000)
+            self.lineGraphDataSource.plotPoints[0][2] = ORKValueRange(value: 1000)
+            DispatchQueue.main.async {
+            self.lineGraph.dataSource = self.lineGraphDataSource
+            }
         }
         // Do any additional setup after loading the view.
     }

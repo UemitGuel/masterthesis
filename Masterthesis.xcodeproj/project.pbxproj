@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B34F50A824B714C200FED5C3 /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F50A724B714C200FED5C3 /* SurveyTask.swift */; };
 		B3733AD024C079F40022C3A0 /* StepCalculatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3733ACF24C079F40022C3A0 /* StepCalculatorHelper.swift */; };
+		B3733AD624C07ED50022C3A0 /* LineGraphDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3733AD524C07ED50022C3A0 /* LineGraphDataSource.swift */; };
 		B38CF0E124B7377D00896774 /* ResearchContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CF0E024B7377D00896774 /* ResearchContainerViewController.swift */; };
 		B38CF0E624B7384200896774 /* ResearchContainerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CF0E524B7384200896774 /* ResearchContainerSegue.swift */; };
 		B38CF0E824B7391A00896774 /* HealthClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CF0E724B7391A00896774 /* HealthClientType.swift */; };
@@ -64,6 +65,7 @@
 /* Begin PBXFileReference section */
 		B34F50A724B714C200FED5C3 /* SurveyTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
 		B3733ACF24C079F40022C3A0 /* StepCalculatorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCalculatorHelper.swift; sourceTree = "<group>"; };
+		B3733AD524C07ED50022C3A0 /* LineGraphDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraphDataSource.swift; sourceTree = "<group>"; };
 		B38CF0E024B7377D00896774 /* ResearchContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchContainerViewController.swift; sourceTree = "<group>"; };
 		B38CF0E524B7384200896774 /* ResearchContainerSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchContainerSegue.swift; sourceTree = "<group>"; };
 		B38CF0E724B7391A00896774 /* HealthClientType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthClientType.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				B38CF0E524B7384200896774 /* ResearchContainerSegue.swift */,
 				B3C182FE24B08D2800FEFC65 /* TaskViewController.swift */,
 				B3C1830024B0B46800FEFC65 /* PersonalViewController.swift */,
+				B3733AD524C07ED50022C3A0 /* LineGraphDataSource.swift */,
 				B3B34FC024B8680D00DA2978 /* Onboarding */,
 				B3B34FC224B8685200DA2978 /* Steps */,
 				B34F50A724B714C200FED5C3 /* SurveyTask.swift */,
@@ -301,6 +304,7 @@
 				B38CF0EE24B73AD000896774 /* OnboardingViewController.swift in Sources */,
 				B3C4112124AF26AC00442787 /* Masterthesis.xcdatamodeld in Sources */,
 				B38CF0F924B746E600896774 /* ConsentDocument.swift in Sources */,
+				B3733AD624C07ED50022C3A0 /* LineGraphDataSource.swift in Sources */,
 				B34F50A824B714C200FED5C3 /* SurveyTask.swift in Sources */,
 				B38CF0F224B73DCA00896774 /* HealthDataStep.swift in Sources */,
 				B38CF0E624B7384200896774 /* ResearchContainerSegue.swift in Sources */,

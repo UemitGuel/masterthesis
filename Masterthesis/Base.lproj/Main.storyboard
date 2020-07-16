@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mxW-f0-Mux">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mxW-f0-Mux">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -186,7 +186,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e89-8z-HzU">
-                                <rect key="frame" x="20" y="120" width="374" height="44"/>
+                                <rect key="frame" x="20" y="585" width="374" height="44"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="veI-Ym-0im"/>
@@ -201,7 +201,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgA-vC-VvA">
-                                <rect key="frame" x="20" y="196" width="374" height="44"/>
+                                <rect key="frame" x="20" y="661" width="374" height="44"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="OcE-ps-0XM"/>
@@ -216,7 +216,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ta-DO-pCu">
-                                <rect key="frame" x="20" y="272" width="374" height="44"/>
+                                <rect key="frame" x="20" y="737" width="374" height="44"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="wea-3s-obR"/>
@@ -229,13 +229,23 @@
                                     <segue destination="BPT-Mf-qyP" kind="unwind" unwindAction="unwindToWithdrawl:" id="Jd8-ZO-3lR"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6x-I5-2Ol" customClass="ORKLineGraphChartView">
+                                <rect key="frame" x="32" y="120" width="350" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="j52-C2-aQo"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="B6x-I5-2Ol" firstAttribute="top" secondItem="BeG-H8-eWA" secondAttribute="top" constant="32" id="0bF-yc-2rn"/>
                             <constraint firstItem="e89-8z-HzU" firstAttribute="centerY" secondItem="YYu-g9-tT7" secondAttribute="centerY" id="2ED-H2-Dzl"/>
                             <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="e89-8z-HzU" secondAttribute="trailing" constant="20" id="7n3-Ke-E6v"/>
+                            <constraint firstItem="B6x-I5-2Ol" firstAttribute="leading" secondItem="BeG-H8-eWA" secondAttribute="leading" constant="32" id="FNw-uz-wa0"/>
+                            <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="B6x-I5-2Ol" secondAttribute="trailing" constant="32" id="GkO-bJ-jMy"/>
                             <constraint firstItem="4ta-DO-pCu" firstAttribute="top" secondItem="WgA-vC-VvA" secondAttribute="bottom" constant="32" id="KTf-nE-ir6"/>
-                            <constraint firstItem="e89-8z-HzU" firstAttribute="top" secondItem="BeG-H8-eWA" secondAttribute="top" constant="32" id="L5V-dP-VF1"/>
+                            <constraint firstItem="BeG-H8-eWA" firstAttribute="bottom" secondItem="4ta-DO-pCu" secondAttribute="bottom" constant="32" id="LL5-Yb-KZ7"/>
                             <constraint firstItem="WgA-vC-VvA" firstAttribute="top" secondItem="e89-8z-HzU" secondAttribute="bottom" constant="32" id="TY4-1m-41q"/>
                             <constraint firstItem="e89-8z-HzU" firstAttribute="centerX" secondItem="YYu-g9-tT7" secondAttribute="centerX" id="Tau-wE-QGk"/>
                             <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="4ta-DO-pCu" secondAttribute="trailing" constant="20" id="Twz-QA-n7H"/>
@@ -254,6 +264,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="zTs-Xx-mIW"/>
                     <connections>
+                        <outlet property="lineGraph" destination="B6x-I5-2Ol" id="H6C-Oo-37F"/>
                         <outlet property="mailButton" destination="WgA-vC-VvA" id="68A-LH-c9J"/>
                         <outlet property="showConsentDocument" destination="e89-8z-HzU" id="sbI-be-oaE"/>
                         <outlet property="withdrawStudy" destination="4ta-DO-pCu" id="eag-sD-5jd"/>
