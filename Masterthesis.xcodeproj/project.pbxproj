@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B34F50A824B714C200FED5C3 /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F50A724B714C200FED5C3 /* SurveyTask.swift */; };
+		B3733AD024C079F40022C3A0 /* StepCalculatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3733ACF24C079F40022C3A0 /* StepCalculatorHelper.swift */; };
 		B38CF0E124B7377D00896774 /* ResearchContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CF0E024B7377D00896774 /* ResearchContainerViewController.swift */; };
 		B38CF0E624B7384200896774 /* ResearchContainerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CF0E524B7384200896774 /* ResearchContainerSegue.swift */; };
 		B38CF0E824B7391A00896774 /* HealthClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CF0E724B7391A00896774 /* HealthClientType.swift */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		B34F50A724B714C200FED5C3 /* SurveyTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
+		B3733ACF24C079F40022C3A0 /* StepCalculatorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCalculatorHelper.swift; sourceTree = "<group>"; };
 		B38CF0E024B7377D00896774 /* ResearchContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchContainerViewController.swift; sourceTree = "<group>"; };
 		B38CF0E524B7384200896774 /* ResearchContainerSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchContainerSegue.swift; sourceTree = "<group>"; };
 		B38CF0E724B7391A00896774 /* HealthClientType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthClientType.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				B3C4112424AF26AE00442787 /* LaunchScreen.storyboard */,
 				B3C4112724AF26AE00442787 /* Info.plist */,
 				B3C4111F24AF26AC00442787 /* Masterthesis.xcdatamodeld */,
+				B3733ACF24C079F40022C3A0 /* StepCalculatorHelper.swift */,
 			);
 			path = Masterthesis;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				B38CF0F224B73DCA00896774 /* HealthDataStep.swift in Sources */,
 				B38CF0E624B7384200896774 /* ResearchContainerSegue.swift in Sources */,
 				B3C4111724AF26AC00442787 /* AppDelegate.swift in Sources */,
+				B3733AD024C079F40022C3A0 /* StepCalculatorHelper.swift in Sources */,
 				B38CF0E124B7377D00896774 /* ResearchContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

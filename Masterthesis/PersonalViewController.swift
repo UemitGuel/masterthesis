@@ -10,7 +10,9 @@ import UIKit
 import ResearchKit
 import MessageUI
 
-class PersonalViewController: UIViewController {
+class PersonalViewController: UIViewController, HealthClientType {
+    
+    var healthStore: HKHealthStore?
     
     @IBOutlet weak var showConsentDocument: UIButton!
     
@@ -31,6 +33,9 @@ class PersonalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureButton()
+        sharedStepCalculatorHelper.getAverageStepsLast30Days(healthStore: healthStore) { double in
+            print(double)
+        }
         // Do any additional setup after loading the view.
     }
     
