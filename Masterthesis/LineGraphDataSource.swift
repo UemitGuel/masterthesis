@@ -10,18 +10,132 @@ import ResearchKit
 
 class LineGraphDataSource: NSObject, ORKValueRangeGraphChartViewDataSource {
     // MARK: Properties
-    
+        
     var plotPoints =
     [
         [
             ORKValueRange(value: 8000),
             ORKValueRange(value: 13000),
-            ORKValueRange(value: 4000)
+            ORKValueRange(value: 4000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 4000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 4000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 4000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 4000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 4000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 4000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 4000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 4000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 4000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 4000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 4000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 4000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 4000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 4000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 4000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 4000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000),
+            ORKValueRange(value: 4000),
+            ORKValueRange(value: 8000),
+            ORKValueRange(value: 13000)
         ],
         [
             ORKValueRange(value: 10000),
             ORKValueRange(value: 10000),
             ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000),
+            ORKValueRange(value: 10000)
         ]
     ]
     
@@ -36,18 +150,10 @@ class LineGraphDataSource: NSObject, ORKValueRangeGraphChartViewDataSource {
     }
     
     func graphChartView(_ graphChartView: ORKGraphChartView, numberOfDataPointsForPlotIndex plotIndex: Int) -> Int {
-        return plotPoints[plotIndex].count
-    }
-    
-    func maximumValue(for graphChartView: ORKGraphChartView) -> Double {
-        return 14000
-    }
-    
-    func minimumValue(for graphChartView: ORKGraphChartView) -> Double {
-        return 0
+        return plotPoints[plotIndex].count/5
     }
     
     func graphChartView(_ graphChartView: ORKGraphChartView, titleForXAxisAtPointIndex pointIndex: Int) -> String? {
-        return "\(pointIndex + 1)"
+        return "\(-60+pointIndex*5)"
     }
 }
