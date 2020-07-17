@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvy-ar-nhK">
-                                <rect key="frame" x="20" y="726" width="374" height="56"/>
+                                <rect key="frame" x="20" y="774" width="374" height="56"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="3Hp-MQ-Nps"/>
@@ -44,50 +44,46 @@
                                 <state key="normal" title="Studie beitreten">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="joinButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iwP-m8-PId"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dies ist eine Umfrage um die psychische Gesundheit von Studenten zu evaluieren" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fj2-ii-aeW">
-                                <rect key="frame" x="32" y="181" width="350" height="82.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fj2-ii-aeW">
+                                <rect key="frame" x="20" y="133" width="374" height="166.5"/>
+                                <string key="text">Im Rahmen meiner Masterarbeit möchte ich rausfinden, ob app-basierte Umfragen wichtige Zusammenhänge finden können, die andernfalls nicht gefunden worden wären. Danke für deine Mithilfe!</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IN COOPERATION MIT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNI-3w-eNl">
-                                <rect key="frame" x="118.5" y="295.5" width="177" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wilkommen!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxS-vb-bQD">
-                                <rect key="frame" x="116" y="108" width="182" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Hi :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxS-vb-bQD">
+                                <rect key="frame" x="177.5" y="76" width="59.5" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rwthLogo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VyP-07-S6Z">
-                                <rect key="frame" x="64" y="348.5" width="286" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="qaf-PJ-1Dm"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Danke" translatesAutoresizingMaskIntoConstraints="NO" id="74i-hs-Yqr">
+                                <rect key="frame" x="32" y="316" width="350" height="439"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Fj2-ii-aeW" firstAttribute="top" secondItem="TxS-vb-bQD" secondAttribute="bottom" constant="32" id="HXl-44-Blp"/>
-                            <constraint firstItem="VyP-07-S6Z" firstAttribute="top" secondItem="wNI-3w-eNl" secondAttribute="bottom" constant="32" id="O6z-cr-Llg"/>
+                            <constraint firstItem="Fj2-ii-aeW" firstAttribute="top" secondItem="TxS-vb-bQD" secondAttribute="bottom" constant="16" id="HXl-44-Blp"/>
+                            <constraint firstItem="nvy-ar-nhK" firstAttribute="top" secondItem="74i-hs-Yqr" secondAttribute="bottom" constant="32" id="JB6-xT-Ylp"/>
                             <constraint firstItem="TxS-vb-bQD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ODg-Z6-Ma2"/>
-                            <constraint firstItem="VyP-07-S6Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="RoW-PR-yUM"/>
+                            <constraint firstItem="74i-hs-Yqr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Zcv-vq-Ls4"/>
                             <constraint firstItem="nvy-ar-nhK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Zd4-Ne-CvG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fj2-ii-aeW" secondAttribute="trailing" constant="32" id="bgu-0d-4iY"/>
-                            <constraint firstItem="wNI-3w-eNl" firstAttribute="top" secondItem="Fj2-ii-aeW" secondAttribute="bottom" constant="32" id="fYb-vz-h3j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fj2-ii-aeW" secondAttribute="trailing" constant="20" id="bgu-0d-4iY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="74i-hs-Yqr" secondAttribute="trailing" constant="32" id="h86-of-mBg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nvy-ar-nhK" secondAttribute="trailing" constant="20" id="mad-cL-fKE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nvy-ar-nhK" secondAttribute="bottom" constant="80" id="p9B-94-rRA"/>
-                            <constraint firstItem="wNI-3w-eNl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sKc-vI-1oH"/>
-                            <constraint firstItem="TxS-vb-bQD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="uMx-LW-sZO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VyP-07-S6Z" secondAttribute="trailing" constant="64" id="uqm-wx-nHu"/>
-                            <constraint firstItem="Fj2-ii-aeW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="vfo-0o-CDS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nvy-ar-nhK" secondAttribute="bottom" constant="32" id="p9B-94-rRA"/>
+                            <constraint firstItem="TxS-vb-bQD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="uMx-LW-sZO"/>
+                            <constraint firstItem="Fj2-ii-aeW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vfo-0o-CDS"/>
+                            <constraint firstItem="74i-hs-Yqr" firstAttribute="top" secondItem="Fj2-ii-aeW" secondAttribute="bottom" constant="32" id="xd1-Nc-FPJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -99,7 +95,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="2zL-PE-pEY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1116" y="-296"/>
+            <point key="canvasLocation" x="1114.4927536231885" y="-296.65178571428572"/>
         </scene>
         <!--Task View Controller-->
         <scene sceneID="DdK-zR-MP7">
@@ -443,12 +439,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Danke" width="2108" height="2482"/>
         <image name="chart.bar" catalog="system" width="128" height="90"/>
         <image name="doc.fill" catalog="system" width="115" height="128"/>
         <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
-        <image name="rwthLogo" width="1200" height="326"/>
         <image name="trash.fill" catalog="system" width="121" height="128"/>
     </resources>
 </document>

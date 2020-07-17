@@ -7,12 +7,12 @@ class WithdrawViewController: ORKTaskViewController {
     
     init() {
         let instructionStep = ORKInstructionStep(identifier: "WithdrawlInstruction")
-        instructionStep.title = "Are you sure you want to withdraw?"
-        instructionStep.text = "Withdrawing from the study will reset the app to the state it was in prior to you originally joining the study."
+        instructionStep.title = "Bist du sicher, dass du dich zurückziehen möchtest?"
+        instructionStep.text = "Wenn du von der Studie zurücktrittst, wird die App auf den Zustand zurückgesetzt, indem du dich vor dem ursprünglichen Beitritt zur Studie befunden hast."
         
         let completionStep = ORKCompletionStep(identifier: "Withdraw")
-        completionStep.title = "We appreciate your time."
-        completionStep.text = "Thank you for your contribution to this study. We are sorry that you could not continue."
+        completionStep.title = "Danke für deine Zeit."
+        completionStep.text = "Danke für deinen Beitrag zur Studie. Schade, dass du nicht fortfahren konntest/wolltest."
         
         let withdrawTask = ORKOrderedTask(identifier: "Withdraw", steps: [instructionStep, completionStep])
         

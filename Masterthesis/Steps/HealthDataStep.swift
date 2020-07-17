@@ -14,8 +14,8 @@ class HealthDataStep: ORKInstructionStep {
     override init(identifier: String) {
         super.init(identifier: identifier)
         
-        title = "Health Data"
-        text = "On the next screen, you will be prompted to grant access to read and write some of your general and health information, such as height, weight, and steps taken so you don't have to enter it again."
+        title = "Schrittzähler - Warum brauche ich den Zugang?"
+        text = "Auf dem nächsten Bildschirm wirst du aufgefordert mir den Zugang zu deinem Schrittzähler zu gewähren. Der essentielle Punkt meiner Masterarbeit ist, zu zeigen das digitale Umfrage-Methoden unbekannte Korrelationen aufzeigen könnten. Dafür möchte ich deine pysische Gesundheit, die durch den Fragebogen erfragt werden soll,"
     }
 
     required init(coder aDecoder: NSCoder) {

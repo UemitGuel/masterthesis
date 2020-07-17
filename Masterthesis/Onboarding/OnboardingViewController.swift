@@ -13,12 +13,12 @@ class OnboardingViewController: UIViewController {
                 
         let reviewConsentStep = ORKConsentReviewStep(identifier: "ConsentReviewStep", signature: nil ,in: consentDocument)
         
-        reviewConsentStep.text = "Review the consent form."
-        reviewConsentStep.reasonForConsent = "Consent to join the Developer Health Research Study."
+        reviewConsentStep.text = "Prüfen Sie die Einverständniserklärung."
+        reviewConsentStep.reasonForConsent = "Zustimmung zur Teilnahme an der Studie."
         
         let completionStep = ORKCompletionStep(identifier: "CompletionStep")
-        completionStep.title = "Welcome aboard."
-        completionStep.text = "Thank you for joining this study."
+        completionStep.title = "Willkommen!"
+        completionStep.text = "Vielen Dank das du teilnimmst."
          
         let orderedTask = ORKOrderedTask(identifier: "Join", steps: [consentStep, reviewConsentStep, healthDataStep, completionStep])
         let taskViewController = ORKTaskViewController(task: orderedTask, taskRun: nil)

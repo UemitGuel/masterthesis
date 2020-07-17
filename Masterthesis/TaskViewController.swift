@@ -47,7 +47,6 @@ extension TaskViewController: ORKTaskViewControllerDelegate{
             self.result = taskViewController.result
             let taskResult = taskViewController.result.result(forIdentifier: "BooleanQuestionStep") as! ORKStepResult
             let firstResult = taskResult.firstResult as! ORKBooleanQuestionResult
-            print(firstResult.booleanAnswer)
             taskViewController.dismiss(animated: true)
             break
         case .discarded:
