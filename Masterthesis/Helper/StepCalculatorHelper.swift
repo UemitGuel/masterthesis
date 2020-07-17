@@ -25,6 +25,7 @@ class StepCalculatorHelper {
         case .zeroToTwenty:
             rightBoundry = now
             leftBoundry = Calendar.current.date(byAdding: DateComponents(day: -60), to: now)!
+            print(leftBoundry)
             predicate = HKQuery.predicateForSamples(withStart: leftBoundry, end: rightBoundry, options: .strictStartDate)
             query = HKStatisticsCollectionQuery.init(quantityType: stepsQuantityType,
                                                      quantitySamplePredicate: predicate,
@@ -60,7 +61,7 @@ class StepCalculatorHelper {
             }
             var stepsTotal: [Double] = []
             statsCollection.enumerateStatistics(from: leftBoundry!, to: rightBoundry!) { statistics, stop in
-                if let quantity = statistics.sumQuantity() {
+                if let quantity = statistics.averageQuantity() {
                     print(quantity.doubleValue(for: HKUnit.count()))
                     let stepValue = quantity.doubleValue(for: HKUnit.count())
                     stepsTotal.append(stepValue)

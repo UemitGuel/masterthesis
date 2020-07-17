@@ -171,6 +171,7 @@
                     <connections>
                         <segue destination="be0-Z5-04A" kind="relationship" relationship="viewControllers" id="fHs-wM-GWn"/>
                         <segue destination="ubX-0G-VkH" kind="relationship" relationship="viewControllers" id="xCd-bP-7m1"/>
+                        <segue destination="441-yf-NWt" kind="relationship" relationship="viewControllers" id="efu-ql-Ji5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="klR-gS-5v5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -229,51 +230,20 @@
                                     <segue destination="BPT-Mf-qyP" kind="unwind" unwindAction="unwindToWithdrawl:" id="Jd8-ZO-3lR"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6x-I5-2Ol" customClass="ORKLineGraphChartView">
-                                <rect key="frame" x="20" y="332.5" width="374" height="216.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="drawsConnectedRanges" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showsHorizontalReferenceLines" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showsVerticalReferenceLines" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIo-VM-Loz">
-                                <rect key="frame" x="16" y="120" width="382" height="196.5"/>
-                                <string key="text">Hier siehst du wie viele Schritte du pro Tag in den letzten 60 Tagen gemacht hast. Die WHO empfhielt 10000 Schritte pro Tag (weiße Linie).  Ich möchte herausfinden ob du weniger Schritte als sonst in deiner Klausurphase machst. Obwohl die Schritte hier pro Tag angezeigt werden, werden nur über 20 Tage gemittelte Werte übermittelt um die Möglichkeit Rückschlüsse zu ziehen zu minimieren.</string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Legende" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EU-RQ-ltA">
-                                <rect key="frame" x="181" y="553" width="52.5" height="16"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="e89-8z-HzU" firstAttribute="centerY" secondItem="YYu-g9-tT7" secondAttribute="centerY" id="2ED-H2-Dzl"/>
-                            <constraint firstItem="e89-8z-HzU" firstAttribute="top" secondItem="4EU-RQ-ltA" secondAttribute="bottom" constant="16" id="47j-sm-VRf"/>
                             <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="e89-8z-HzU" secondAttribute="trailing" constant="20" id="7n3-Ke-E6v"/>
-                            <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="B6x-I5-2Ol" secondAttribute="trailing" constant="20" id="FGE-HZ-uDR"/>
                             <constraint firstItem="4ta-DO-pCu" firstAttribute="top" secondItem="WgA-vC-VvA" secondAttribute="bottom" constant="32" id="KTf-nE-ir6"/>
                             <constraint firstItem="BeG-H8-eWA" firstAttribute="bottom" secondItem="4ta-DO-pCu" secondAttribute="bottom" constant="32" id="LL5-Yb-KZ7"/>
-                            <constraint firstItem="B6x-I5-2Ol" firstAttribute="leading" secondItem="BeG-H8-eWA" secondAttribute="leading" constant="20" id="PdC-WJ-djf"/>
                             <constraint firstItem="WgA-vC-VvA" firstAttribute="top" secondItem="e89-8z-HzU" secondAttribute="bottom" constant="32" id="TY4-1m-41q"/>
                             <constraint firstItem="e89-8z-HzU" firstAttribute="centerX" secondItem="YYu-g9-tT7" secondAttribute="centerX" id="Tau-wE-QGk"/>
                             <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="4ta-DO-pCu" secondAttribute="trailing" constant="20" id="Twz-QA-n7H"/>
                             <constraint firstItem="WgA-vC-VvA" firstAttribute="leading" secondItem="BeG-H8-eWA" secondAttribute="leading" constant="20" id="Y29-TN-NXD"/>
-                            <constraint firstItem="B6x-I5-2Ol" firstAttribute="top" secondItem="qIo-VM-Loz" secondAttribute="bottom" constant="16" id="bqz-3R-Jlm"/>
                             <constraint firstItem="e89-8z-HzU" firstAttribute="leading" secondItem="BeG-H8-eWA" secondAttribute="leading" constant="20" id="eWA-al-5V6"/>
-                            <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="qIo-VM-Loz" secondAttribute="trailing" constant="16" id="g5c-wh-Kzh"/>
                             <constraint firstItem="4ta-DO-pCu" firstAttribute="leading" secondItem="BeG-H8-eWA" secondAttribute="leading" constant="20" id="nSC-g5-cZ2"/>
-                            <constraint firstItem="4EU-RQ-ltA" firstAttribute="centerX" secondItem="YYu-g9-tT7" secondAttribute="centerX" id="qfK-oE-EJa"/>
-                            <constraint firstItem="qIo-VM-Loz" firstAttribute="leading" secondItem="BeG-H8-eWA" secondAttribute="leading" constant="16" id="v1z-Y5-irD"/>
-                            <constraint firstItem="4EU-RQ-ltA" firstAttribute="top" secondItem="B6x-I5-2Ol" secondAttribute="bottom" constant="4" id="xTd-5f-yW6"/>
                             <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="WgA-vC-VvA" secondAttribute="trailing" constant="20" id="ySd-Y1-Ofy"/>
-                            <constraint firstItem="qIo-VM-Loz" firstAttribute="top" secondItem="BeG-H8-eWA" secondAttribute="top" constant="32" id="zaT-vl-VSU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BeG-H8-eWA"/>
                         <variation key="default">
@@ -285,8 +255,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="zTs-Xx-mIW"/>
                     <connections>
-                        <outlet property="legendeLabel" destination="4EU-RQ-ltA" id="Hfe-bd-I7u"/>
-                        <outlet property="lineGraph" destination="B6x-I5-2Ol" id="H6C-Oo-37F"/>
                         <outlet property="mailButton" destination="WgA-vC-VvA" id="68A-LH-c9J"/>
                         <outlet property="showConsentDocument" destination="e89-8z-HzU" id="sbI-be-oaE"/>
                         <outlet property="withdrawStudy" destination="4ta-DO-pCu" id="eag-sD-5jd"/>
@@ -317,6 +285,32 @@
             </objects>
             <point key="canvasLocation" x="1952" y="1586"/>
         </scene>
+        <!--Dashboard-->
+        <scene sceneID="RnD-MP-Q4J">
+            <objects>
+                <viewController id="441-yf-NWt" customClass="DashboardViewController" customModule="Masterthesis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WDH-oy-Akv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIo-VM-Loz">
+                                <rect key="frame" x="20" y="101" width="382" height="108.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Hier siehst du wie viele Schritte du pro Tag in den letzten 60 Tagen gemacht hast. Die WHO empfhielt 10000 Schritte pro Tag (weiße Linie).  Ich möchte herausfinden ob du weniger Schritte als sonst in deiner Klausurphase machst.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ikr-WR-AEP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dashboard" selectedImage="chart.bar" catalog="system" id="jzn-lB-ZTh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s2a-ZN-i6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1007" y="1623"/>
+        </scene>
         <!--Umfrage-->
         <scene sceneID="BOi-7P-01L">
             <objects>
@@ -338,6 +332,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chart.bar" catalog="system" width="128" height="90"/>
         <image name="doc.fill" catalog="system" width="115" height="128"/>
         <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
