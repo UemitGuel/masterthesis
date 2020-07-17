@@ -25,7 +25,7 @@ class ConsentDocument: ORKConsentDocument {
             switch contentSectionType {
             case .overview:
                 consentSection.title = "Worum geht es in der Studie?"
-                let summary = "Unternehmen sind verpflichtet im Rahmen der betrieblichen Gefährdungsbeurteilung psychische Belastungen und Beanspruchungen ihrer Arbeitnehmerinnen und Arbeitnehmer bei der Arbeit zu messen und sie vor psychischen Erkrankungen zu schützen. Universitäten sind im Bezug auf Studenten nicht dazu verpflichtet. Diese Studie soll daher helfen die psychischen Beanspruchungen von Studenten in Stress-Situationen besser nachzuvollziehen."
+                let summary = "App-basierte Umfragen in Kombination mit Gesundheitsdaten, die sowieso schon auf den Geräten vorhanden sind, könnten das wissenschaftliche Arbeiten langfristig verändern und Möglichkeiten bieten, sonst verborgen gebliebene Zusammenhänge festzustellen. Um diese These zu überprüfen, möchte ich gerne festellen ob es einen Zusammenhang gibt zwischen der psychischen Belastung eines Studenten in einer Stresssituation und der Anzahl von Schritten die dieser Student pro Tag zurücklegt.\n\n Dafür wende ich eine leicht abgewandelte Version des COPSOQ-Fragebogen an, welcher ursprünglich zur Gefährdungsbeurteilung von Arbeitnehmern entwickelt worden ist. Das Ergebniss des Fragebogens vergleiche ich dann mit dem durschnittlichen Wert deiner Schrittzahlen über die letzten zwei Monate."
                 consentSection.summary = summary
                 consentSection.content = summary
             case .privacy:
@@ -46,7 +46,7 @@ class ConsentDocument: ORKConsentDocument {
                 
             case .studySurvey:
                 consentSection.title = "Umfrage der Studie"
-                let summary = "Die Teilnahme an der Umfrage is freiwillig. Es werden Ihnen nur Fragen gestellt. Es gibt keine Aufgaben die Sie bewältigen müssen. Sie können nach der Einführung unter dem Punkt ‘Account‘ mir jederzeit Fragen zur Studie zusenden."
+                let summary = "Die Teilnahme an der Umfrage ist freiwillig. Es werden nur Fragen gestellt, es gibt keine Aufgaben die du bewältigen musst. Du kannst mir jederzeit unter dem Menü-Punkt ‘Account‘ eine Email schreiben wenn du Fragen hast."
                 consentSection.summary = summary
                 consentSection.content = summary
                 
