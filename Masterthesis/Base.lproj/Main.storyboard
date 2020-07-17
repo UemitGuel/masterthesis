@@ -171,7 +171,7 @@
                     <connections>
                         <segue destination="be0-Z5-04A" kind="relationship" relationship="viewControllers" id="fHs-wM-GWn"/>
                         <segue destination="ubX-0G-VkH" kind="relationship" relationship="viewControllers" id="xCd-bP-7m1"/>
-                        <segue destination="441-yf-NWt" kind="relationship" relationship="viewControllers" id="efu-ql-Ji5"/>
+                        <segue destination="UsW-RI-dec" kind="relationship" relationship="viewControllers" id="efu-ql-Ji5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="klR-gS-5v5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -283,9 +283,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dlx-VC-Nuq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1952" y="1586"/>
+            <point key="canvasLocation" x="2860.8695652173915" y="1585.7142857142856"/>
         </scene>
-        <!--Dashboard-->
+        <!--Dashboard View Controller-->
         <scene sceneID="RnD-MP-Q4J">
             <objects>
                 <viewController id="441-yf-NWt" customClass="DashboardViewController" customModule="Masterthesis" customModuleProvider="target" sceneMemberID="viewController">
@@ -293,23 +293,115 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIo-VM-Loz">
-                                <rect key="frame" x="20" y="101" width="382" height="108.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Hier siehst du wie viele Schritte du pro Tag in den letzten 60 Tagen gemacht hast. Die WHO empfhielt 10000 Schritte pro Tag (weiße Linie).  Ich möchte herausfinden ob du weniger Schritte als sonst in deiner Klausurphase machst.</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00000 Schritte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPF-4D-U0p">
+                                <rect key="frame" x="20" y="498" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17.07.00 - 00.00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCd-Bk-lCC">
+                                <rect key="frame" x="20" y="542" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Durschnitt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlB-PB-KDJ">
+                                <rect key="frame" x="20" y="598" width="374" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00000 Schritte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAC-32-Bm0">
+                                <rect key="frame" x="20" y="627.5" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17.07.00 - 00.00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRs-Dn-4OW">
+                                <rect key="frame" x="20" y="671.5" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unterschied" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKK-i1-Jwf">
+                                <rect key="frame" x="20" y="727.5" width="374" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00000 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6O-Au-goC">
+                                <rect key="frame" x="20" y="757" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Durschnitt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBU-8H-I1l">
+                                <rect key="frame" x="20" y="468.5" width="374" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rqe-Zy-bwb" customClass="ORKDiscreteGraphChartView">
+                                <rect key="frame" x="20" y="258.5" width="374" height="190"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECC-0a-Daq">
+                                <rect key="frame" x="20" y="108" width="374" height="130.5"/>
+                                <string key="text">Die Studie möchte rausfinden, ob es einen Zusammenhang zwischen psychischer Belastung und verringerter Anzahl von Schritten pro Tag gibt. Hier sieht du einen Vergleich zwischen dem gemittelten Wert der letzten 30 Tage und der 30 Tage davor.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="rCd-Bk-lCC" secondAttribute="trailing" constant="20" id="3Cp-DJ-yrV"/>
+                            <constraint firstItem="QPF-4D-U0p" firstAttribute="top" secondItem="uBU-8H-I1l" secondAttribute="bottom" constant="8" id="4Y1-zc-ftE"/>
+                            <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="ECC-0a-Daq" secondAttribute="trailing" constant="20" id="4ya-Ro-8BS"/>
+                            <constraint firstItem="Rqe-Zy-bwb" firstAttribute="top" secondItem="ECC-0a-Daq" secondAttribute="bottom" constant="20" id="8ff-6k-YRe"/>
+                            <constraint firstItem="rCd-Bk-lCC" firstAttribute="leading" secondItem="ikr-WR-AEP" secondAttribute="leading" constant="20" id="AX8-Ej-xIS"/>
+                            <constraint firstItem="uBU-8H-I1l" firstAttribute="leading" secondItem="ikr-WR-AEP" secondAttribute="leading" constant="20" id="EUe-cJ-say"/>
+                            <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="l6O-Au-goC" secondAttribute="trailing" constant="20" id="FWe-zL-WyV"/>
+                            <constraint firstItem="YKK-i1-Jwf" firstAttribute="top" secondItem="PRs-Dn-4OW" secondAttribute="bottom" constant="32" id="Kb4-6d-PJt"/>
+                            <constraint firstItem="JlB-PB-KDJ" firstAttribute="leading" secondItem="ikr-WR-AEP" secondAttribute="leading" constant="20" id="Q17-XJ-ooS"/>
+                            <constraint firstItem="ECC-0a-Daq" firstAttribute="leading" secondItem="ikr-WR-AEP" secondAttribute="leading" constant="20" id="ReD-7D-PU5"/>
+                            <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="YKK-i1-Jwf" secondAttribute="trailing" constant="20" id="RmP-Jg-6td"/>
+                            <constraint firstItem="PRs-Dn-4OW" firstAttribute="leading" secondItem="ikr-WR-AEP" secondAttribute="leading" constant="20" id="S4X-Oc-qyF"/>
+                            <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="PRs-Dn-4OW" secondAttribute="trailing" constant="20" id="Tag-zA-Gy6"/>
+                            <constraint firstItem="YKK-i1-Jwf" firstAttribute="leading" secondItem="ikr-WR-AEP" secondAttribute="leading" constant="20" id="UxV-xg-fAX"/>
+                            <constraint firstItem="ikr-WR-AEP" firstAttribute="bottom" secondItem="l6O-Au-goC" secondAttribute="bottom" constant="20" id="XVX-MS-Has"/>
+                            <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="QPF-4D-U0p" secondAttribute="trailing" constant="20" id="ZvO-qA-ns3"/>
+                            <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="MAC-32-Bm0" secondAttribute="trailing" constant="20" id="bNq-vh-L2a"/>
+                            <constraint firstItem="uBU-8H-I1l" firstAttribute="top" secondItem="Rqe-Zy-bwb" secondAttribute="bottom" constant="20" id="bsU-j8-De6"/>
+                            <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="Rqe-Zy-bwb" secondAttribute="trailing" constant="20" id="dCC-m6-m9O"/>
+                            <constraint firstItem="MAC-32-Bm0" firstAttribute="top" secondItem="JlB-PB-KDJ" secondAttribute="bottom" constant="8" id="fbE-oi-hhO"/>
+                            <constraint firstItem="l6O-Au-goC" firstAttribute="leading" secondItem="ikr-WR-AEP" secondAttribute="leading" constant="20" id="he1-ai-JEa"/>
+                            <constraint firstItem="MAC-32-Bm0" firstAttribute="leading" secondItem="ikr-WR-AEP" secondAttribute="leading" constant="20" id="jZE-v8-e1a"/>
+                            <constraint firstItem="QPF-4D-U0p" firstAttribute="leading" secondItem="ikr-WR-AEP" secondAttribute="leading" constant="20" id="ku7-jP-HNd"/>
+                            <constraint firstItem="ECC-0a-Daq" firstAttribute="top" secondItem="ikr-WR-AEP" secondAttribute="top" constant="20" id="l0y-mO-gFE"/>
+                            <constraint firstItem="l6O-Au-goC" firstAttribute="top" secondItem="YKK-i1-Jwf" secondAttribute="bottom" constant="8" id="mug-bP-pkD"/>
+                            <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="uBU-8H-I1l" secondAttribute="trailing" constant="20" id="pBg-Re-jdf"/>
+                            <constraint firstItem="JlB-PB-KDJ" firstAttribute="top" secondItem="rCd-Bk-lCC" secondAttribute="bottom" constant="32" id="pDB-Za-N8g"/>
+                            <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="JlB-PB-KDJ" secondAttribute="trailing" constant="20" id="rS6-TK-lgH"/>
+                            <constraint firstItem="PRs-Dn-4OW" firstAttribute="top" secondItem="MAC-32-Bm0" secondAttribute="bottom" constant="8" id="rw9-la-lJC"/>
+                            <constraint firstItem="rCd-Bk-lCC" firstAttribute="top" secondItem="QPF-4D-U0p" secondAttribute="bottom" constant="8" id="sp7-be-SW1"/>
+                            <constraint firstItem="Rqe-Zy-bwb" firstAttribute="leading" secondItem="ikr-WR-AEP" secondAttribute="leading" constant="20" id="xw9-zM-vgF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ikr-WR-AEP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dashboard" selectedImage="chart.bar" catalog="system" id="jzn-lB-ZTh"/>
+                    <navigationItem key="navigationItem" id="bb8-SZ-CbU"/>
+                    <connections>
+                        <outlet property="DifferenceLabel" destination="l6O-Au-goC" id="7fT-gq-AVU"/>
+                        <outlet property="discreteGraph" destination="Rqe-Zy-bwb" id="chL-j6-5jU"/>
+                        <outlet property="last30DaysDateLabel" destination="rCd-Bk-lCC" id="rzR-N1-Dwk"/>
+                        <outlet property="last30DaysLabel" destination="QPF-4D-U0p" id="pas-fL-ghw"/>
+                        <outlet property="last60DaysDateLabel" destination="PRs-Dn-4OW" id="fuh-L1-uC3"/>
+                        <outlet property="last60DaysLabel" destination="MAC-32-Bm0" id="wwK-mU-zq1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2a-ZN-i6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1007" y="1623"/>
+            <point key="canvasLocation" x="-1007.2463768115942" y="2476.3392857142858"/>
         </scene>
         <!--Umfrage-->
         <scene sceneID="BOi-7P-01L">
@@ -328,7 +420,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ovD-bp-iD7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="221.73913043478262" y="1586.3839285714284"/>
+            <point key="canvasLocation" x="1131.8840579710145" y="1586.3839285714284"/>
+        </scene>
+        <!--Dashboard-->
+        <scene sceneID="vEt-kp-Hrg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UsW-RI-dec" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="chart.bar" catalog="system" id="jzn-lB-ZTh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gTh-8h-wkE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="441-yf-NWt" kind="relationship" relationship="rootViewController" id="c1a-Sy-DcZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sk0-sg-qIn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-558" y="1550"/>
         </scene>
     </scenes>
     <resources>

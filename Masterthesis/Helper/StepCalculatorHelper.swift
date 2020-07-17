@@ -3,16 +3,22 @@ import HealthKit
 
 let sharedStepCalculatorHelper = StepCalculatorHelper()
 
-enum DayInterval {
-    case zeroToTwenty
-    case twentyToFourty
+enum TimeIntervalCustom {
+    case zeroToThirty
     case fourtyToSixty
 }
 
 
 class StepCalculatorHelper {
     
-    func getAverageStepsFor(dayInterval: DayInterval, healthStore: HKHealthStore?, completion: @escaping ([Double]) -> Void) {
+    let sharedDateFormatter = DateFormatter()
+    
+    init() {
+        sharedDateFormatter.dateStyle = .short
+        sharedDateFormatter.timeStyle = .none
+    }
+    
+    func getAverageStepsFor(dayInterval: TimeIntervalCustom, healthStore: HKHealthStore?, completion: @escaping (Double) -> Void) {
         let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
         
         let now = Date()
@@ -22,19 +28,9 @@ class StepCalculatorHelper {
         var query: HKStatisticsCollectionQuery?
         
         switch dayInterval {
-        case .zeroToTwenty:
+        case .zeroToThirty:
             rightBoundry = now
-            leftBoundry = Calendar.current.date(byAdding: DateComponents(day: -60), to: now)!
-            print(leftBoundry)
-            predicate = HKQuery.predicateForSamples(withStart: leftBoundry, end: rightBoundry, options: .strictStartDate)
-            query = HKStatisticsCollectionQuery.init(quantityType: stepsQuantityType,
-                                                     quantitySamplePredicate: predicate,
-                                                     options: .cumulativeSum,
-                                                     anchorDate: leftBoundry!,
-                                                     intervalComponents: DateComponents(day: 1))
-        case .twentyToFourty:
-            rightBoundry = Calendar.current.date(byAdding: DateComponents(day: -20), to: now)!
-            leftBoundry = Calendar.current.date(byAdding: DateComponents(day: -40), to: now)!
+            leftBoundry = Calendar.current.date(byAdding: DateComponents(day: -30), to: now)!
             predicate = HKQuery.predicateForSamples(withStart: leftBoundry, end: rightBoundry, options: .strictStartDate)
             query = HKStatisticsCollectionQuery.init(quantityType: stepsQuantityType,
                                                      quantitySamplePredicate: predicate,
@@ -42,7 +38,7 @@ class StepCalculatorHelper {
                                                      anchorDate: leftBoundry!,
                                                      intervalComponents: DateComponents(day: 1))
         case .fourtyToSixty:
-            rightBoundry = Calendar.current.date(byAdding: DateComponents(day: -40), to: now)!
+            rightBoundry = Calendar.current.date(byAdding: DateComponents(day: -30), to: now)!
             leftBoundry = Calendar.current.date(byAdding: DateComponents(day: -60), to: now)!
             predicate = HKQuery.predicateForSamples(withStart: leftBoundry, end: rightBoundry, options: .strictStartDate)
             query = HKStatisticsCollectionQuery.init(quantityType: stepsQuantityType,
@@ -59,83 +55,36 @@ class StepCalculatorHelper {
                 // Perform proper error handling here...
                 fatalError()
             }
-            var stepsTotal: [Double] = []
+            var stepsTotal: Double = 0
             statsCollection.enumerateStatistics(from: leftBoundry!, to: rightBoundry!) { statistics, stop in
-                if let quantity = statistics.averageQuantity() {
-                    print(quantity.doubleValue(for: HKUnit.count()))
+                if let quantity = statistics.sumQuantity() {
                     let stepValue = quantity.doubleValue(for: HKUnit.count())
-                    stepsTotal.append(stepValue)
+                    stepsTotal += stepValue
                 }
             }
-            completion(stepsTotal)
+            completion(stepsTotal/30)
         }
         
         healthStore?.execute(executablQuery)
     }
     
-    func getAverageSteps60Days(completion: @escaping (Double) -> Void) {
-        let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
-        
-        let now = Date()
-        let oneMonthAgo = Calendar.current.date(byAdding: DateComponents(day: -30), to: now)!
-        let twoMonthAgo = Calendar.current.date(byAdding: DateComponents(day: -60), to: now)!
-        let startOfTwoMonthAgo = Calendar.current.startOfDay(for: twoMonthAgo)
-        let predicate = HKQuery.predicateForSamples(withStart: startOfTwoMonthAgo, end: oneMonthAgo, options: .strictStartDate)
-        
-        let query = HKStatisticsCollectionQuery.init(quantityType: stepsQuantityType,
-                                                     quantitySamplePredicate: predicate,
-                                                     options: .cumulativeSum,
-                                                     anchorDate: startOfTwoMonthAgo,
-                                                     intervalComponents: DateComponents(day: 1))
-        
-        query.initialResultsHandler = { query, results, error in
-            guard let statsCollection = results else {
-                // Perform proper error handling here...
-                fatalError()
-            }
-            var stepsTotal: Double = 0
-            statsCollection.enumerateStatistics(from: startOfTwoMonthAgo, to: oneMonthAgo) { statistics, stop in
-                if let quantity = statistics.sumQuantity() {
-                    let stepValue = quantity.doubleValue(for: HKUnit.count())
-                    stepsTotal += stepValue
-                }
-            }
-            completion(stepsTotal/30)
-        }
-        
-        //        healthStore?.execute(query)
+    func getTodayFormatted() -> String {
+        let today = Date()
+        var todayFormatted = sharedDateFormatter.string(from: today)
+        return todayFormatted
     }
     
-    func getAverageSteps90Days(completion: @escaping (Double) -> Void) {
-        let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
-        
-        let now = Date()
-        let oneMonthAgo = Calendar.current.date(byAdding: DateComponents(day: -60), to: now)!
-        let twoMonthAgo = Calendar.current.date(byAdding: DateComponents(day: -90), to: now)!
-        let startOfTwoMonthAgo = Calendar.current.startOfDay(for: twoMonthAgo)
-        let predicate = HKQuery.predicateForSamples(withStart: startOfTwoMonthAgo, end: oneMonthAgo, options: .strictStartDate)
-        
-        let query = HKStatisticsCollectionQuery.init(quantityType: stepsQuantityType,
-                                                     quantitySamplePredicate: predicate,
-                                                     options: .cumulativeSum,
-                                                     anchorDate: startOfTwoMonthAgo,
-                                                     intervalComponents: DateComponents(day: 1))
-        
-        query.initialResultsHandler = { query, results, error in
-            guard let statsCollection = results else {
-                // Perform proper error handling here...
-                fatalError()
-            }
-            var stepsTotal: Double = 0
-            statsCollection.enumerateStatistics(from: startOfTwoMonthAgo, to: oneMonthAgo) { statistics, stop in
-                if let quantity = statistics.sumQuantity() {
-                    let stepValue = quantity.doubleValue(for: HKUnit.count())
-                    stepsTotal += stepValue
-                }
-            }
-            completion(stepsTotal/30)
-        }
-        
-        //        healthStore?.execute(query)
+    func getBefore30DaysFormatted() -> String {
+        let today = Date()
+        var before30Days = Calendar.current.date(byAdding: DateComponents(day: -30), to: today)!
+        var before30DaysFormatted = sharedDateFormatter.string(from: before30Days)
+        return before30DaysFormatted
+    }
+    
+    func getBefore60DaysFormatted() -> String {
+        let today = Date()
+        var before60Days = Calendar.current.date(byAdding: DateComponents(day: -60), to: today)!
+        var before60DaysFormatted = sharedDateFormatter.string(from: before60Days)
+        return before60DaysFormatted
     }
 }

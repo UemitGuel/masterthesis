@@ -1,19 +1,10 @@
-//
-//  PersonalViewController.swift
-//  Masterthesis
-//
-//  Created by Ümit Gül on 04.07.20.
-//  Copyright © 2020 Ümit Gül. All rights reserved.
-//
 
 import UIKit
 import ResearchKit
 import MessageUI
 
-class PersonalViewController: UIViewController, HealthClientType {
-    
-    var healthStore: HKHealthStore?
-                
+class PersonalViewController: UIViewController {
+                    
     @IBOutlet weak var showConsentDocument: UIButton!
     
     @IBAction func showConsentDocumentTapped(_ sender: UIButton) {
