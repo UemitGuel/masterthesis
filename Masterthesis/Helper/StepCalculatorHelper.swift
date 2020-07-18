@@ -70,21 +70,21 @@ class StepCalculatorHelper {
     
     func getTodayFormatted() -> String {
         let today = Date()
-        var todayFormatted = sharedDateFormatter.string(from: today)
+        let todayFormatted = sharedDateFormatter.string(from: today)
         return todayFormatted
     }
     
     func getBefore30DaysFormatted() -> String {
         let today = Date()
-        var before30Days = Calendar.current.date(byAdding: DateComponents(day: -30), to: today)!
-        var before30DaysFormatted = sharedDateFormatter.string(from: before30Days)
+        let before30Days = Calendar.current.date(byAdding: DateComponents(day: -30), to: today)!
+        let before30DaysFormatted = sharedDateFormatter.string(from: before30Days)
         return before30DaysFormatted
     }
     
     func getBefore60DaysFormatted() -> String {
         let today = Date()
-        var before60Days = Calendar.current.date(byAdding: DateComponents(day: -60), to: today)!
-        var before60DaysFormatted = sharedDateFormatter.string(from: before60Days)
+        let before60Days = Calendar.current.date(byAdding: DateComponents(day: -60), to: today)!
+        let before60DaysFormatted = sharedDateFormatter.string(from: before60Days)
         return before60DaysFormatted
     }
 }
