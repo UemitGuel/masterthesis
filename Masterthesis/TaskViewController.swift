@@ -43,10 +43,10 @@ extension TaskViewController: ORKTaskViewControllerDelegate{
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         switch reason {
         case .completed:
-            self.task = taskViewController.task
-            self.result = taskViewController.result
-            let taskResult = taskViewController.result.result(forIdentifier: "BooleanQuestionStep") as! ORKStepResult
-            let firstResult = taskResult.firstResult as! ORKBooleanQuestionResult
+//            self.task = taskViewController.task
+//            self.result = taskViewController.result
+//            let taskResult = taskViewController.result.result(forIdentifier: "BooleanQuestionStep") as! ORKStepResult
+//            let firstResult = taskResult.firstResult as! ORKBooleanQuestionResult
             taskViewController.dismiss(animated: true)
             break
         case .discarded:

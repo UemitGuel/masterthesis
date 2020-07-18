@@ -15,7 +15,7 @@ class HealthDataStep: ORKInstructionStep {
         super.init(identifier: identifier)
         
         title = "Schrittzähler - Warum brauche ich den Zugang?"
-        text = "Auf dem nächsten Bildschirm wirst du aufgefordert mir den Zugang zu deinem Schrittzähler zu gewähren. Der essentielle Punkt meiner Masterarbeit ist, zu zeigen das digitale Umfrage-Methoden unbekannte Korrelationen aufzeigen könnten. Dafür möchte ich deine pysische Gesundheit, die durch den Fragebogen erfragt werden soll,"
+        text = "Auf dem nächsten Bildschirm wirst du aufgefordert mir den Zugang zu deinen Daten des Schrittzählers zu gewähren. Der essentielle Punkt meiner Masterarbeit ist es zu zeigen das digitale Umfrage-Methoden unbekannte Korrelationen aufzeigen könnten. Dafür möchte ich deine psychische Gesundheit, die durch den Fragebogen erfragt werden soll, vergleichen mit einer möglichen Veränderung in deinen Schritten pro Tag."
     }
 
     required init(coder aDecoder: NSCoder) {

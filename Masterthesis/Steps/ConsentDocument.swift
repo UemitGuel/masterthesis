@@ -25,7 +25,7 @@ class ConsentDocument: ORKConsentDocument {
             switch contentSectionType {
             case .overview:
                 consentSection.title = "Worum geht es in der Studie?"
-                let summary = "App-basierte Umfragen in Kombination mit Gesundheitsdaten, die sowieso schon auf den Geräten vorhanden sind, könnten das wissenschaftliche Arbeiten langfristig verändern und Möglichkeiten bieten, sonst verborgen gebliebene Zusammenhänge festzustellen. Um diese These zu überprüfen, möchte ich gerne festellen ob es einen Zusammenhang gibt zwischen der psychischen Belastung eines Studenten in einer Stresssituation und der Anzahl von Schritten die dieser Student pro Tag zurücklegt.\n\n Dafür wende ich eine leicht abgewandelte Version des COPSOQ-Fragebogen an, welcher ursprünglich zur Gefährdungsbeurteilung von Arbeitnehmern entwickelt worden ist. Das Ergebniss des Fragebogens vergleiche ich dann mit dem durschnittlichen Wert deiner Schrittzahlen über die letzten zwei Monate."
+                let summary = "App-basierte Umfragen in Kombination mit Gesundheitsdaten, die sowieso schon auf den Geräten vorhanden sind, könnten das wissenschaftliche Arbeiten langfristig verändern und Möglichkeiten bieten, sonst verborgen gebliebene Zusammenhänge festzustellen. Um diese These zu überprüfen, möchte ich gerne feststellen ob es einen Zusammenhang gibt zwischen der psychischen Belastung eines Studenten in einer Stresssituation und der Anzahl von Schritten die dieser Student pro Tag zurücklegt.\nDafür wende ich eine leicht abgewandelte Version des COPSOQ-Fragebogen an, welcher ursprünglich zur Gefährdungsbeurteilung von Arbeitnehmern entwickelt worden ist. Das Ergebnis des Fragebogens vergleiche ich dann mit dem durchschnittlichen Wert deiner Schrittzahlen über die letzten zwei Monate."
                 consentSection.summary = summary
                 consentSection.content = summary
             case .privacy:
@@ -52,7 +52,7 @@ class ConsentDocument: ORKConsentDocument {
                 
             case .withdrawing:
                 consentSection.title = "Rücktritt"
-                let summary = "Sie können jederzeit aus der Studie zurücktreten, indem Sie unter dem Punkt ‘Account‘ die Löschung ihre Daten anfordern."
+                let summary = "Du kannst unter dem Menü-Punkt ‘Account‘ jederzeit aus der Studie wieder austreten."
                 consentSection.summary = summary
                 consentSection.content = summary
             default:

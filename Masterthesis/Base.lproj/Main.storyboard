@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvy-ar-nhK">
-                                <rect key="frame" x="20" y="774" width="374" height="56"/>
+                                <rect key="frame" x="32" y="774" width="350" height="56"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="3Hp-MQ-Nps"/>
@@ -53,37 +53,29 @@
                                     <action selector="joinButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iwP-m8-PId"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fj2-ii-aeW">
-                                <rect key="frame" x="20" y="133" width="374" height="166.5"/>
-                                <string key="text">Im Rahmen meiner Masterarbeit möchte ich rausfinden, ob app-basierte Umfragen wichtige Zusammenhänge finden können, die andernfalls nicht gefunden worden wären. Danke für deine Mithilfe!</string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fj2-ii-aeW">
+                                <rect key="frame" x="32" y="76" width="350" height="240.5"/>
+                                <string key="text">Hi! Im Rahmen meiner Masterarbeit möchte ich rausfinden, ob App-basierte Studien Zusammenhänge finden können, die andernfalls nicht gefunden worden wären. Dazu vergleiche ich den psychischen Zustand von Studierenden während der Klausurphase und einer möglicherweise verringerten Schritte Anzahl pro Tag. Das alles wird aber in den nächsten Schritten noch ausführlich erklärt. Danke für deine Mithilfe!</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Hi :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxS-vb-bQD">
-                                <rect key="frame" x="177.5" y="76" width="59.5" height="41"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Danke" translatesAutoresizingMaskIntoConstraints="NO" id="74i-hs-Yqr">
-                                <rect key="frame" x="32" y="316" width="350" height="439"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Danke" translatesAutoresizingMaskIntoConstraints="NO" id="74i-hs-Yqr">
+                                <rect key="frame" x="20" y="348.5" width="374" height="393.5"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Fj2-ii-aeW" firstAttribute="top" secondItem="TxS-vb-bQD" secondAttribute="bottom" constant="16" id="HXl-44-Blp"/>
-                            <constraint firstItem="nvy-ar-nhK" firstAttribute="top" secondItem="74i-hs-Yqr" secondAttribute="bottom" constant="32" id="JB6-xT-Ylp"/>
-                            <constraint firstItem="TxS-vb-bQD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ODg-Z6-Ma2"/>
-                            <constraint firstItem="74i-hs-Yqr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Zcv-vq-Ls4"/>
-                            <constraint firstItem="nvy-ar-nhK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Zd4-Ne-CvG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fj2-ii-aeW" secondAttribute="trailing" constant="20" id="bgu-0d-4iY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="74i-hs-Yqr" secondAttribute="trailing" constant="32" id="h86-of-mBg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nvy-ar-nhK" secondAttribute="trailing" constant="20" id="mad-cL-fKE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nvy-ar-nhK" secondAttribute="bottom" constant="32" id="p9B-94-rRA"/>
-                            <constraint firstItem="TxS-vb-bQD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="uMx-LW-sZO"/>
-                            <constraint firstItem="Fj2-ii-aeW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vfo-0o-CDS"/>
-                            <constraint firstItem="74i-hs-Yqr" firstAttribute="top" secondItem="Fj2-ii-aeW" secondAttribute="bottom" constant="32" id="xd1-Nc-FPJ"/>
+                            <constraint firstItem="74i-hs-Yqr" firstAttribute="top" secondItem="Fj2-ii-aeW" secondAttribute="bottom" constant="32" id="A3U-vg-HU7"/>
+                            <constraint firstItem="74i-hs-Yqr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BTC-T1-X1I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nvy-ar-nhK" secondAttribute="bottom" constant="32" id="FdE-Eb-ZWD"/>
+                            <constraint firstItem="nvy-ar-nhK" firstAttribute="top" secondItem="74i-hs-Yqr" secondAttribute="bottom" constant="32" id="FiN-bn-6Lc"/>
+                            <constraint firstItem="Fj2-ii-aeW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="HXl-44-Blp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="74i-hs-Yqr" secondAttribute="trailing" constant="20" id="VHa-i8-jPr"/>
+                            <constraint firstItem="nvy-ar-nhK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Zd4-Ne-CvG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fj2-ii-aeW" secondAttribute="trailing" constant="32" id="bgu-0d-4iY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nvy-ar-nhK" secondAttribute="trailing" constant="32" id="mad-cL-fKE"/>
+                            <constraint firstItem="Fj2-ii-aeW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="vfo-0o-CDS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -106,32 +98,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dl-Tf-Z0r">
-                                <rect key="frame" x="20" y="289" width="374" height="56"/>
+                                <rect key="frame" x="20" y="420" width="374" height="56"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="HHe-oq-ubK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <state key="normal" title="UMFRAGE STARTEN">
+                                <state key="normal" title="Umfrage starten">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
                                 <connections>
                                     <action selector="startStudyButtonTapped:" destination="W2b-dS-TWQ" eventType="touchUpInside" id="Dti-tn-haL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danke für deine Mithilfe!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJr-WU-I2i">
-                                <rect key="frame" x="20" y="216" width="374" height="41"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ZJr-WU-I2i" firstAttribute="top" secondItem="aaF-sN-sRh" secondAttribute="top" constant="128" id="7eo-Tp-Vcs"/>
-                            <constraint firstItem="ZJr-WU-I2i" firstAttribute="leading" secondItem="aaF-sN-sRh" secondAttribute="leading" constant="20" id="8Vj-M7-UPe"/>
-                            <constraint firstItem="aaF-sN-sRh" firstAttribute="trailing" secondItem="ZJr-WU-I2i" secondAttribute="trailing" constant="20" id="Qh0-lD-ERl"/>
-                            <constraint firstItem="2dl-Tf-Z0r" firstAttribute="top" secondItem="ZJr-WU-I2i" secondAttribute="bottom" constant="32" id="eBl-30-4TP"/>
+                            <constraint firstItem="2dl-Tf-Z0r" firstAttribute="centerY" secondItem="rWV-FZ-aEW" secondAttribute="centerY" id="Kag-aB-zeY"/>
                             <constraint firstItem="2dl-Tf-Z0r" firstAttribute="leading" secondItem="aaF-sN-sRh" secondAttribute="leading" constant="20" id="mke-O1-xZS"/>
                             <constraint firstItem="aaF-sN-sRh" firstAttribute="trailing" secondItem="2dl-Tf-Z0r" secondAttribute="trailing" constant="20" id="t1T-0A-yXM"/>
                             <constraint firstItem="2dl-Tf-Z0r" firstAttribute="top" secondItem="aaF-sN-sRh" secondAttribute="top" constant="32" id="wfd-L8-nbX"/>
@@ -152,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xuy-AE-MKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="222" y="2429"/>
+            <point key="canvasLocation" x="1132" y="2373"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JwZ-tv-59x">
@@ -182,28 +165,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e89-8z-HzU">
-                                <rect key="frame" x="20" y="585" width="374" height="44"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="veI-Ym-0im"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <state key="normal" title="Einverständniserklärung zeigen" image="doc.fill" catalog="system">
-                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="showConsentDocumentTapped:" destination="DAn-Th-Gpp" eventType="touchUpInside" id="JYg-QO-ImV"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgA-vC-VvA">
-                                <rect key="frame" x="20" y="661" width="374" height="44"/>
+                                <rect key="frame" x="20" y="420" width="374" height="56"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="OcE-ps-0XM"/>
+                                    <constraint firstAttribute="height" constant="56" id="OcE-ps-0XM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <state key="normal" title="Frage zur Studie" image="envelope.fill" catalog="system">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -213,13 +181,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ta-DO-pCu">
-                                <rect key="frame" x="20" y="737" width="374" height="44"/>
+                                <rect key="frame" x="20" y="508" width="374" height="56"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="wea-3s-obR"/>
+                                    <constraint firstAttribute="height" constant="56" id="wea-3s-obR"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <state key="normal" title="Studie abbrechen&amp; Daten löschen" image="trash.fill" catalog="system">
+                                <state key="normal" title="Studie abbrechen">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
                                 <connections>
@@ -229,30 +198,18 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="e89-8z-HzU" firstAttribute="centerY" secondItem="YYu-g9-tT7" secondAttribute="centerY" id="2ED-H2-Dzl"/>
-                            <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="e89-8z-HzU" secondAttribute="trailing" constant="20" id="7n3-Ke-E6v"/>
+                            <constraint firstItem="WgA-vC-VvA" firstAttribute="centerY" secondItem="YYu-g9-tT7" secondAttribute="centerY" id="I5I-7N-DOW"/>
                             <constraint firstItem="4ta-DO-pCu" firstAttribute="top" secondItem="WgA-vC-VvA" secondAttribute="bottom" constant="32" id="KTf-nE-ir6"/>
-                            <constraint firstItem="BeG-H8-eWA" firstAttribute="bottom" secondItem="4ta-DO-pCu" secondAttribute="bottom" constant="32" id="LL5-Yb-KZ7"/>
-                            <constraint firstItem="WgA-vC-VvA" firstAttribute="top" secondItem="e89-8z-HzU" secondAttribute="bottom" constant="32" id="TY4-1m-41q"/>
-                            <constraint firstItem="e89-8z-HzU" firstAttribute="centerX" secondItem="YYu-g9-tT7" secondAttribute="centerX" id="Tau-wE-QGk"/>
                             <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="4ta-DO-pCu" secondAttribute="trailing" constant="20" id="Twz-QA-n7H"/>
                             <constraint firstItem="WgA-vC-VvA" firstAttribute="leading" secondItem="BeG-H8-eWA" secondAttribute="leading" constant="20" id="Y29-TN-NXD"/>
-                            <constraint firstItem="e89-8z-HzU" firstAttribute="leading" secondItem="BeG-H8-eWA" secondAttribute="leading" constant="20" id="eWA-al-5V6"/>
                             <constraint firstItem="4ta-DO-pCu" firstAttribute="leading" secondItem="BeG-H8-eWA" secondAttribute="leading" constant="20" id="nSC-g5-cZ2"/>
                             <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="WgA-vC-VvA" secondAttribute="trailing" constant="20" id="ySd-Y1-Ofy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BeG-H8-eWA"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="2ED-H2-Dzl"/>
-                                <exclude reference="Tau-wE-QGk"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="zTs-Xx-mIW"/>
                     <connections>
                         <outlet property="mailButton" destination="WgA-vC-VvA" id="68A-LH-c9J"/>
-                        <outlet property="showConsentDocument" destination="e89-8z-HzU" id="sbI-be-oaE"/>
                         <outlet property="withdrawStudy" destination="4ta-DO-pCu" id="eag-sD-5jd"/>
                         <segue destination="BPT-Mf-qyP" kind="unwind" unwindAction="unwindToWithdrawl:" id="j5G-zI-bvK"/>
                     </connections>
@@ -260,7 +217,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FtC-oH-3TE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="BPT-Mf-qyP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1950.7246376811595" y="2405.3571428571427"/>
+            <point key="canvasLocation" x="2861" y="2338"/>
         </scene>
         <!--Account-->
         <scene sceneID="kbq-Yx-bsJ">
@@ -397,7 +354,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2a-ZN-i6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1007.2463768115942" y="2476.3392857142858"/>
+            <point key="canvasLocation" x="-559" y="2326"/>
         </scene>
         <!--Umfrage-->
         <scene sceneID="BOi-7P-01L">
@@ -441,10 +398,8 @@
     <resources>
         <image name="Danke" width="2108" height="2482"/>
         <image name="chart.bar" catalog="system" width="128" height="90"/>
-        <image name="doc.fill" catalog="system" width="115" height="128"/>
         <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
-        <image name="trash.fill" catalog="system" width="121" height="128"/>
     </resources>
 </document>

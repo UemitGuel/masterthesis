@@ -23,9 +23,9 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Brauche Zugriff für gewisse Übungen&amp; Anwendungen</string>
 	<key>NSHealthShareUsageDescription</key>
-	<string>Brauche Zugriff für gewisse Übungen&amp; Anwendungen</string>
+	<string>Auf dem nächsten Bildschirm wirst du aufgefordert mir den Zugang zu deinen Daten des Schrittzählers zu gewähren. Der essentielle Punkt meiner Masterarbeit ist es zu zeigen das digitale Umfrage-Methoden unbekannte Korrelationen aufzeigen könnten. Dafür möchte ich deine psychische Gesundheit, die durch den Fragebogen erfragt werden soll, vergleichen mit einer möglichen Veränderung in deinen Schritten pro Tag.</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>Brauche Zugriff für gewisse Übungen&amp; Anwendungen</string>
+	<string>Auf dem nächsten Bildschirm wirst du aufgefordert mir den Zugang zu deinen Daten des Schrittzählers zu gewähren. Der essentielle Punkt meiner Masterarbeit ist es zu zeigen das digitale Umfrage-Methoden unbekannte Korrelationen aufzeigen könnten. Dafür möchte ich deine psychische Gesundheit, die durch den Fragebogen erfragt werden soll, vergleichen mit einer möglichen Veränderung in deinen Schritten pro Tag.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Brauche Zugriff für gewisse Übungen&amp; Anwendungen</string>
 	<key>NSMicrophoneUsageDescription</key>
