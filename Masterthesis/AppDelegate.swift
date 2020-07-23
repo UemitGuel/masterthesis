@@ -8,6 +8,7 @@
 
 import UIKit
 import ResearchKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,12 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-//        let standardDefaults = UserDefaults.standard
-//        if standardDefaults.object(forKey: "ORKSampleFirstRun") == nil {
-//            ORKPasscodeViewController.removePasscodeFromKeychain()
-//            standardDefaults.setValue("ORKSampleFirstRun", forKey: "ORKSampleFirstRun")
-//        }
-        // Dependency injection.
+
+        FirebaseApp.configure()
+        
         containerViewController?.injectHealthStore(healthStore)
         return true
     }
