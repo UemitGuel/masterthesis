@@ -13,10 +13,10 @@ class ConsentDocument: ORKConsentDocument {
         
         let consentSectionTypes: [ORKConsentSectionType] = [
             .overview,
+            .studySurvey,
+            .timeCommitment,
             .privacy,
             .dataUse,
-            .timeCommitment,
-            .studySurvey,
             .withdrawing
         ]
         
@@ -25,7 +25,7 @@ class ConsentDocument: ORKConsentDocument {
             switch contentSectionType {
             case .overview:
                 consentSection.title = "Worum geht es in der Studie?"
-                let summary = "App-basierte Umfragen in Kombination mit Gesundheitsdaten, die sowieso schon auf den Geräten vorhanden sind, könnten das wissenschaftliche Arbeiten langfristig verändern und Möglichkeiten bieten, sonst verborgen gebliebene Zusammenhänge zu finden. Um diese These zu überprüfen, möchte ich gerne feststellen ob es einen Zusammenhang gibt zwischen der psychischen Belastung eines Studenten in einer Stresssituation und der Anzahl von Schritten die dieser Student pro Tag zurücklegt.\nDafür wende ich eine leicht abgewandelte Version des COPSOQ-Fragebogen an, welcher ursprünglich zur Gefährdungsbeurteilung von Arbeitnehmern entwickelt worden ist. Das Ergebnis des Fragebogens vergleiche ich dann mit dem durchschnittlichen Wert deiner Schrittzahlen über die letzten zwei Monate."
+                let summary = "App-basierte Studien haben den Vorteil, dass sie herkömmliche Umfragen durch reale Gesundheitsdaten erweitern können. Das könnte dazu führen, dass sonst verborgen gebliebene Zusammenhänge festgestellt werden können.\nUm diese These zu überprüfen möchte ich zum einen mit einer Umfrage die psychische Belastung von Studierenden in Stress-Situationen erfassen und zum anderen untersuchen, ob die Stress-Situation einen signifikanten Effekt auf die täglich zurückgelegten Schritte hatte."
                 consentSection.summary = summary
                 consentSection.content = summary
             case .privacy:
@@ -40,13 +40,13 @@ class ConsentDocument: ORKConsentDocument {
                 consentSection.content = summary
             case .timeCommitment:
                 consentSection.title = "Dauer"
-                let summary = "Die Umfrage sollte nicht länger als 15-20 minuten dauern."
+                let summary = "Die Umfrage sollte nicht länger als 10-15 minuten dauern."
                 consentSection.summary = summary
                 consentSection.content = summary
                 
             case .studySurvey:
                 consentSection.title = "Umfrage der Studie"
-                let summary = "Die Teilnahme an der Umfrage ist freiwillig. Es werden nur Fragen gestellt, es gibt keine Aufgaben die du bewältigen musst. Du kannst mir jederzeit unter dem Menü-Punkt ‘Account‘ eine Email schreiben wenn du Fragen hast."
+                let summary = "Der verwendete Fragebogen ist eine leicht abgewandelte Version des COPSOQ (Copenhagen Psychosocial Questionnaire). Dieser ist ein wissenschaftlich validierter Fragebogen zur Erfassung psychischer Belastungen und Beanspruchungen bei der Arbeit. Er wird insbesondere im Rahmen der betrieblichen Gefährdungsbeurteilung eingesetzt. Ich habe den Fragebogen aber auf Studierende angepasst. Die Teilnahme an der Umfrage ist freiwillig. Du kannst mir jederzeit unter dem Menü-Punkt ‘Account‘ eine Email schreiben wenn du Fragen hast."
                 consentSection.summary = summary
                 consentSection.content = summary
                 

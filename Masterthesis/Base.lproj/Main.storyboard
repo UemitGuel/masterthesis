@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mxW-f0-Mux">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -53,9 +54,14 @@
                                     <action selector="joinButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iwP-m8-PId"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fj2-ii-aeW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fj2-ii-aeW">
                                 <rect key="frame" x="32" y="76" width="350" height="240.5"/>
-                                <string key="text">Hi! Im Rahmen meiner Masterarbeit möchte ich rausfinden, ob App-basierte Studien Zusammenhänge finden können, die andernfalls nicht gefunden worden wären. Dazu vergleiche ich den psychischen Zustand von Studierenden während der Klausurphase und einer möglicherweise verringerten Schritte Anzahl pro Tag. Das alles wird aber in den nächsten Schritten noch ausführlich erklärt. Danke für deine Mithilfe!</string>
+                                <string key="text">Hi!
+Willkommen zu meiner Masterarbeit mit dem Thema:
+
+“Konzeption einer digitalen, psychischen Gesundheitsevaluierung für Studierende“
+
+Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, du kannst an jedem Zeitpunkt wieder aussteigen. Danke für deine Mithilfe!</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
