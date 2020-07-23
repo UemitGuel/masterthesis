@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1ADB4E3AA57C2E8940D9D39A /* Pods_Masterthesis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F379A84DFB1D94D2251AB2 /* Pods_Masterthesis.framework */; };
 		B34F50A824B714C200FED5C3 /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F50A724B714C200FED5C3 /* SurveyTask.swift */; };
+		B36F00E624C980AA0026095D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B36F00E224C980AA0026095D /* GoogleService-Info.plist */; };
 		B3733AD024C079F40022C3A0 /* StepCalculatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3733ACF24C079F40022C3A0 /* StepCalculatorHelper.swift */; };
 		B385224D24C1A00D0056D34F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385224C24C1A00D0056D34F /* DashboardViewController.swift */; };
 		B385224F24C1B5B00056D34F /* DiscreteGraphDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385224E24C1B5B00056D34F /* DiscreteGraphDataSource.swift */; };
@@ -64,7 +66,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		51E2BFB8FDAF33498F762DDF /* Pods-Masterthesis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Masterthesis.release.xcconfig"; path = "Target Support Files/Pods-Masterthesis/Pods-Masterthesis.release.xcconfig"; sourceTree = "<group>"; };
+		B14C1CF523159B46C5D174FB /* Pods-Masterthesis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Masterthesis.debug.xcconfig"; path = "Target Support Files/Pods-Masterthesis/Pods-Masterthesis.debug.xcconfig"; sourceTree = "<group>"; };
 		B34F50A724B714C200FED5C3 /* SurveyTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
+		B36F00E224C980AA0026095D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B3733ACF24C079F40022C3A0 /* StepCalculatorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCalculatorHelper.swift; sourceTree = "<group>"; };
 		B385224C24C1A00D0056D34F /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		B385224E24C1B5B00056D34F /* DiscreteGraphDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscreteGraphDataSource.swift; sourceTree = "<group>"; };
@@ -91,6 +96,7 @@
 		B3C4112224AF26AE00442787 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3C4112524AF26AE00442787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3C4112724AF26AE00442787 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4F379A84DFB1D94D2251AB2 /* Pods_Masterthesis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Masterthesis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +106,23 @@
 			files = (
 				B3A052F824AF276E00FB801B /* ResearchKit.framework in Frameworks */,
 				B38CF0FB24B7477600896774 /* HealthKit.framework in Frameworks */,
+				1ADB4E3AA57C2E8940D9D39A /* Pods_Masterthesis.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2ACD11F74683DDA795674F5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B14C1CF523159B46C5D174FB /* Pods-Masterthesis.debug.xcconfig */,
+				51E2BFB8FDAF33498F762DDF /* Pods-Masterthesis.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B385224A24C19D580056D34F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				B38CF0FA24B7477600896774 /* HealthKit.framework */,
+				B4F379A84DFB1D94D2251AB2 /* Pods_Masterthesis.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -172,6 +190,7 @@
 				B3A052F724AF276E00FB801B /* Frameworks */,
 				B3C4111524AF26AC00442787 /* Masterthesis */,
 				B3C4111424AF26AC00442787 /* Products */,
+				2ACD11F74683DDA795674F5A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,6 +224,7 @@
 				B3C4112224AF26AE00442787 /* Assets.xcassets */,
 				B3C4112424AF26AE00442787 /* LaunchScreen.storyboard */,
 				B3C4112724AF26AE00442787 /* Info.plist */,
+				B36F00E224C980AA0026095D /* GoogleService-Info.plist */,
 				B3C4111F24AF26AC00442787 /* Masterthesis.xcdatamodeld */,
 			);
 			path = Masterthesis;
@@ -217,10 +237,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3C4112A24AF26AE00442787 /* Build configuration list for PBXNativeTarget "Masterthesis" */;
 			buildPhases = (
+				710D0BDA7E71612202D6D910 /* [CP] Check Pods Manifest.lock */,
 				B3C4110F24AF26AC00442787 /* Sources */,
 				B3C4111024AF26AC00442787 /* Frameworks */,
 				B3C4111124AF26AC00442787 /* Resources */,
 				B3A052FA24AF276F00FB801B /* Embed Frameworks */,
+				1AC7EEEE6FC286DC376BD9DF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,12 +316,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C4112624AF26AE00442787 /* LaunchScreen.storyboard in Resources */,
+				B36F00E624C980AA0026095D /* GoogleService-Info.plist in Resources */,
 				B3C4112324AF26AE00442787 /* Assets.xcassets in Resources */,
 				B3C4111E24AF26AC00442787 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AC7EEEE6FC286DC376BD9DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Masterthesis/Pods-Masterthesis-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Masterthesis/Pods-Masterthesis-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Masterthesis/Pods-Masterthesis-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		710D0BDA7E71612202D6D910 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Masterthesis-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B3C4110F24AF26AC00442787 /* Sources */ = {
@@ -468,6 +533,7 @@
 		};
 		B3C4112B24AF26AE00442787 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B14C1CF523159B46C5D174FB /* Pods-Masterthesis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Masterthesis/Masterthesis.entitlements;
@@ -489,6 +555,7 @@
 		};
 		B3C4112C24AF26AE00442787 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51E2BFB8FDAF33498F762DDF /* Pods-Masterthesis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Masterthesis/Masterthesis.entitlements;
