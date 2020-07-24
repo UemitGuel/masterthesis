@@ -44,7 +44,7 @@ public var SurveyTask: ORKOrderedTask {
     
     let alwaysToNeverAnswerFormat = ORKAnswerFormat.textScale(with: alwaysToNeverTextChoices, defaultIndex: NSIntegerMax, vertical: false)
     
-    alwaysToNeverAnswerFormat.shouldShowDontKnowButton = true
+//    alwaysToNeverAnswerFormat.shouldShowDontKnowButton = true
     
     //vastToSmallExtendTextChoices
     let vastToSmallExtendTextChoices: [ORKTextChoice] = [ORKTextChoice(text: "in sehr geringem Maß", value: 0 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "in geringem Maß", value: 25 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "zum Teil", value: 50 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "in hohem Maß", value: 75 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "in sehr hohem Maß", value: 100 as NSCoding & NSCopying & NSObjectProtocol)]
@@ -103,27 +103,27 @@ public var SurveyTask: ORKOrderedTask {
     
     steps += [a1Form]
     
-//    //MARK: B1
-//
-//    let b11 = ORKFormItem(identifier: "b11", text: "Musst du sehr schnell lernen?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b12 = ORKFormItem(identifier: "b12", text: "Arbeitest du den ganzen Tag mit hohem Tempo?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b13 = ORKFormItem(identifier: "b13", text: "Wie oft kommt es vor, dass du nicht genügend Zeit hast, alle Aufgaben für den Tag zu erledigen?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b14 = ORKFormItem(identifier: "b14", text: "Kommst du mit dem Lernen in Rückstand?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b15 = ORKFormItem(identifier: "b15", text: "Musst du länger lernen als du dir das vorgenommen hast?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b16 = ORKFormItem(identifier: "b16", text: "Gehört es zu deinem Lernen dazu, sich mit den persönlichen Problemen anderer Menschen zu beschäftigen?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b1Form = ORKFormStep(identifier: "b1Form", title: nil, text: "Folgende Fragen betreffen die Anforderungen beim Lernen")
-//
-//    b1Form.formItems = [
-//        b11, b12, b13, b14, b15, b16
-//    ]
-//
-//    steps += [b1Form]
+    //MARK: B1
+
+    let b11 = ORKFormItem(identifier: "b11", text: "Musst du sehr schnell lernen?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b12 = ORKFormItem(identifier: "b12", text: "Arbeitest du den ganzen Tag mit hohem Tempo?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b13 = ORKFormItem(identifier: "b13", text: "Wie oft kommt es vor, dass du nicht genügend Zeit hast, alle Aufgaben für den Tag zu erledigen?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b14 = ORKFormItem(identifier: "b14", text: "Kommst du mit dem Lernen in Rückstand?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b15 = ORKFormItem(identifier: "b15", text: "Musst du länger lernen als du dir das vorgenommen hast?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b16 = ORKFormItem(identifier: "b16", text: "Gehört es zu deinem Lernen dazu, sich mit den persönlichen Problemen anderer Menschen zu beschäftigen?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b1Form = ORKFormStep(identifier: "b1Form", title: nil, text: "Folgende Fragen betreffen die Anforderungen beim Lernen")
+
+    b1Form.formItems = [
+        b11, b12, b13, b14, b15, b16
+    ]
+
+    steps += [b1Form]
 //
 //    //MARK: 1 2ter Teil
 //

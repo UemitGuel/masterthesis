@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		B38CF0F924B746E600896774 /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CF0F824B746E600896774 /* ConsentDocument.swift */; };
 		B38CF0FB24B7477600896774 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38CF0FA24B7477600896774 /* HealthKit.framework */; };
 		B38CF10024B74D3600896774 /* HKHealthStore+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CF0FF24B74D3600896774 /* HKHealthStore+Queries.swift */; };
+		B3954DDF24CAF25500A5ADDD /* AverageCalculatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3954DDE24CAF25500A5ADDD /* AverageCalculatorHelper.swift */; };
 		B3A052F824AF276E00FB801B /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A052F424AF276900FB801B /* ResearchKit.framework */; };
 		B3A052F924AF276F00FB801B /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3A052F424AF276900FB801B /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3C182FF24B08D2800FEFC65 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C182FE24B08D2800FEFC65 /* TaskViewController.swift */; };
@@ -84,6 +85,7 @@
 		B38CF0FA24B7477600896774 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		B38CF0FE24B7483C00896774 /* Masterthesis.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Masterthesis.entitlements; sourceTree = "<group>"; };
 		B38CF0FF24B74D3600896774 /* HKHealthStore+Queries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKHealthStore+Queries.swift"; sourceTree = "<group>"; };
+		B3954DDE24CAF25500A5ADDD /* AverageCalculatorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageCalculatorHelper.swift; sourceTree = "<group>"; };
 		B39B1C3B24AF5BA700DEF452 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		B39B1C3F24AF5BA700DEF452 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		B3A052ED24AF276800FB801B /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../../Downloads/ResearchKit-master-2/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
@@ -119,13 +121,13 @@
 				B14C1CF523159B46C5D174FB /* Pods-Masterthesis.debug.xcconfig */,
 				51E2BFB8FDAF33498F762DDF /* Pods-Masterthesis.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		B385224A24C19D580056D34F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B3954DDE24CAF25500A5ADDD /* AverageCalculatorHelper.swift */,
 				B3733ACF24C079F40022C3A0 /* StepCalculatorHelper.swift */,
 			);
 			path = Helper;
@@ -376,6 +378,7 @@
 				B38CF10024B74D3600896774 /* HKHealthStore+Queries.swift in Sources */,
 				B385224F24C1B5B00056D34F /* DiscreteGraphDataSource.swift in Sources */,
 				B38CF0F724B73DDE00896774 /* HealthDataStepViewController.swift in Sources */,
+				B3954DDF24CAF25500A5ADDD /* AverageCalculatorHelper.swift in Sources */,
 				B3C182FF24B08D2800FEFC65 /* TaskViewController.swift in Sources */,
 				B3C1830124B0B46800FEFC65 /* PersonalViewController.swift in Sources */,
 				B38CF0EA24B7395800896774 /* WithdrawViewController.swift in Sources */,

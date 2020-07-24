@@ -34,7 +34,7 @@ class TaskViewController: UIViewController, HealthClientType {
         startStudyButton.layer.cornerRadius = 10
     }
     
-    func handlea1FormResults(_ result: ORKTaskResult) {
+    func handleA1FormResults(_ result: ORKTaskResult) {
         let a1FormResult = result.result(forIdentifier: "a1Form") as! ORKStepResult
         let a11Result = a1FormResult.result(forIdentifier: "a11") as! ORKQuestionResult
         let a11Answer = a11Result.answer
@@ -50,13 +50,39 @@ class TaskViewController: UIViewController, HealthClientType {
         
         let a15Result = a1FormResult.result(forIdentifier: "a15") as! ORKQuestionResult
         let a15Answer = a15Result.answer
-        print(a11Answer)
-        print(a12Answer)
-        print(a13Answer)
-        print(a14Answer)
-        print(a15Answer)
-
+//        print(a11Answer)
+//        print(a12Answer)
+//        print(a13Answer)
+//        print(a14Answer)
+//        print(a15Answer)
     }
+    
+        func handleB1FormResults(_ result: ORKTaskResult) {
+            let b1FormResult = result.result(forIdentifier: "b1Form") as! ORKStepResult
+            let b11Result = b1FormResult.result(forIdentifier: "b11") as! ORKChoiceQuestionResult
+            let b11Answer = b11Result.choiceAnswers?.first as? Int
+            
+            let b12Result = b1FormResult.result(forIdentifier: "b12") as! ORKChoiceQuestionResult
+            let b12Answer = b12Result.choiceAnswers?.first as? Int
+            
+            let b13Result = b1FormResult.result(forIdentifier: "b13") as! ORKChoiceQuestionResult
+            let b13Answer = b13Result.choiceAnswers?.first as? Int
+            
+            let b14Result = b1FormResult.result(forIdentifier: "b14") as! ORKChoiceQuestionResult
+            let b14Answer = b14Result.choiceAnswers?.first as? Int
+            
+            let b15Result = b1FormResult.result(forIdentifier: "b15") as! ORKChoiceQuestionResult
+            let b15Answer = b15Result.choiceAnswers?.first as? Int
+            
+            let b16Result = b1FormResult.result(forIdentifier: "b16") as! ORKChoiceQuestionResult
+            let b16Answer = b16Result.choiceAnswers?.first as? Int
+            
+            let answerArray = [b11Answer,b12Answer,b13Answer,b14Answer,b15Answer,b16Answer].compactMap { $0 }
+            
+            let averageB1FormResult = sharedAverageCalculatorHelper.getAverage(arrayOfInt: answerArray)
+            print(averageB1FormResult)
+            
+        }
     
 }
 
@@ -65,7 +91,8 @@ extension TaskViewController: ORKTaskViewControllerDelegate{
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         switch reason {
         case .completed:
-            handlea1FormResults(taskViewController.result)
+            handleA1FormResults(taskViewController.result)
+            handleB1FormResults(taskViewController.result)
             taskViewController.dismiss(animated: true)
             break
         case .discarded:
