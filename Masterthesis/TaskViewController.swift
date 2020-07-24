@@ -76,6 +76,7 @@ class TaskViewController: UIViewController, HealthClientType {
             let b16Result = b1FormResult.result(forIdentifier: "b16") as! ORKChoiceQuestionResult
             sharedModel.b16Answer = b16Result.choiceAnswers?.first as? Int
 
+            sharedFirebaseHelper.saveDataB1(uuid: sharedModel.uuid, b11: sharedModel.b11Answer ?? -1, b12: sharedModel.b12Answer ?? -1, b13: sharedModel.b13Answer ?? -1, b14: sharedModel.b14Answer ?? -1, b15: sharedModel.b15Answer ?? -1, b16: sharedModel.b16Answer ?? -1, b1Average: sharedModel.averageB1FormResult ?? -1)
         }
     
 }

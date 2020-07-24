@@ -6,7 +6,7 @@ var sharedModel = SurveyViewModel()
 
 struct SurveyViewModel {
     
-    let uuid = UIDevice.current.identifierForVendor?.uuidString ?? "0"
+    let uuid = "ExampleUser2"
     
     var a11Answer: String?
     var a12Answer: String?
