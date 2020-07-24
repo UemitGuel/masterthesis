@@ -19,9 +19,6 @@ class TaskViewController: UIViewController, HealthClientType {
         present(taskViewController, animated: true, completion: nil)
     }
     
-    var task: ORKTask?
-    var result: ORKTaskResult?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureButton()
@@ -36,6 +33,31 @@ class TaskViewController: UIViewController, HealthClientType {
     func configureButton() {
         startStudyButton.layer.cornerRadius = 10
     }
+    
+    func handlea1FormResults(_ result: ORKTaskResult) {
+        let a1FormResult = result.result(forIdentifier: "a1Form") as! ORKStepResult
+        let a11Result = a1FormResult.result(forIdentifier: "a11") as! ORKQuestionResult
+        let a11Answer = a11Result.answer
+        
+        let a12Result = a1FormResult.result(forIdentifier: "a12") as! ORKQuestionResult
+        let a12Answer = a12Result.answer
+        
+        let a13Result = a1FormResult.result(forIdentifier: "a13") as! ORKQuestionResult
+        let a13Answer = a13Result.answer
+        
+        let a14Result = a1FormResult.result(forIdentifier: "a14") as! ORKQuestionResult
+        let a14Answer = a14Result.answer
+        
+        let a15Result = a1FormResult.result(forIdentifier: "a15") as! ORKQuestionResult
+        let a15Answer = a15Result.answer
+        print(a11Answer)
+        print(a12Answer)
+        print(a13Answer)
+        print(a14Answer)
+        print(a15Answer)
+
+    }
+    
 }
 
 extension TaskViewController: ORKTaskViewControllerDelegate{
@@ -43,10 +65,7 @@ extension TaskViewController: ORKTaskViewControllerDelegate{
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         switch reason {
         case .completed:
-//            self.task = taskViewController.task
-//            self.result = taskViewController.result
-//            let taskResult = taskViewController.result.result(forIdentifier: "BooleanQuestionStep") as! ORKStepResult
-//            let firstResult = taskResult.firstResult as! ORKBooleanQuestionResult
+            handlea1FormResults(taskViewController.result)
             taskViewController.dismiss(animated: true)
             break
         case .discarded:
