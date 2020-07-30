@@ -7,13 +7,13 @@ class TaskViewController: UIViewController, HealthClientType {
     
     let defaults = UserDefaults.standard
     
-    var uuid: String {
-        if let currentDeviceID = UIDevice.current.identifierForVendor?.uuidString {
-            return currentDeviceID
-        } else {
-            return "no device ID"
-        }
-    }
+    var uuid: String = "Example 1"
+//        if let currentDeviceID = UIDevice.current.identifierForVendor?.uuidString {
+//            return currentDeviceID
+//        } else {
+//            return "no device ID"
+//        }
+//    }
     
     let healthObjectTypes = [
         HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
@@ -83,8 +83,8 @@ class TaskViewController: UIViewController, HealthClientType {
         let a12Result = a1FormResult.result(forIdentifier: "a12") as! ORKChoiceQuestionResult
         let a12Answer = a12Result.choiceAnswers?.first as? String
         
-        let a13Result = a1FormResult.result(forIdentifier: "a13") as! ORKScaleQuestionResult
-        let a13Answer = a13Result.scaleAnswer?.stringValue
+        let a13Result = a1FormResult.result(forIdentifier: "a13") as! ORKChoiceQuestionResult
+        let a13Answer = a13Result.choiceAnswers?.first as? String
         
         let a14Result = a1FormResult.result(forIdentifier: "a14") as! ORKScaleQuestionResult
         let a14Answer = a14Result.scaleAnswer?.stringValue
@@ -92,7 +92,10 @@ class TaskViewController: UIViewController, HealthClientType {
         let a15Result = a1FormResult.result(forIdentifier: "a15") as! ORKScaleQuestionResult
         let a15Answer = a15Result.scaleAnswer?.stringValue
         
-        sharedFirebaseHelper.saveDataA1(uuid: self.uuid, a11: a11Answer ?? "k.A.", a12: a12Answer ?? "k.A.", a13: a13Answer ?? "k.A.", a14: a14Answer ?? "k.A.", a15: a15Answer ?? "k.A.")
+        let a16Result = a1FormResult.result(forIdentifier: "a16") as! ORKScaleQuestionResult
+        let a16Answer = a16Result.scaleAnswer?.stringValue
+        
+        sharedFirebaseHelper.saveDataA1(uuid: self.uuid, a11: a11Answer ?? "k.A.", a12: a12Answer ?? "k.A.", a13: a13Answer ?? "k.A.", a14: a14Answer ?? "k.A.", a15: a15Answer ?? "k.A.", a16: a16Answer ?? "k.A.")
         
     }
     

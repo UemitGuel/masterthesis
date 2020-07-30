@@ -22,7 +22,15 @@ public var SurveyTask: ORKOrderedTask {
     
 //    whichUniAnswerFormat.shouldShowDontKnowButton = true
     
-    // WhichGenderQuestionStep
+    //MARK:  BachelorMasterQuestionStep
+    let BachelorMasterChoices = [
+        ORKTextChoice(text: "Bachelor", value: "Bachelor" as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoice(text: "Master", value: "Master" as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoice(text: "Andere Abschlussform", value: "Andere Abschlussform" as NSCoding & NSCopying & NSObjectProtocol)
+    ]
+    let BachelorMasterAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: BachelorMasterChoices)
+    
+    //MARK:  WhichGenderQuestionStep
     let whichGenderChoices = [
         ORKTextChoice(text: "männlich", value: "männlich" as NSCoding & NSCopying & NSObjectProtocol),
         ORKTextChoice(text: "weiblich", value: "weiblich" as NSCoding & NSCopying & NSObjectProtocol),
@@ -90,15 +98,16 @@ public var SurveyTask: ORKOrderedTask {
     // Chapter A
     
     let a11 = ORKFormItem(identifier: "a11", text: "Welchen Studiengang studierst du?", answerFormat: whichUniAnswerFormat, optional: true)
-    let a12 = ORKFormItem(identifier: "a12", text: "Welchen Geschlecht hast du?", answerFormat: whichGenderAnswerFormat, optional: true)
-    let a13 = ORKFormItem(identifier: "a13", text: "Wie alt bist du?", answerFormat: ageAnswerFormat, optional: true)
-    let a14 = ORKFormItem(identifier: "a14", text: "Wie viele Stunden pro Woche arbeitest du nebenbei ungefähr? (Nebenjob, Werksstudent, Ehrenamtlich, etc.)", answerFormat: hoursAnswerFormat, optional: true)
-    let a15 = ORKFormItem(identifier: "a15", text: "Wie viele Stunden pro Woche lernst du ungefähr?", answerFormat: hoursAnswerFormat, optional: true)
+    let a12 = ORKFormItem(identifier: "a12", text: "In welchem Studienabschnitt bist du?", answerFormat: BachelorMasterAnswerFormat, optional: true)
+    let a13 = ORKFormItem(identifier: "a13", text: "Welchen Geschlecht hast du?", answerFormat: whichGenderAnswerFormat, optional: true)
+    let a14 = ORKFormItem(identifier: "a14", text: "Wie alt bist du?", answerFormat: ageAnswerFormat, optional: true)
+    let a15 = ORKFormItem(identifier: "a15", text: "Wie viele Stunden pro Woche arbeitest du nebenbei ungefähr? (Nebenjob, Werksstudent, Ehrenamtlich, etc.)", answerFormat: hoursAnswerFormat, optional: true)
+    let a16 = ORKFormItem(identifier: "a16", text: "Wie viele Stunden pro Woche lernst du ungefähr?", answerFormat: hoursAnswerFormat, optional: true)
     
     let a1Form = ORKFormStep(identifier: "a1Form", title: "Person& Studium", text: nil)
     
     a1Form.formItems = [
-        a11, a12, a13, a14, a15
+        a11, a12, a13, a14, a15, a16
     ]
     
     steps += [a1Form]

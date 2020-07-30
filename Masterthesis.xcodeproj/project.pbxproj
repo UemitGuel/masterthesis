@@ -158,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				B38CF0ED24B73AD000896774 /* OnboardingViewController.swift */,
+				B38CF0F824B746E600896774 /* ConsentDocument.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -174,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				B38CF0F624B73DDE00896774 /* HealthDataStepViewController.swift */,
-				B38CF0F824B746E600896774 /* ConsentDocument.swift */,
 				B38CF0F124B73DCA00896774 /* HealthDataStep.swift */,
 			);
 			path = Steps;
