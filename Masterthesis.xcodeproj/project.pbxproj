@@ -23,7 +23,7 @@
 		B38CF0FB24B7477600896774 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38CF0FA24B7477600896774 /* HealthKit.framework */; };
 		B38CF10024B74D3600896774 /* HKHealthStore+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CF0FF24B74D3600896774 /* HKHealthStore+Queries.swift */; };
 		B3954DDF24CAF25500A5ADDD /* AverageCalculatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3954DDE24CAF25500A5ADDD /* AverageCalculatorHelper.swift */; };
-		B3954DE424CB08EF00A5ADDD /* SurveyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3954DE324CB08EF00A5ADDD /* SurveyViewModel.swift */; };
+		B3954DE424CB08EF00A5ADDD /* StepsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3954DE324CB08EF00A5ADDD /* StepsEnum.swift */; };
 		B3954DE624CB0CD700A5ADDD /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3954DE524CB0CD700A5ADDD /* FirebaseHelper.swift */; };
 		B3A052F824AF276E00FB801B /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A052F424AF276900FB801B /* ResearchKit.framework */; };
 		B3A052F924AF276F00FB801B /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3A052F424AF276900FB801B /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -86,7 +86,7 @@
 		B38CF0FE24B7483C00896774 /* Masterthesis.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Masterthesis.entitlements; sourceTree = "<group>"; };
 		B38CF0FF24B74D3600896774 /* HKHealthStore+Queries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKHealthStore+Queries.swift"; sourceTree = "<group>"; };
 		B3954DDE24CAF25500A5ADDD /* AverageCalculatorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageCalculatorHelper.swift; sourceTree = "<group>"; };
-		B3954DE324CB08EF00A5ADDD /* SurveyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModel.swift; sourceTree = "<group>"; };
+		B3954DE324CB08EF00A5ADDD /* StepsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsEnum.swift; sourceTree = "<group>"; };
 		B3954DE524CB0CD700A5ADDD /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		B39B1C3B24AF5BA700DEF452 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		B39B1C3F24AF5BA700DEF452 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 		B3C31DED24CC650A004ADA56 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B3954DE324CB08EF00A5ADDD /* SurveyViewModel.swift */,
+				B3954DE324CB08EF00A5ADDD /* StepsEnum.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,11 +225,10 @@
 				B38CF0E024B7377D00896774 /* ResearchContainerViewController.swift */,
 				B38CF0E524B7384200896774 /* ResearchContainerSegue.swift */,
 				B385224C24C1A00D0056D34F /* DashboardViewController.swift */,
-				B3C182FE24B08D2800FEFC65 /* TaskViewController.swift */,
+				B3C9C86824D30EB30088E944 /* Survey */,
 				B3C1830024B0B46800FEFC65 /* PersonalViewController.swift */,
 				B3B34FC024B8680D00DA2978 /* Onboarding */,
 				B3B34FC224B8685200DA2978 /* Steps */,
-				B34F50A724B714C200FED5C3 /* SurveyTask.swift */,
 				B3B34FC124B8682500DA2978 /* Withdrawal */,
 				B3B34FC324B8686000DA2978 /* Protocols */,
 				B38CF0FF24B74D3600896774 /* HKHealthStore+Queries.swift */,
@@ -241,6 +240,15 @@
 				B3C4111F24AF26AC00442787 /* Masterthesis.xcdatamodeld */,
 			);
 			path = Masterthesis;
+			sourceTree = "<group>";
+		};
+		B3C9C86824D30EB30088E944 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				B3C182FE24B08D2800FEFC65 /* TaskViewController.swift */,
+				B34F50A724B714C200FED5C3 /* SurveyTask.swift */,
+			);
+			path = Survey;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,7 +399,7 @@
 				B38CF0F724B73DDE00896774 /* HealthDataStepViewController.swift in Sources */,
 				B3954DDF24CAF25500A5ADDD /* AverageCalculatorHelper.swift in Sources */,
 				B3C182FF24B08D2800FEFC65 /* TaskViewController.swift in Sources */,
-				B3954DE424CB08EF00A5ADDD /* SurveyViewModel.swift in Sources */,
+				B3954DE424CB08EF00A5ADDD /* StepsEnum.swift in Sources */,
 				B3C1830124B0B46800FEFC65 /* PersonalViewController.swift in Sources */,
 				B38CF0EA24B7395800896774 /* WithdrawViewController.swift in Sources */,
 				B38CF0EE24B73AD000896774 /* OnboardingViewController.swift in Sources */,

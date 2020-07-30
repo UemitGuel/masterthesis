@@ -1,17 +1,23 @@
 
 import Foundation
 
-let sharedAverageCalculatorHelper = AverageCalculatorHelper()
-
 class AverageCalculatorHelper {
     
-    func getAverage(arrayOfInt: [Int]) -> Int {
-        var total = 0
-        for item in arrayOfInt {
-            total += item
+    static let shared = AverageCalculatorHelper()
+    
+    func getAverage(_ arrayOfInt: [Int?]) -> Int {
+        let arrayOfIntNotNil = arrayOfInt.compactMap { $0 }
+        if arrayOfIntNotNil.count == 0 {
+            return 0
+        } else {
+            var total = 0
+            for item in arrayOfIntNotNil {
+                total += item
+            }
+            let average = total/arrayOfIntNotNil.count
+            return average
         }
-        let average = total/arrayOfInt.count
-        return average
+
     }
     
 }

@@ -7,6 +7,14 @@ class TaskViewController: UIViewController, HealthClientType {
     
     let defaults = UserDefaults.standard
     
+    var uuid: String {
+        if let currentDeviceID = UIDevice.current.identifierForVendor?.uuidString {
+            return currentDeviceID
+        } else {
+            return "no device ID"
+        }
+    }
+    
     let healthObjectTypes = [
         HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
     ]
@@ -55,7 +63,7 @@ class TaskViewController: UIViewController, HealthClientType {
                 print(changeInPercentageRounded)
                 self.defaults.set(changeInPercentageRounded, forKey: StepsEnum.changeInPercentage.rawValue)
                 
-                sharedFirebaseHelper.saveSteps(uuid: sharedModel.uuid, stepsLast30DaysAverage: stepsLast30daysInt, stepsLast60to30DaysAverage: stepsLast60to30daysInt, changeInPercentage: changeInPercentageRounded)
+                sharedFirebaseHelper.saveSteps(uuid: self.uuid, stepsLast30DaysAverage: stepsLast30daysInt, stepsLast60to30DaysAverage: stepsLast60to30daysInt, changeInPercentage: changeInPercentageRounded)
                 self.defaults.set(true, forKey: "stepDataSaved")
             }
         }
@@ -66,48 +74,52 @@ class TaskViewController: UIViewController, HealthClientType {
         return devision
     }
     
+    //MARK: Handle A1 Results
     func handleA1FormResults(_ result: ORKTaskResult) {
         let a1FormResult = result.result(forIdentifier: "a1Form") as! ORKStepResult
         let a11Result = a1FormResult.result(forIdentifier: "a11") as! ORKChoiceQuestionResult
-        sharedModel.a11Answer = a11Result.choiceAnswers?.first as? String
+        let a11Answer = a11Result.choiceAnswers?.first as? String
         
         let a12Result = a1FormResult.result(forIdentifier: "a12") as! ORKChoiceQuestionResult
-        sharedModel.a12Answer = a12Result.choiceAnswers?.first as? String
+        let a12Answer = a12Result.choiceAnswers?.first as? String
         
         let a13Result = a1FormResult.result(forIdentifier: "a13") as! ORKScaleQuestionResult
-        sharedModel.a13Answer = a13Result.scaleAnswer?.stringValue
+        let a13Answer = a13Result.scaleAnswer?.stringValue
         
         let a14Result = a1FormResult.result(forIdentifier: "a14") as! ORKScaleQuestionResult
-        sharedModel.a14Answer = a14Result.scaleAnswer?.stringValue
+        let a14Answer = a14Result.scaleAnswer?.stringValue
         
         let a15Result = a1FormResult.result(forIdentifier: "a15") as! ORKScaleQuestionResult
-        sharedModel.a15Answer = a15Result.scaleAnswer?.stringValue
+        let a15Answer = a15Result.scaleAnswer?.stringValue
         
-        sharedFirebaseHelper.saveDataA1(uuid: sharedModel.uuid, a11: sharedModel.a11Answer ?? "k.A.", a12: sharedModel.a12Answer ?? "k.A.", a13: sharedModel.a13Answer ?? "k.A.", a14: sharedModel.a14Answer ?? "k.A.", a15: sharedModel.a15Answer ?? "k.A.")
+        sharedFirebaseHelper.saveDataA1(uuid: self.uuid, a11: a11Answer ?? "k.A.", a12: a12Answer ?? "k.A.", a13: a13Answer ?? "k.A.", a14: a14Answer ?? "k.A.", a15: a15Answer ?? "k.A.")
         
     }
     
+    //MARK: Handle B1 Results
     func handleB1FormResults(_ result: ORKTaskResult) {
         let b1FormResult = result.result(forIdentifier: "b1Form") as! ORKStepResult
         let b11Result = b1FormResult.result(forIdentifier: "b11") as! ORKChoiceQuestionResult
-        sharedModel.b11Answer = b11Result.choiceAnswers?.first as? Int
+        let b11Answer = b11Result.choiceAnswers?.first as? Int
         
         let b12Result = b1FormResult.result(forIdentifier: "b12") as! ORKChoiceQuestionResult
-        sharedModel.b12Answer = b12Result.choiceAnswers?.first as? Int
+        let b12Answer = b12Result.choiceAnswers?.first as? Int
         
         let b13Result = b1FormResult.result(forIdentifier: "b13") as! ORKChoiceQuestionResult
-        sharedModel.b13Answer = b13Result.choiceAnswers?.first as? Int
+        let b13Answer = b13Result.choiceAnswers?.first as? Int
         
         let b14Result = b1FormResult.result(forIdentifier: "b14") as! ORKChoiceQuestionResult
-        sharedModel.b14Answer = b14Result.choiceAnswers?.first as? Int
+        let b14Answer = b14Result.choiceAnswers?.first as? Int
         
         let b15Result = b1FormResult.result(forIdentifier: "b15") as! ORKChoiceQuestionResult
-        sharedModel.b15Answer = b15Result.choiceAnswers?.first as? Int
+        let b15Answer = b15Result.choiceAnswers?.first as? Int
         
         let b16Result = b1FormResult.result(forIdentifier: "b16") as! ORKChoiceQuestionResult
-        sharedModel.b16Answer = b16Result.choiceAnswers?.first as? Int
+        let b16Answer = b16Result.choiceAnswers?.first as? Int
         
-        sharedFirebaseHelper.saveDataB1(uuid: sharedModel.uuid, b11: sharedModel.b11Answer ?? -1, b12: sharedModel.b12Answer ?? -1, b13: sharedModel.b13Answer ?? -1, b14: sharedModel.b14Answer ?? -1, b15: sharedModel.b15Answer ?? -1, b16: sharedModel.b16Answer ?? -1, b1Average: sharedModel.averageB1FormResult ?? -1)
+        let averageB1FormResult = AverageCalculatorHelper.shared.getAverage([b11Answer,b12Answer,b13Answer,b14Answer,b15Answer,b16Answer])
+        
+        sharedFirebaseHelper.saveDataB1(uuid: uuid, b11: b11Answer ?? -1, b12: b12Answer ?? -1, b13: b13Answer ?? -1, b14: b14Answer ?? -1, b15: b15Answer ?? -1, b16: b16Answer ?? -1, b1Average: averageB1FormResult )
     }
 }
 
