@@ -126,50 +126,49 @@ public var SurveyTask: ORKOrderedTask {
 
     let b16 = ORKFormItem(identifier: "b16", text: "Gehört es zu deinem Lernen dazu, sich mit den persönlichen Problemen anderer Menschen zu beschäftigen?", answerFormat: alwaysToNeverAnswerFormat)
 
-    let b1Form = ORKFormStep(identifier: "b1Form", title: nil, text: "Folgende Fragen betreffen die Anforderungen beim Lernen")
+    let b1Form = ORKFormStep(identifier: "b1Form", title: "Anforderungen", text: "Denke an deine letzten zwei Wochen, in wie weit treffen die folgenden Aussagen zu?")
 
     b1Form.formItems = [
         b11, b12, b13, b14, b15, b16
     ]
 
     steps += [b1Form]
-//
-//    //MARK: 1 2ter Teil
-//
-//    let b11_2 = ORKFormItem(identifier: "b11_2", text: "Fordert dich das Lernen emotional?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b12_2 = ORKFormItem(identifier: "b12_2", text: "Verlangt das Studium von dir, dass du deine Gefühle verbergen musst?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b13_2 = ORKFormItem(identifier: "b13_2", text: "Verlangt das Studium von dir, deine Meinung zurück zu halten?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b1_2Form = ORKFormStep(identifier: "b1_2Form", title: nil, text: "Anforderungen beim Lernen (Teil 2)")
-//
-//    b1_2Form.formItems = [
-//        b11_2, b12_2, b13_2
-//    ]
-//
-//    steps += [b1_2Form]
-//
-//    //MARK: B2
-//
-//    let b21 = ORKFormItem(identifier: "b21", text: "Die Anforderungen meines Studiums stören mein Privat- und Familienleben", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b22 = ORKFormItem(identifier: "b22", text: "Wegen meiner Verpflichtungen im Studium muss ich Pläne für private oder Familienaktivitäten ändern", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b23 = ORKFormItem(identifier: "b23", text: "Mein Studium beansprucht so viel Energie, dass sich dies negativ auf mein Privatleben auswirkt", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b24 = ORKFormItem(identifier: "b24", text: "Mein Studium nimmt so viel Zeit in Anspruch, dass sich dies negativ auf mein Privatleben auswirkt.", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b25 = ORKFormItem(identifier: "b25", text: "In meiner Freizeit bin ich für Personen, mit den ich im Studium zu tun habe, erreichbar.", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//
-//    let b2Form = ORKFormStep(identifier: "b2Form", title: nil, text: "Die folgenden Fragen betreffen das Verhältnis zwischen Arbeit und Privatleben: Inwieweit stimmst du folgenden Aussagen zu?")
-//
-//    b2Form.formItems = [
-//        b21, b22, b23, b24, b25
-//    ]
-//
-//    steps += [b2Form]
+
+    //MARK: 1 2ter Teil
+
+    let b11_2 = ORKFormItem(identifier: "b11_2", text: "Fordert dich das Lernen emotional?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b12_2 = ORKFormItem(identifier: "b12_2", text: "Verlangt das Studium von dir, dass du deine Gefühle verbergen musst?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b13_2 = ORKFormItem(identifier: "b13_2", text: "Verlangt das Studium von dir, deine Meinung zurück zu halten?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b1_2Form = ORKFormStep(identifier: "b1_2Form", title: "Anforderungen", text: "Denke an deine letzten zwei Wochen, in wie weit treffen die folgenden Aussagen zu?")
+
+    b1_2Form.formItems = [
+        b11_2, b12_2, b13_2
+    ]
+
+    steps += [b1_2Form]
+
+    //MARK: B2
+
+    let b21 = ORKFormItem(identifier: "b21", text: "Die Anforderungen meines Studiums stören mein Privat- und Familienleben", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b22 = ORKFormItem(identifier: "b22", text: "Wegen meiner Verpflichtungen im Studium muss ich Pläne für private oder Familienaktivitäten ändern", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b23 = ORKFormItem(identifier: "b23", text: "Mein Studium beansprucht so viel Energie, dass sich dies negativ auf mein Privatleben auswirkt", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b24 = ORKFormItem(identifier: "b24", text: "Mein Studium nimmt so viel Zeit in Anspruch, dass sich dies negativ auf mein Privatleben auswirkt.", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b25 = ORKFormItem(identifier: "b25", text: "In meiner Freizeit bin ich für Personen, mit den ich im Studium zu tun habe, erreichbar.", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b2Form = ORKFormStep(identifier: "b2Form", title: "Privatleben", text: "Denke an deine letzten zwei Wochen, in wie weit treffen die folgenden Aussagen zu?")
+
+    b2Form.formItems = [
+        b21, b22, b23, b24, b25
+    ]
+
+    steps += [b2Form]
 //
 //    //MARK: B3
 //
