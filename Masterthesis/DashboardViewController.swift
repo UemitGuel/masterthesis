@@ -30,16 +30,22 @@ class DashboardViewController: UIViewController, HealthClientType {
         let dateBefore60Days = sharedStepCalculatorHelper.getBefore60DaysFormatted()
         last60DaysDateLabel.text = "von \(dateBefore60Days) bis \(dateBefore30Days)"
         
-        if let last30 = sharedModel.stepsLast30days {
-            last30DaysLabel.text = "\((last30*100).rounded()/100) Schritte"
-        }
+        let last30 = defaults.integer(forKey: StepsEnum.stepsLast30days.rawValue)
+        last30DaysLabel.text = "\(last30) Schritte"
         
-        if let last60to30 = sharedModel.stepsLast60to30days {
-            last60DaysLabel.text = "\((last60to30*100).rounded()/100) Schritte"
-        }
+        let last60to30 = defaults.integer(forKey: StepsEnum.stepsLast60to30days.rawValue)
+        last60DaysLabel.text = "\(last60to30) Schritte"
         
-        if let changeInPercentage = sharedModel.changeInPercentage {
-            differenceLabel.text = "\((changeInPercentage*100).rounded()/100)%"
+        let changeInPercentage = defaults.double(forKey: StepsEnum.changeInPercentage.rawValue)
+        if changeInPercentage.isNaN {
+            differenceLabel.text = "-"
+        } else {
+            differenceLabel.text = "\(changeInPercentage)%"
+        }
+        if changeInPercentage < 0 {
+            differenceLabel.textColor = .systemRed
+        } else {
+            differenceLabel.textColor = .systemGreen
         }
     }
 }

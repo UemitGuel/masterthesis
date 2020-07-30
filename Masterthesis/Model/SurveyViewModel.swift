@@ -4,19 +4,15 @@ import Foundation
 
 var sharedModel = SurveyViewModel()
 
+enum StepsEnum: String {
+    case stepsLast30days
+    case stepsLast60to30days
+    case changeInPercentage
+}
+
 struct SurveyViewModel {
     
     let uuid = "ExampleUser1"
-    
-    var stepsLast30days: Double?
-    var stepsLast60to30days: Double?
-    
-    var changeInPercentage: Double? {
-        guard let last30 = stepsLast30days else { return -1 }
-        guard let last60 = stepsLast60to30days else { return -1 }
-        let devision: Double = (((last60/last30)-1)*100)
-        return devision
-    }
     
     var a11Answer: String?
     var a12Answer: String?

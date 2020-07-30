@@ -24,6 +24,7 @@ class TaskViewController: UIViewController, HealthClientType {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureButton()
+
         if defaults.bool(forKey: "stepDataSaved") == false {
             self.fillViewModelWithStepsData()
         }
@@ -42,13 +43,27 @@ class TaskViewController: UIViewController, HealthClientType {
     
     func fillViewModelWithStepsData() {
         sharedStepCalculatorHelper.getAverageStepsFor(dayInterval: .zeroToThirty, healthStore: healthStore) { double in
-            sharedModel.stepsLast30days = double
+            let stepsLast30daysDouble = double
+            let stepsLast30daysInt = Int(double)
+            self.defaults.set(stepsLast30daysInt, forKey: StepsEnum.stepsLast30days.rawValue)
             sharedStepCalculatorHelper.getAverageStepsFor(dayInterval: .fourtyToSixty, healthStore: self.healthStore) { double in
-                sharedModel.stepsLast60to30days = double
-                sharedFirebaseHelper.saveSteps(uuid: sharedModel.uuid, stepsLast30DaysAverage: sharedModel.stepsLast30days ?? -1, stepsLast60to30DaysAverage: sharedModel.stepsLast60to30days ?? -1, changeInPercentage: sharedModel.changeInPercentage ?? -1)
+                let stepsLast60to30daysDouble = double
+                let stepsLast60to30daysInt = Int(double)
+                self.defaults.set(stepsLast60to30daysInt, forKey: StepsEnum.stepsLast60to30days.rawValue)
+                let changeInPercentage = (((stepsLast30daysDouble/stepsLast60to30daysDouble)-1)*100)
+                let changeInPercentageRounded = ((changeInPercentage*100).rounded()/100)
+                print(changeInPercentageRounded)
+                self.defaults.set(changeInPercentageRounded, forKey: StepsEnum.changeInPercentage.rawValue)
+                
+                sharedFirebaseHelper.saveSteps(uuid: sharedModel.uuid, stepsLast30DaysAverage: stepsLast30daysInt, stepsLast60to30DaysAverage: stepsLast60to30daysInt, changeInPercentage: changeInPercentageRounded)
                 self.defaults.set(true, forKey: "stepDataSaved")
             }
         }
+    }
+    
+    func getChangeInPercentage(stepsLast30days: Double, stepsLast60to30days: Double) -> Double {
+        let devision: Double = (((stepsLast60to30days/stepsLast30days)-1)*100)
+        return devision
     }
     
     func handleA1FormResults(_ result: ORKTaskResult) {
