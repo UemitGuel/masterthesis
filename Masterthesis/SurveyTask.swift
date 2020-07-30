@@ -20,7 +20,7 @@ public var SurveyTask: ORKOrderedTask {
     ]
     let whichUniAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: whichUniChoices)
     
-    whichUniAnswerFormat.shouldShowDontKnowButton = true
+//    whichUniAnswerFormat.shouldShowDontKnowButton = true
     
     // WhichGenderQuestionStep
     let whichGenderChoices = [
@@ -30,7 +30,7 @@ public var SurveyTask: ORKOrderedTask {
     ]
     let whichGenderAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: whichGenderChoices)
     
-    whichGenderAnswerFormat.customDontKnowButtonText = "Das möchte ich nicht beantworten"
+//    whichGenderAnswerFormat.customDontKnowButtonText = "Das möchte ich nicht beantworten"
     
     //AGE
     let ageAnswerFormat = ORKContinuousScaleAnswerFormat(maximumValue: 40, minimumValue: 18, defaultValue: 22, maximumFractionDigits: 0)
@@ -51,7 +51,7 @@ public var SurveyTask: ORKOrderedTask {
     
     let vastToSmallExtendAnswerFormat = ORKAnswerFormat.textScale(with: vastToSmallExtendTextChoices, defaultIndex: NSIntegerMax, vertical: false)
     
-    vastToSmallExtendAnswerFormat.shouldShowDontKnowButton = true
+//    vastToSmallExtendAnswerFormat.shouldShowDontKnowButton = true
     
     //neverToEveryDayTextChoices
     let neverToEveryDayTextChoices: [ORKTextChoice] = [ORKTextChoice(text: "nie", value: 0 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "einige Male im Jahr", value: 25 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "einige Male im Monat", value: 50 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "einige Male in der Woche", value: 75 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "jeden Tag", value: 100 as NSCoding & NSCopying & NSObjectProtocol)]
@@ -65,7 +65,7 @@ public var SurveyTask: ORKOrderedTask {
     
     let happyToNotHappyAnswerFormat = ORKAnswerFormat.textScale(with: happyToNotHappyTextChoices, defaultIndex: NSIntegerMax, vertical: false)
     
-    happyToNotHappyAnswerFormat.shouldShowDontKnowButton = true
+//    happyToNotHappyAnswerFormat.shouldShowDontKnowButton = true
     
     //whichBadEnviroment (B8b)
     let whichBadEnviromentChoices = [
@@ -77,7 +77,7 @@ public var SurveyTask: ORKOrderedTask {
     ]
     let whichBadEnviromentAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .multipleChoice, textChoices: whichBadEnviromentChoices)
     
-    whichBadEnviromentAnswerFormat.shouldShowDontKnowButton = true
+//    whichBadEnviromentAnswerFormat.shouldShowDontKnowButton = true
     
     
     // Instruction step

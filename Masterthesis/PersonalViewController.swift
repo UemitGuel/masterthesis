@@ -7,6 +7,25 @@ class PersonalViewController: UIViewController {
     
     @IBOutlet weak var mailButton: UIButton!
     
+    @IBOutlet weak var copsoqInformationButton: UIButton!
+    
+    @IBAction func copsoqButtonTapped(_ sender: UIButton) {
+        if let url = URL(string: "https://www.copsoq.de") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    
+    @IBOutlet weak var githubButton: UIButton!
+    
+    @IBAction func githubButtonTapped(_ sender: UIButton) {
+        if let url = URL(string: "https://github.com/quechupiOS/masterthesis") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    
+    
     @IBAction func mailButtonTapped(_ sender: UIButton) {
         sendEmail(subject: "Frage zur Umfrage um die psychische Gesundheit von Studenten zu evaluieren", body: "<p>Lieber Ümit,ich habe folgende Frage zu deiner Studie:</p>")
     }
@@ -20,13 +39,9 @@ class PersonalViewController: UIViewController {
     
     func configureButton() {
         mailButton.layer.cornerRadius = 10
-        mailButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
-        mailButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
-        mailButton.contentHorizontalAlignment = .left
         withdrawStudy.layer.cornerRadius = 10
-        withdrawStudy.titleEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
-        withdrawStudy.contentEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
-        withdrawStudy.contentHorizontalAlignment = .left
+        copsoqInformationButton.layer.cornerRadius = 10
+        githubButton.layer.cornerRadius = 10
     }
     
     func sendEmail(subject: String, body: String) {

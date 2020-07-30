@@ -172,14 +172,14 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgA-vC-VvA">
-                                <rect key="frame" x="20" y="420" width="374" height="56"/>
+                                <rect key="frame" x="20" y="332" width="374" height="56"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="OcE-ps-0XM"/>
+                                    <constraint firstAttribute="height" constant="56" id="fL8-JY-2VX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <state key="normal" title="Frage zur Studie" image="envelope.fill" catalog="system">
+                                <state key="normal" title="Fragen zur Studie">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
                                 <connections>
@@ -187,10 +187,10 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ta-DO-pCu">
-                                <rect key="frame" x="20" y="508" width="374" height="56"/>
+                                <rect key="frame" x="20" y="628" width="374" height="56"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="wea-3s-obR"/>
+                                    <constraint firstAttribute="height" constant="56" id="BVa-23-Kbc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -201,20 +201,56 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
                                     <segue destination="BPT-Mf-qyP" kind="unwind" unwindAction="unwindToWithdrawl:" id="Jd8-ZO-3lR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frW-1c-xcd">
+                                <rect key="frame" x="20" y="508" width="374" height="56"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="z9J-fU-UIW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Projekt in Github">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="githubButtonTapped:" destination="DAn-Th-Gpp" eventType="touchUpInside" id="anB-zq-29K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1R-9S-Jcu">
+                                <rect key="frame" x="20" y="420" width="374" height="56"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="GvN-hs-SV0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Mehr zum COPSOQ Fragebogen">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="copsoqButtonTapped:" destination="DAn-Th-Gpp" eventType="touchUpInside" id="WFE-nl-yzY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="WgA-vC-VvA" firstAttribute="centerY" secondItem="YYu-g9-tT7" secondAttribute="centerY" id="I5I-7N-DOW"/>
-                            <constraint firstItem="4ta-DO-pCu" firstAttribute="top" secondItem="WgA-vC-VvA" secondAttribute="bottom" constant="32" id="KTf-nE-ir6"/>
-                            <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="4ta-DO-pCu" secondAttribute="trailing" constant="20" id="Twz-QA-n7H"/>
-                            <constraint firstItem="WgA-vC-VvA" firstAttribute="leading" secondItem="BeG-H8-eWA" secondAttribute="leading" constant="20" id="Y29-TN-NXD"/>
-                            <constraint firstItem="4ta-DO-pCu" firstAttribute="leading" secondItem="BeG-H8-eWA" secondAttribute="leading" constant="20" id="nSC-g5-cZ2"/>
-                            <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="WgA-vC-VvA" secondAttribute="trailing" constant="20" id="ySd-Y1-Ofy"/>
+                            <constraint firstItem="WgA-vC-VvA" firstAttribute="leading" secondItem="BeG-H8-eWA" secondAttribute="leading" constant="20" id="6WF-aA-c8G"/>
+                            <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="c1R-9S-Jcu" secondAttribute="trailing" constant="20" id="76L-tC-iGx"/>
+                            <constraint firstItem="c1R-9S-Jcu" firstAttribute="leading" secondItem="BeG-H8-eWA" secondAttribute="leading" constant="20" id="7dr-wJ-WaH"/>
+                            <constraint firstItem="frW-1c-xcd" firstAttribute="top" secondItem="c1R-9S-Jcu" secondAttribute="bottom" constant="32" id="EWB-Sm-6qJ"/>
+                            <constraint firstItem="c1R-9S-Jcu" firstAttribute="centerY" secondItem="YYu-g9-tT7" secondAttribute="centerY" id="Eun-hn-BRa"/>
+                            <constraint firstItem="4ta-DO-pCu" firstAttribute="top" secondItem="frW-1c-xcd" secondAttribute="bottom" constant="64" id="LR6-uL-ntt"/>
+                            <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="4ta-DO-pCu" secondAttribute="trailing" constant="20" id="Tu0-S5-QlJ"/>
+                            <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="frW-1c-xcd" secondAttribute="trailing" constant="20" id="Wmh-bp-0Fq"/>
+                            <constraint firstItem="4ta-DO-pCu" firstAttribute="leading" secondItem="BeG-H8-eWA" secondAttribute="leading" constant="20" id="cfZ-f2-PFB"/>
+                            <constraint firstItem="frW-1c-xcd" firstAttribute="leading" secondItem="BeG-H8-eWA" secondAttribute="leading" constant="20" id="r9R-BV-HRr"/>
+                            <constraint firstItem="BeG-H8-eWA" firstAttribute="trailing" secondItem="WgA-vC-VvA" secondAttribute="trailing" constant="20" id="sJI-bt-rET"/>
+                            <constraint firstItem="c1R-9S-Jcu" firstAttribute="top" secondItem="WgA-vC-VvA" secondAttribute="bottom" constant="32" id="x8s-zr-EUQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BeG-H8-eWA"/>
                     </view>
                     <navigationItem key="navigationItem" id="zTs-Xx-mIW"/>
                     <connections>
+                        <outlet property="copsoqInformationButton" destination="c1R-9S-Jcu" id="j9G-Pi-Z4G"/>
+                        <outlet property="githubButton" destination="frW-1c-xcd" id="TIY-Yo-Gy6"/>
                         <outlet property="mailButton" destination="WgA-vC-VvA" id="68A-LH-c9J"/>
                         <outlet property="withdrawStudy" destination="4ta-DO-pCu" id="eag-sD-5jd"/>
                         <segue destination="BPT-Mf-qyP" kind="unwind" unwindAction="unwindToWithdrawl:" id="j5G-zI-bvK"/>
@@ -228,11 +264,10 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
         <!--Account-->
         <scene sceneID="kbq-Yx-bsJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ubX-0G-VkH" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ubX-0G-VkH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Account" image="person.crop.circle" catalog="system" id="CfT-s6-017"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jml-sr-Owz">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -253,61 +288,57 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00000 Schritte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPF-4D-U0p">
-                                <rect key="frame" x="20" y="498" width="374" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <rect key="frame" x="20" y="247" width="374" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17.07.00 - 00.00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCd-Bk-lCC">
-                                <rect key="frame" x="20" y="542" width="374" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="20" y="295" width="374" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Durschnitt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlB-PB-KDJ">
-                                <rect key="frame" x="20" y="598" width="374" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <rect key="frame" x="20" y="353.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00000 Schritte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAC-32-Bm0">
-                                <rect key="frame" x="20" y="627.5" width="374" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <rect key="frame" x="20" y="374" width="374" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17.07.00 - 00.00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRs-Dn-4OW">
-                                <rect key="frame" x="20" y="671.5" width="374" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="20" y="422" width="374" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unterschied" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKK-i1-Jwf">
-                                <rect key="frame" x="20" y="727.5" width="374" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <rect key="frame" x="20" y="480.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00000 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6O-Au-goC">
-                                <rect key="frame" x="20" y="757" width="374" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <rect key="frame" x="20" y="509" width="374" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Durschnitt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBU-8H-I1l">
-                                <rect key="frame" x="20" y="468.5" width="374" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <rect key="frame" x="20" y="226.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rqe-Zy-bwb" customClass="ORKDiscreteGraphChartView">
-                                <rect key="frame" x="20" y="258.5" width="374" height="190"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECC-0a-Daq">
-                                <rect key="frame" x="20" y="108" width="374" height="130.5"/>
+                                <rect key="frame" x="20" y="64" width="374" height="130.5"/>
                                 <string key="text">Die Studie möchte rausfinden, ob es einen Zusammenhang zwischen psychischer Belastung und verringerter Anzahl von Schritten pro Tag gibt. Hier sieht du einen Vergleich zwischen dem gemittelten Wert der letzten 30 Tage und der 30 Tage davor.</string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -315,9 +346,9 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="rCd-Bk-lCC" secondAttribute="trailing" constant="20" id="3Cp-DJ-yrV"/>
-                            <constraint firstItem="QPF-4D-U0p" firstAttribute="top" secondItem="uBU-8H-I1l" secondAttribute="bottom" constant="8" id="4Y1-zc-ftE"/>
+                            <constraint firstItem="QPF-4D-U0p" firstAttribute="top" secondItem="uBU-8H-I1l" secondAttribute="bottom" id="4Y1-zc-ftE"/>
                             <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="ECC-0a-Daq" secondAttribute="trailing" constant="20" id="4ya-Ro-8BS"/>
-                            <constraint firstItem="Rqe-Zy-bwb" firstAttribute="top" secondItem="ECC-0a-Daq" secondAttribute="bottom" constant="20" id="8ff-6k-YRe"/>
+                            <constraint firstItem="uBU-8H-I1l" firstAttribute="top" secondItem="ECC-0a-Daq" secondAttribute="bottom" constant="32" id="5MU-du-Uro"/>
                             <constraint firstItem="rCd-Bk-lCC" firstAttribute="leading" secondItem="ikr-WR-AEP" secondAttribute="leading" constant="20" id="AX8-Ej-xIS"/>
                             <constraint firstItem="uBU-8H-I1l" firstAttribute="leading" secondItem="ikr-WR-AEP" secondAttribute="leading" constant="20" id="EUe-cJ-say"/>
                             <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="l6O-Au-goC" secondAttribute="trailing" constant="20" id="FWe-zL-WyV"/>
@@ -328,12 +359,9 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
                             <constraint firstItem="PRs-Dn-4OW" firstAttribute="leading" secondItem="ikr-WR-AEP" secondAttribute="leading" constant="20" id="S4X-Oc-qyF"/>
                             <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="PRs-Dn-4OW" secondAttribute="trailing" constant="20" id="Tag-zA-Gy6"/>
                             <constraint firstItem="YKK-i1-Jwf" firstAttribute="leading" secondItem="ikr-WR-AEP" secondAttribute="leading" constant="20" id="UxV-xg-fAX"/>
-                            <constraint firstItem="ikr-WR-AEP" firstAttribute="bottom" secondItem="l6O-Au-goC" secondAttribute="bottom" constant="20" id="XVX-MS-Has"/>
                             <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="QPF-4D-U0p" secondAttribute="trailing" constant="20" id="ZvO-qA-ns3"/>
                             <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="MAC-32-Bm0" secondAttribute="trailing" constant="20" id="bNq-vh-L2a"/>
-                            <constraint firstItem="uBU-8H-I1l" firstAttribute="top" secondItem="Rqe-Zy-bwb" secondAttribute="bottom" constant="20" id="bsU-j8-De6"/>
-                            <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="Rqe-Zy-bwb" secondAttribute="trailing" constant="20" id="dCC-m6-m9O"/>
-                            <constraint firstItem="MAC-32-Bm0" firstAttribute="top" secondItem="JlB-PB-KDJ" secondAttribute="bottom" constant="8" id="fbE-oi-hhO"/>
+                            <constraint firstItem="MAC-32-Bm0" firstAttribute="top" secondItem="JlB-PB-KDJ" secondAttribute="bottom" id="fbE-oi-hhO"/>
                             <constraint firstItem="l6O-Au-goC" firstAttribute="leading" secondItem="ikr-WR-AEP" secondAttribute="leading" constant="20" id="he1-ai-JEa"/>
                             <constraint firstItem="MAC-32-Bm0" firstAttribute="leading" secondItem="ikr-WR-AEP" secondAttribute="leading" constant="20" id="jZE-v8-e1a"/>
                             <constraint firstItem="QPF-4D-U0p" firstAttribute="leading" secondItem="ikr-WR-AEP" secondAttribute="leading" constant="20" id="ku7-jP-HNd"/>
@@ -342,16 +370,14 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
                             <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="uBU-8H-I1l" secondAttribute="trailing" constant="20" id="pBg-Re-jdf"/>
                             <constraint firstItem="JlB-PB-KDJ" firstAttribute="top" secondItem="rCd-Bk-lCC" secondAttribute="bottom" constant="32" id="pDB-Za-N8g"/>
                             <constraint firstItem="ikr-WR-AEP" firstAttribute="trailing" secondItem="JlB-PB-KDJ" secondAttribute="trailing" constant="20" id="rS6-TK-lgH"/>
-                            <constraint firstItem="PRs-Dn-4OW" firstAttribute="top" secondItem="MAC-32-Bm0" secondAttribute="bottom" constant="8" id="rw9-la-lJC"/>
-                            <constraint firstItem="rCd-Bk-lCC" firstAttribute="top" secondItem="QPF-4D-U0p" secondAttribute="bottom" constant="8" id="sp7-be-SW1"/>
-                            <constraint firstItem="Rqe-Zy-bwb" firstAttribute="leading" secondItem="ikr-WR-AEP" secondAttribute="leading" constant="20" id="xw9-zM-vgF"/>
+                            <constraint firstItem="PRs-Dn-4OW" firstAttribute="top" secondItem="MAC-32-Bm0" secondAttribute="bottom" id="rw9-la-lJC"/>
+                            <constraint firstItem="rCd-Bk-lCC" firstAttribute="top" secondItem="QPF-4D-U0p" secondAttribute="bottom" id="sp7-be-SW1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ikr-WR-AEP"/>
                     </view>
                     <navigationItem key="navigationItem" id="bb8-SZ-CbU"/>
                     <connections>
-                        <outlet property="DifferenceLabel" destination="l6O-Au-goC" id="7fT-gq-AVU"/>
-                        <outlet property="discreteGraph" destination="Rqe-Zy-bwb" id="chL-j6-5jU"/>
+                        <outlet property="differenceLabel" destination="l6O-Au-goC" id="7fT-gq-AVU"/>
                         <outlet property="last30DaysDateLabel" destination="rCd-Bk-lCC" id="rzR-N1-Dwk"/>
                         <outlet property="last30DaysLabel" destination="QPF-4D-U0p" id="pas-fL-ghw"/>
                         <outlet property="last60DaysDateLabel" destination="PRs-Dn-4OW" id="fuh-L1-uC3"/>
@@ -365,11 +391,10 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
         <!--Umfrage-->
         <scene sceneID="BOi-7P-01L">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="be0-Z5-04A" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="be0-Z5-04A" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Umfrage" image="doc.text" catalog="system" id="FHL-nd-mHa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WQa-ep-guV">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -384,11 +409,10 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
         <!--Dashboard-->
         <scene sceneID="vEt-kp-Hrg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UsW-RI-dec" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="UsW-RI-dec" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Dashboard" image="chart.bar" catalog="system" id="jzn-lB-ZTh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gTh-8h-wkE">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -405,7 +429,6 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
         <image name="Danke" width="2108" height="2482"/>
         <image name="chart.bar" catalog="system" width="128" height="90"/>
         <image name="doc.text" catalog="system" width="115" height="128"/>
-        <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>
