@@ -225,80 +225,80 @@ public var SurveyTask: ORKOrderedTask {
     ]
 
     steps += [b5Form]
-//
-//    //MARK: B6
-//
-//    let b61 = ORKFormItem(identifier: "b61", text: "Wirst du rechtzeitig im Voraus über Veränderungen in deinem Studium informiert, z.B. über wichtige Entscheidungen, Veränderungen oder Pläne für die Zukunft?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b62 = ORKFormItem(identifier: "b62", text: "Erhältst du alle Informationen, die du brauchst, um dein Studium gut zu erledigen?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b63 = ORKFormItem(identifier: "b63", text: "Gibt es klare Ziele für dein Studium?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b64 = ORKFormItem(identifier: "b64", text: "Weißt du genau, welche Dinge in deinen Verantwortungsbereich fallen?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b65 = ORKFormItem(identifier: "b65", text: "Weißt du genau, was von dir in deinem Studium erwartet wird?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b66 = ORKFormItem(identifier: "b66", text: "Werden in deinem Studium widersprüchliche Erwartungen gestellt?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b67 = ORKFormItem(identifier: "b67", text: "Musst du manchmal Dinge tun, die eigentlich auf andere Weise getan werden sollten?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b68 = ORKFormItem(identifier: "b68", text: "Musst du manchmal Dinge tun, die dir unnötig erscheinen?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b6Form = ORKFormStep(identifier: "b6Form", title: nil, text: "Nun einige Fragen zu Regelungen und Abläufen bei deinem Studium.")
-//
-//    b6Form.formItems = [
-//        b61, b62, b63, b64, b65, b66, b67, b68
-//    ]
-//
-//    steps += [b6Form]
-//
-//    //MARK: B7
-//
-//    let b71 = ORKFormItem(identifier: "b71", text: "... für gute Entwicklungsmöglichkeiten der Studierende sorgen?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b72 = ORKFormItem(identifier: "b72", text: "... der Zufriedenheit der Studierende einen hohen Stellenwert beimessen?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b73 = ORKFormItem(identifier: "b73", text: "... das Fach/Vorlesung/Übung gut planen?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b74 = ORKFormItem(identifier: "b74", text: "... konflikte gut lösen?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b7Form = ORKFormStep(identifier: "b7Form", title: nil, text: "Bitte schätze ein, in welchem Maße Dozierende bzw. Professoren/innen...")
-//
-//    b7Form.formItems = [
-//        b71, b72, b73, b74
-//    ]
-//
-//    steps += [b7Form]
-//
-//    //MARK: B8
-//
-//    let b81 = ORKFormItem(identifier: "b81", text: "Wie oft erhältst du bei Bedarf Hilfe und Unterstützung von deinen Mitstudierenden?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b82 = ORKFormItem(identifier: "b82", text: "Wie oft sind deine Mitstudierende bei Bedarf bereit, sich deine studienbezogenen Probleme anzuhören?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b83 = ORKFormItem(identifier: "b83", text: "Wie oft erhältst du bei Bedarf Hilfe und Unterstützung von den Dozierenden bzw. Professoren/innen?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b84 = ORKFormItem(identifier: "b84", text: "Wie oft sind Dozierende bzw. Professoren/innen bei Bedarf bereit, sich deine Probleme mit dem Studium anzuhören?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b85 = ORKFormItem(identifier: "b85", text: "Wie oft sprechen Dozierende bzw. Professoren/innen mit dir über die Qualität deiner Leistungen?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b86 = ORKFormItem(identifier: "b86", text: "Wir oft sprechen deine Mitstudierende mit dir über die Qualität deiner Leistungen?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b87 = ORKFormItem(identifier: "b87", text: "Ist die Atmosphäre zwischen dir und deinen Mitstudierenden gut?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b88 = ORKFormItem(identifier: "b88", text: "Ist die Zusammenarbeit zwischen dir und deinen Mitstudierenden gut?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b89 = ORKFormItem(identifier: "b89", text: "Wie oft fühlst du dich von Dozierenden bzw. Professoren/innen zu Unrecht kritisiert, schikaniert oder vor anderen bloßgestellt?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b8Form = ORKFormStep(identifier: "b8Form", title: nil, text: "Die folgenden Fragen betreffen dein Verhältnis zu deinen Mitstudierenden und Dozierenden bzw. Professoren/innen.")
-//
-//    b8Form.formItems = [
-//        b81, b82, b83, b84, b85, b86, b87, b88, b89
-//    ]
-//
-//    steps += [b8Form]
-//
-//    //MARK: B8a
+
+    //MARK: B6
+
+    let b61 = ORKFormItem(identifier: "b61", text: "Wirst du rechtzeitig im Voraus über Veränderungen in deinem Studium informiert, z.B. über wichtige Entscheidungen, Veränderungen oder Pläne für die Zukunft?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b62 = ORKFormItem(identifier: "b62", text: "Erhältst du alle Informationen, die du brauchst, um dein Studium gut zu erledigen?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b63 = ORKFormItem(identifier: "b63", text: "Gibt es klare Ziele für dein Studium?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b64 = ORKFormItem(identifier: "b64", text: "Weißt du genau, welche Dinge in deinen Verantwortungsbereich fallen?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b65 = ORKFormItem(identifier: "b65", text: "Weißt du genau, was von dir in deinem Studium erwartet wird?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b66 = ORKFormItem(identifier: "b66", text: "Werden in deinem Studium widersprüchliche Erwartungen gestellt?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b67 = ORKFormItem(identifier: "b67", text: "Musst du manchmal Dinge tun, die eigentlich auf andere Weise getan werden sollten?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b68 = ORKFormItem(identifier: "b68", text: "Musst du manchmal Dinge tun, die dir unnötig erscheinen?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b6Form = ORKFormStep(identifier: "b6Form", title: nil, text: "Nun einige Fragen zu Regelungen und Abläufen bei deinem Studium.")
+
+    b6Form.formItems = [
+        b61, b62, b63, b64, b65, b66, b67, b68
+    ]
+
+    steps += [b6Form]
+
+    //MARK: B7
+
+    let b71 = ORKFormItem(identifier: "b71", text: "... für gute Entwicklungsmöglichkeiten der Studierende sorgen?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b72 = ORKFormItem(identifier: "b72", text: "... der Zufriedenheit der Studierende einen hohen Stellenwert beimessen?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b73 = ORKFormItem(identifier: "b73", text: "... das Fach/Vorlesung/Übung gut planen?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b74 = ORKFormItem(identifier: "b74", text: "... konflikte gut lösen?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b7Form = ORKFormStep(identifier: "b7Form", title: nil, text: "Bitte schätze ein, in welchem Maße Dozierende bzw. Professoren/innen...")
+
+    b7Form.formItems = [
+        b71, b72, b73, b74
+    ]
+
+    steps += [b7Form]
+
+    //MARK: B8
+
+    let b81 = ORKFormItem(identifier: "b81", text: "Wie oft erhältst du bei Bedarf Hilfe und Unterstützung von deinen Mitstudierenden?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b82 = ORKFormItem(identifier: "b82", text: "Wie oft sind deine Mitstudierende bei Bedarf bereit, sich deine studienbezogenen Probleme anzuhören?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b83 = ORKFormItem(identifier: "b83", text: "Wie oft erhältst du bei Bedarf Hilfe und Unterstützung von den Dozierenden bzw. Professoren/innen?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b84 = ORKFormItem(identifier: "b84", text: "Wie oft sind Dozierende bzw. Professoren/innen bei Bedarf bereit, sich deine Probleme mit dem Studium anzuhören?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b85 = ORKFormItem(identifier: "b85", text: "Wie oft sprechen Dozierende bzw. Professoren/innen mit dir über die Qualität deiner Leistungen?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b86 = ORKFormItem(identifier: "b86", text: "Wir oft sprechen deine Mitstudierende mit dir über die Qualität deiner Leistungen?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b87 = ORKFormItem(identifier: "b87", text: "Ist die Atmosphäre zwischen dir und deinen Mitstudierenden gut?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b88 = ORKFormItem(identifier: "b88", text: "Ist die Zusammenarbeit zwischen dir und deinen Mitstudierenden gut?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b89 = ORKFormItem(identifier: "b89", text: "Wie oft fühlst du dich von Dozierenden bzw. Professoren/innen zu Unrecht kritisiert, schikaniert oder vor anderen bloßgestellt?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b8Form = ORKFormStep(identifier: "b8Form", title: nil, text: "Die folgenden Fragen betreffen dein Verhältnis zu deinen Mitstudierenden und Dozierenden bzw. Professoren/innen.")
+
+    b8Form.formItems = [
+        b81, b82, b83, b84, b85, b86, b87, b88, b89
+    ]
+
+    steps += [b8Form]
+
+    //MARK: B8a
 //
 //    let b81a = ORKFormItem(identifier: "b81a", text: "Vertrauen die Dozierenden bzw. Professoren/innen darauf, dass die Studierenden ihr Lernpensum gut einteilen?", answerFormat: vastToSmallExtendAnswerFormat)
 //
