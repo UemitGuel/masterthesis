@@ -52,6 +52,26 @@ class FirebaseHelper {
         ref.child(uuid).child("B8").setValue(["B81": b81, "B82" : b82, "B83" : b83, "B84" : b84, "B85" : b85, "B86": b86, "B87": b87, "B88": b88, "B89": b89, "B8Average": b8Average])
     }
     
+    func saveDataB8a(uuid: String, b81a: Int, b82a: Int, b83a: Int, b84a: Int, b8aAverage: Int) {
+        ref.child(uuid).child("B8a").setValue(["B81a": b81a, "B82a" : b82a, "B83a" : b83a, "B84a" : b84a, "B8aAverage": b8aAverage])
+    }
+    
+    func saveDataB8b(uuid: String, b81b: Int, b82b: Int, b83b: Int, b84b: Int, b8bAverage: Int) {
+        ref.child(uuid).child("B8b").setValue(["B81b": b81b, "B82b" : b82b, "B83b" : b83b, "B84b" : b84b, "B8bAverage": b8bAverage])
+    }
+    
+    func saveDataB9(uuid: String, b91: Int, b92: Int, b93: Int, b94: Int, b9Average: Int) {
+        ref.child(uuid).child("B9").setValue(["B91": b91, "B92" : b92, "B93" : b93, "B94" : b94, "B9Average": b9Average])
+    }
+    
+    func saveDataB10(uuid: String, b101: Int, b102: Int, b10Average: Int) {
+        ref.child(uuid).child("B10").setValue(["B101": b101, "B102" : b102, "B10Average": b10Average])
+    }
+    
+    func saveDataB11(uuid: String, b111: Int, b112: Int, b113: Int, b114: Int, b115: Int, b116: Int, b11Average: Int) {
+        ref.child(uuid).child("B11").setValue(["B111": b111, "B112" : b112, "B113" : b113, "B114" : b114, "B115" : b115, "B116": b116, "B11Average": b11Average])
+    }
+    
     func saveSteps(uuid: String, stepsLast30DaysAverage: Int, stepsLast60to30DaysAverage: Int, changeInPercentage: Double) {
         if changeInPercentage.isNaN {
             ref.child(uuid).child("Durschnittliche Schritte").setValue(["Letzten 30 Tage": Int(stepsLast30DaysAverage), "Letzten 60 bis 30 Tage": Int(stepsLast60to30DaysAverage), "Prozentuale Veränderung": 0])

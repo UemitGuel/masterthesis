@@ -242,6 +242,76 @@ class TaskViewController: UIViewController, HealthClientType {
         
         FirebaseHelper.shared.saveDataB8(uuid: uuid, b81: b81, b82: b82, b83: b83, b84: b84, b85: b85,  b86: b86, b87: b87, b88: b88, b89: b89, b8Average: averageB8FormResult )
     }
+    
+    //MARK: Handle B8a Results
+    func handleB8aFormResults(_ result: ORKTaskResult) {
+        let b8aFormResult = result.result(forIdentifier: "b8aForm") as! ORKStepResult
+        
+        let b81a = getIntAnswer(identifier: "b81a", formResult: b8aFormResult)
+        let b82a = getIntAnswer(identifier: "b82a", formResult: b8aFormResult)
+        let b83a = getIntAnswer(identifier: "b83a", formResult: b8aFormResult)
+        let b84a = getIntAnswer(identifier: "b84a", formResult: b8aFormResult)
+        
+        let averageB8aFormResult = AverageCalculatorHelper.shared.getAverage([b81a,b82a,b83a,b84a])
+        
+        FirebaseHelper.shared.saveDataB8a(uuid: uuid, b81a: b81a, b82a: b82a, b83a: b83a, b84a: b84a, b8aAverage: averageB8aFormResult )
+    }
+    
+    //MARK: Handle B8b Results
+    func handleB8bFormResults(_ result: ORKTaskResult) {
+        let b8bFormResult = result.result(forIdentifier: "b8bForm") as! ORKStepResult
+        
+        let b81b = getIntAnswer(identifier: "b81b", formResult: b8bFormResult)
+        let b82b = getIntAnswer(identifier: "b82b", formResult: b8bFormResult)
+        let b83b = getIntAnswer(identifier: "b83b", formResult: b8bFormResult)
+        let b84b = getIntAnswer(identifier: "b84b", formResult: b8bFormResult)
+        
+        let averageB8bFormResult = AverageCalculatorHelper.shared.getAverage([b81b,b82b,b83b,b84b])
+        
+        FirebaseHelper.shared.saveDataB8b(uuid: uuid, b81b: b81b, b82b: b82b, b83b: b83b, b84b: b84b, b8bAverage: averageB8bFormResult )
+    }
+    
+    //MARK: Handle B9 Results
+    func handleB9FormResults(_ result: ORKTaskResult) {
+        let b9FormResult = result.result(forIdentifier: "b9Form") as! ORKStepResult
+
+        let b91 = getIntAnswer(identifier: "b91", formResult: b9FormResult)
+        let b92 = getIntAnswer(identifier: "b92", formResult: b9FormResult)
+        let b93 = getIntAnswer(identifier: "b93", formResult: b9FormResult)
+        let b94 = getIntAnswer(identifier: "b94", formResult: b9FormResult)
+
+        let averageB9FormResult = AverageCalculatorHelper.shared.getAverage([b91,b92,b93,b94])
+
+        FirebaseHelper.shared.saveDataB9(uuid: uuid, b91: b91, b92: b92, b93: b93, b94: b94, b9Average: averageB9FormResult )
+    }
+    
+    //MARK: Handle B10 Results
+    func handleB10FormResults(_ result: ORKTaskResult) {
+        let b10FormResult = result.result(forIdentifier: "b10Form") as! ORKStepResult
+        
+        let b101 = getIntAnswer(identifier: "b101", formResult: b10FormResult)
+        let b102 = getIntAnswer(identifier: "b102", formResult: b10FormResult)
+        
+        let averageB10FormResult = AverageCalculatorHelper.shared.getAverage([b101,b102])
+        
+        FirebaseHelper.shared.saveDataB10(uuid: uuid, b101: b101, b102: b102, b10Average: averageB10FormResult )
+    }
+    
+    //MARK: Handle B11 Results
+    func handleB11FormResults(_ result: ORKTaskResult) {
+        let b11FormResult = result.result(forIdentifier: "b11Form") as! ORKStepResult
+        
+        let b111 = getIntAnswer(identifier: "b111", formResult: b11FormResult)
+        let b112 = getIntAnswer(identifier: "b112", formResult: b11FormResult)
+        let b113 = getIntAnswer(identifier: "b113", formResult: b11FormResult)
+        let b114 = getIntAnswer(identifier: "b114", formResult: b11FormResult)
+        let b115 = getIntAnswer(identifier: "b115", formResult: b11FormResult)
+        let b116 = getIntAnswer(identifier: "b116", formResult: b11FormResult)
+        
+        let averageB11FormResult = AverageCalculatorHelper.shared.getAverage([b111,b112,b113,b114,b115,b116])
+        
+        FirebaseHelper.shared.saveDataB11(uuid: uuid, b111: b111, b112: b112, b113: b113, b114: b114, b115: b115,  b116: b116, b11Average: averageB11FormResult )
+    }
 }
 
 extension TaskViewController: ORKTaskViewControllerDelegate{
@@ -259,6 +329,11 @@ extension TaskViewController: ORKTaskViewControllerDelegate{
             handleB6FormResults(taskViewController.result)
             handleB7FormResults(taskViewController.result)
             handleB8FormResults(taskViewController.result)
+            handleB8aFormResults(taskViewController.result)
+            handleB8bFormResults(taskViewController.result)
+            handleB9FormResults(taskViewController.result)
+            handleB10FormResults(taskViewController.result)
+            handleB11FormResults(taskViewController.result)
             taskViewController.dismiss(animated: true)
             break
         case .discarded:

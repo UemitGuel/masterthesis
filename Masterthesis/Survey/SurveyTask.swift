@@ -20,7 +20,6 @@ public var SurveyTask: ORKOrderedTask {
     ]
     let whichUniAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: whichUniChoices)
     
-//    whichUniAnswerFormat.shouldShowDontKnowButton = true
     
     //MARK:  BachelorMasterQuestionStep
     let BachelorMasterChoices = [
@@ -52,42 +51,25 @@ public var SurveyTask: ORKOrderedTask {
     
     let alwaysToNeverAnswerFormat = ORKAnswerFormat.textScale(with: alwaysToNeverTextChoices, defaultIndex: NSIntegerMax, vertical: false)
     
-//    alwaysToNeverAnswerFormat.shouldShowDontKnowButton = true
     
     //vastToSmallExtendTextChoices
     let vastToSmallExtendTextChoices: [ORKTextChoice] = [ORKTextChoice(text: "in sehr geringem Maß", value: 0 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "in geringem Maß", value: 25 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "zum Teil", value: 50 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "in hohem Maß", value: 75 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "in sehr hohem Maß", value: 100 as NSCoding & NSCopying & NSObjectProtocol)]
     
     let vastToSmallExtendAnswerFormat = ORKAnswerFormat.textScale(with: vastToSmallExtendTextChoices, defaultIndex: NSIntegerMax, vertical: false)
     
-//    vastToSmallExtendAnswerFormat.shouldShowDontKnowButton = true
     
     //neverToEveryDayTextChoices
     let neverToEveryDayTextChoices: [ORKTextChoice] = [ORKTextChoice(text: "nie", value: 0 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "einige Male im Jahr", value: 25 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "einige Male im Monat", value: 50 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "einige Male in der Woche", value: 75 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "jeden Tag", value: 100 as NSCoding & NSCopying & NSObjectProtocol)]
     
     let neverToEveryDayAnswerFormat = ORKAnswerFormat.textScale(with: neverToEveryDayTextChoices, defaultIndex: NSIntegerMax, vertical: false)
     
-    neverToEveryDayAnswerFormat.shouldShowDontKnowButton = true
     
     //happyToNotHappyTextChoices
     let happyToNotHappyTextChoices: [ORKTextChoice] = [ORKTextChoice(text: "sehr unzufrieden", value: 0 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "unzufrieden", value: 25 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "teils-teils", value: 50 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "zufrieden", value: 75 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "sehr zufrieden", value: 100 as NSCoding & NSCopying & NSObjectProtocol)]
     
     let happyToNotHappyAnswerFormat = ORKAnswerFormat.textScale(with: happyToNotHappyTextChoices, defaultIndex: NSIntegerMax, vertical: false)
     
-//    happyToNotHappyAnswerFormat.shouldShowDontKnowButton = true
-    
-    //whichBadEnviroment (B8b)
-    let whichBadEnviromentChoices = [
-        ORKTextChoice(text: "Lichtverhältnissen", value: 20 as NSCoding & NSCopying & NSObjectProtocol),
-        ORKTextChoice(text: "Luftverhältnissen", value: 20 as NSCoding & NSCopying & NSObjectProtocol),
-        ORKTextChoice(text: "Temperaturverhältnissen", value: 20 as NSCoding & NSCopying & NSObjectProtocol),
-        ORKTextChoice(text: "Zugluft", value: 20 as NSCoding & NSCopying & NSObjectProtocol),
-        ORKTextChoice(text: "Umgebungsgeräuschen ", value: 20 as NSCoding & NSCopying & NSObjectProtocol)
-    ]
-    let whichBadEnviromentAnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .multipleChoice, textChoices: whichBadEnviromentChoices)
-    
-//    whichBadEnviromentAnswerFormat.shouldShowDontKnowButton = true
-    
-    
+
     // Instruction step
     let instructionStep = ORKInstructionStep(identifier: "IntroStep")
     instructionStep.title = "Evaluierung deiner psychischen Belastung"
@@ -299,89 +281,92 @@ public var SurveyTask: ORKOrderedTask {
     steps += [b8Form]
 
     //MARK: B8a
-//
-//    let b81a = ORKFormItem(identifier: "b81a", text: "Vertrauen die Dozierenden bzw. Professoren/innen darauf, dass die Studierenden ihr Lernpensum gut einteilen?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b82a = ORKFormItem(identifier: "b82a", text: "Können Studierende den Informationen vertrauen, die sie von den Dozierenden bzw. Professoren/innen bekommen?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b83a = ORKFormItem(identifier: "b83a", text: "Werden Konflikte auf gerechte Weise gelöst?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b84a = ORKFormItem(identifier: "b84a", text: "Erfährt dein Einsatz im Studium Anerkennung und Wertschätzung von Dozierenden bzw. Professoren/innen?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b8aForm = ORKFormStep(identifier: "b8aForm", title: nil, text: "Die nächsten Fragen beziehen sich nicht auf deine Lerntätigkeit, sondern auf das Studium an sich.")
-//
-//    b8aForm.formItems = [
-//        b81a, b82a, b83a, b84a
-//    ]
-//
-//    steps += [b8aForm]
-//
-//    //MARK: B8b
-//
-//    let b81b = ORKFormItem(identifier: "b81a", text: "Wie oft kommt es vor, dass du während des Lernens schlechten/lauten ... ausgesetzt bist?", answerFormat: whichBadEnviromentAnswerFormat)
-//
-//    let b8bForm = ORKFormStep(identifier: "b8bForm", title: nil, text: "Die nächsten Fragen beziehen sich nicht auf deine Umgebungsbedingungen beim Lernen")
-//
-//    b8bForm.formItems = [
-//        b81b
-//    ]
-//
-//    steps += [b8bForm]
-//
-//    //MARK: B9
-//
-//    let b91 = ORKFormItem(identifier: "b91", text: "... du nach dem Studium kein Job findest?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b92 = ORKFormItem(identifier: "b92", text: "... neue Technologien dich überflüssig machen?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b93 = ORKFormItem(identifier: "b93", text: "... es schwierig für dich wäre, eine Alternative zu finden, wenn du dieses Studium nicht schaffen würdest?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b94 = ORKFormItem(identifier: "b94", text: "... du nach deinem Studium einen Job mit geringem Einkommen finden wirst. ?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b9Form = ORKFormStep(identifier: "b9Form", title: nil, text: "Machst du dir Sorgen, dass ...")
-//
-//    b9Form.formItems = [
-//        b91, b92, b93, b94
-//    ]
-//
-//    steps += [b9Form]
-//
-//    //MARK: B10
-//
-//    let b101 = ORKFormItem(identifier: "b101", text: "... dein Studium aufzugeben?", answerFormat: neverToEveryDayAnswerFormat)
-//
-//    let b102 = ORKFormItem(identifier: "b102", text: "... dein Studium zu wechseln?", answerFormat: neverToEveryDayAnswerFormat)
-//
-//    let b10Form = ORKFormStep(identifier: "b10Form", title: nil, text: "Wie oft hast du im Laufe der letzten 12 Monate daran gedacht ...")
-//
-//    b10Form.formItems = [
-//        b101, b102
-//    ]
-//
-//    steps += [b10Form]
-//
-//    //MARK: B11
-//
-//    let b111 = ORKFormItem(identifier: "b111", text: "... deinen Berufsperspektiven?", answerFormat: happyToNotHappyAnswerFormat)
-//
-//    let b112 = ORKFormItem(identifier: "b112", text: "... deinen Mitstudierenden?", answerFormat: happyToNotHappyAnswerFormat)
-//
-//    let b113 = ORKFormItem(identifier: "b113", text: "... den körperlichen Studiums Bedingungen?", answerFormat: happyToNotHappyAnswerFormat)
-//
-//    let b114 = ORKFormItem(identifier: "b114", text: "... der Art und Weise, wie die Universität geführt wird?", answerFormat: happyToNotHappyAnswerFormat)
-//
-//    let b115 = ORKFormItem(identifier: "b115", text: "... der Art und Weise, wie deine Fähigkeiten genutzt werden?", answerFormat: happyToNotHappyAnswerFormat)
-//
-//    let b116 = ORKFormItem(identifier: "b116", text: "... deinem Studium insgesamt, unter Berücksichtigung aller Umstände?", answerFormat: happyToNotHappyAnswerFormat)
-//
-//    let b11Form = ORKFormStep(identifier: "b11Form", title: nil, text: "Wenn du deine Studiums- Situation insgesamt betrachtest, wie zufrieden bist du mit ...")
-//
-//    b11Form.formItems = [
-//        b111, b112, b113, b114, b115, b116
-//    ]
-//
-//    steps += [b11Form]
-//
+
+    let b81a = ORKFormItem(identifier: "b81a", text: "Vertrauen die Dozierenden bzw. Professoren/innen darauf, dass die Studierenden ihr Lernpensum gut einteilen?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b82a = ORKFormItem(identifier: "b82a", text: "Können Studierende den Informationen vertrauen, die sie von den Dozierenden bzw. Professoren/innen bekommen?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b83a = ORKFormItem(identifier: "b83a", text: "Werden Konflikte auf gerechte Weise gelöst?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b84a = ORKFormItem(identifier: "b84a", text: "Erfährt dein Einsatz im Studium Anerkennung und Wertschätzung von Dozierenden bzw. Professoren/innen?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b8aForm = ORKFormStep(identifier: "b8aForm", title: nil, text: "Die nächsten Fragen beziehen sich nicht auf deine Lerntätigkeit, sondern auf das Studium an sich.")
+
+    b8aForm.formItems = [
+        b81a, b82a, b83a, b84a
+    ]
+
+    steps += [b8aForm]
+
+    //MARK: B8b
+
+    let b81b = ORKFormItem(identifier: "b81b", text: "Zu helles oder zu wenig Licht", answerFormat: alwaysToNeverAnswerFormat)
+    let b82b = ORKFormItem(identifier: "b82b", text: "Stickige Luft", answerFormat: alwaysToNeverAnswerFormat)
+    let b83b = ORKFormItem(identifier: "b83b", text: "Zu warmen oder zu kalten Temperaturen", answerFormat: alwaysToNeverAnswerFormat)
+    let b84b = ORKFormItem(identifier: "b84b", text: "Mit störenden Umgebungsgeräuschen", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b8bForm = ORKFormStep(identifier: "b8bForm", title: nil, text: "Denke an deine letzten zwei Wochen, in wie weit musstest du unter folgenden Umgebungsbedingungen lernen?")
+
+    b8bForm.formItems = [
+        b81b,b82b,b83b,b84b
+    ]
+
+    steps += [b8bForm]
+
+    //MARK: B9
+
+    let b91 = ORKFormItem(identifier: "b91", text: "... du nach dem Studium kein Job findest?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b92 = ORKFormItem(identifier: "b92", text: "... neue Technologien dich überflüssig machen?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b93 = ORKFormItem(identifier: "b93", text: "... es schwierig für dich wäre, eine Alternative zu finden, wenn du dieses Studium nicht schaffen würdest?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b94 = ORKFormItem(identifier: "b94", text: "... du nach deinem Studium einen Job mit geringem Einkommen finden wirst. ?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b9Form = ORKFormStep(identifier: "b9Form", title: nil, text: "Machst du dir Sorgen, dass ...")
+
+    b9Form.formItems = [
+        b91, b92, b93, b94
+    ]
+
+    steps += [b9Form]
+
+    //MARK: B10
+
+    let b101 = ORKFormItem(identifier: "b101", text: "... dein Studium aufzugeben?", answerFormat: neverToEveryDayAnswerFormat)
+
+    let b102 = ORKFormItem(identifier: "b102", text: "... dein Studium zu wechseln?", answerFormat: neverToEveryDayAnswerFormat)
+
+    let b10Form = ORKFormStep(identifier: "b10Form", title: nil, text: "Wie oft hast du im Laufe der letzten 12 Monate daran gedacht ...")
+
+    b10Form.formItems = [
+        b101, b102
+    ]
+
+    steps += [b10Form]
+
+    //MARK: B11
+
+    let b111 = ORKFormItem(identifier: "b111", text: "... deinen Berufsperspektiven?", answerFormat: happyToNotHappyAnswerFormat)
+
+    let b112 = ORKFormItem(identifier: "b112", text: "... deinen Mitstudierenden?", answerFormat: happyToNotHappyAnswerFormat)
+
+    let b113 = ORKFormItem(identifier: "b113", text: "... den körperlichen Studiums Bedingungen?", answerFormat: happyToNotHappyAnswerFormat)
+
+    let b114 = ORKFormItem(identifier: "b114", text: "... der Art und Weise, wie die Universität geführt wird?", answerFormat: happyToNotHappyAnswerFormat)
+
+    let b115 = ORKFormItem(identifier: "b115", text: "... der Art und Weise, wie deine Fähigkeiten genutzt werden?", answerFormat: happyToNotHappyAnswerFormat)
+
+    let b116 = ORKFormItem(identifier: "b116", text: "... deinem Studium insgesamt, unter Berücksichtigung aller Umstände?", answerFormat: happyToNotHappyAnswerFormat)
+
+    let b11Form = ORKFormStep(identifier: "b11Form", title: nil, text: "Wenn du deine Studiums- Situation insgesamt betrachtest, wie zufrieden bist du mit ...")
+
+    b11Form.formItems = [
+        b111, b112, b113, b114, b115, b116
+    ]
+
+    steps += [b11Form]
+
 //    //MARK: B12
 //
 //    let b12AnswerFormat = ORKSESAnswerFormat(topRungText: "bester denkbarer Gesundheitszustand",
