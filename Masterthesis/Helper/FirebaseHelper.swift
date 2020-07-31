@@ -12,7 +12,7 @@ class FirebaseHelper {
         ref = Database.database().reference()
     }
     
-    func saveDataA1(uuid: String, a11: String, a12: String, a13: String, a14: String, a15: String, a16: String) {
+    func saveDataA1(uuid: String, a11: String, a12: String, a13: String, a14: Int, a15: Int, a16: Int) {
         ref.child(uuid).child("A1").setValue(["Studiengang": a11, "Studienabschnitt": a12, "Geschlecht" : a13, "Alter" : a14, "Stunden pro Woche Arbeit" : a15, "Stunden pro Woche Lernen" : a16])
     }
     
@@ -70,6 +70,18 @@ class FirebaseHelper {
     
     func saveDataB11(uuid: String, b111: Int, b112: Int, b113: Int, b114: Int, b115: Int, b116: Int, b11Average: Int) {
         ref.child(uuid).child("B11").setValue(["B111": b111, "B112" : b112, "B113" : b113, "B114" : b114, "B115" : b115, "B116": b116, "B11Average": b11Average])
+    }
+    
+    func saveDataB12(uuid: String, b121: Int, b12Average: Int) {
+        ref.child(uuid).child("B12").setValue(["B121": b121, "B12Average": b12Average])
+    }
+    
+    func saveDataB13(uuid: String, b131: Int, b132: Int, b133: Int, b134: Int, b135: Int, b13Average: Int) {
+        ref.child(uuid).child("B13").setValue(["B131": b131, "B132" : b132, "B133" : b133, "B134" : b134, "B135" : b135, "B13Average": b13Average])
+    }
+    
+    func saveDataB14(uuid: String, b141: Int, b142: Int, b143: Int, b14Average: Int) {
+        ref.child(uuid).child("B14").setValue(["B141": b141, "B142" : b142, "B143" : b143, "B14Average": b14Average])
     }
     
     func saveSteps(uuid: String, stepsLast30DaysAverage: Int, stepsLast60to30DaysAverage: Int, changeInPercentage: Double) {

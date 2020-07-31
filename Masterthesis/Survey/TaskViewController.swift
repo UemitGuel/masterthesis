@@ -94,15 +94,15 @@ class TaskViewController: UIViewController, HealthClientType {
         let a13Answer = a13Result.choiceAnswers?.first as? String
         
         let a14Result = a1FormResult.result(forIdentifier: "a14") as! ORKScaleQuestionResult
-        let a14Answer = a14Result.scaleAnswer?.stringValue
+        let a14Answer = a14Result.scaleAnswer?.intValue
         
         let a15Result = a1FormResult.result(forIdentifier: "a15") as! ORKScaleQuestionResult
-        let a15Answer = a15Result.scaleAnswer?.stringValue
+        let a15Answer = a15Result.scaleAnswer?.intValue
         
         let a16Result = a1FormResult.result(forIdentifier: "a16") as! ORKScaleQuestionResult
-        let a16Answer = a16Result.scaleAnswer?.stringValue
+        let a16Answer = a16Result.scaleAnswer?.intValue
         
-        FirebaseHelper.shared.saveDataA1(uuid: self.uuid, a11: a11Answer ?? "k.A.", a12: a12Answer ?? "k.A.", a13: a13Answer ?? "k.A.", a14: a14Answer ?? "k.A.", a15: a15Answer ?? "k.A.", a16: a16Answer ?? "k.A.")
+        FirebaseHelper.shared.saveDataA1(uuid: self.uuid, a11: a11Answer ?? "k.A.", a12: a12Answer ?? "k.A.", a13: a13Answer ?? "k.A.", a14: a14Answer ?? -1, a15: a15Answer ?? -1, a16: a16Answer ?? -1)
         
     }
     
@@ -312,6 +312,47 @@ class TaskViewController: UIViewController, HealthClientType {
         
         FirebaseHelper.shared.saveDataB11(uuid: uuid, b111: b111, b112: b112, b113: b113, b114: b114, b115: b115,  b116: b116, b11Average: averageB11FormResult )
     }
+    
+    //MARK: Handle A12 Results
+    func handleB12FormResults(_ result: ORKTaskResult) {
+        let b12FormResult = result.result(forIdentifier: "b12Form") as! ORKStepResult
+
+        let b121Result = b12FormResult.result(forIdentifier: "b121") as! ORKScaleQuestionResult
+        let b121 = b121Result.scaleAnswer?.intValue
+        
+        let averageB12FormResult = AverageCalculatorHelper.shared.getAverage([b121])
+        
+        FirebaseHelper.shared.saveDataB12(uuid: uuid, b121: b121 ?? -1, b12Average: averageB12FormResult)
+        
+    }
+    
+    //MARK: Handle B13 Results
+    func handleB13FormResults(_ result: ORKTaskResult) {
+        let b13FormResult = result.result(forIdentifier: "b13Form") as! ORKStepResult
+        
+        let b131 = getIntAnswer(identifier: "b131", formResult: b13FormResult)
+        let b132 = getIntAnswer(identifier: "b132", formResult: b13FormResult)
+        let b133 = getIntAnswer(identifier: "b133", formResult: b13FormResult)
+        let b134 = getIntAnswer(identifier: "b134", formResult: b13FormResult)
+        let b135 = getIntAnswer(identifier: "b135", formResult: b13FormResult)
+        
+        let averageB13FormResult = AverageCalculatorHelper.shared.getAverage([b131,b132,b133,b134,b135])
+        
+        FirebaseHelper.shared.saveDataB13(uuid: uuid, b131: b131, b132: b132, b133: b133, b134: b134, b135: b135, b13Average: averageB13FormResult )
+    }
+    
+    //MARK: Handle B14 Results
+    func handleB14FormResults(_ result: ORKTaskResult) {
+        let b14FormResult = result.result(forIdentifier: "b14Form") as! ORKStepResult
+        
+        let b141 = getIntAnswer(identifier: "b141", formResult: b14FormResult)
+        let b142 = getIntAnswer(identifier: "b142", formResult: b14FormResult)
+        let b143 = getIntAnswer(identifier: "b143", formResult: b14FormResult)
+        
+        let averageB14FormResult = AverageCalculatorHelper.shared.getAverage([b141,b142,b143])
+        
+        FirebaseHelper.shared.saveDataB14(uuid: uuid, b141: b141, b142: b142, b143: b143, b14Average: averageB14FormResult )
+    }
 }
 
 extension TaskViewController: ORKTaskViewControllerDelegate{
@@ -334,6 +375,9 @@ extension TaskViewController: ORKTaskViewControllerDelegate{
             handleB9FormResults(taskViewController.result)
             handleB10FormResults(taskViewController.result)
             handleB11FormResults(taskViewController.result)
+            handleB12FormResults(taskViewController.result)
+            handleB13FormResults(taskViewController.result)
+            handleB14FormResults(taskViewController.result)
             taskViewController.dismiss(animated: true)
             break
         case .discarded:

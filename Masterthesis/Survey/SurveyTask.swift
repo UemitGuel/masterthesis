@@ -45,6 +45,9 @@ public var SurveyTask: ORKOrderedTask {
     // hoursAnswerFormat
     let hoursAnswerFormat = ORKAnswerFormat.scale(withMaximumValue: 60, minimumValue: 0, defaultValue: 20, step: 5, vertical: false, maximumValueDescription: "60 h/Woche", minimumValueDescription: "0 h/Woche")
     
+    // healthAnswerFormat
+    let healthAnswerFormat = ORKAnswerFormat.scale(withMaximumValue: 10, minimumValue: 0, defaultValue: 5, step: 1, vertical: true, maximumValueDescription: "bester denkbarer Gesundheitszustand", minimumValueDescription: "schlechtester denkbarer Gesundheitszustand")
+    
     
     //AlwaysToNeverTextChoices
     let alwaysToNeverTextChoices: [ORKTextChoice] = [ORKTextChoice(text: "nie/ fast nie", value: 0 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "selten", value: 25 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "manchmal", value: 50 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "oft", value: 75 as NSCoding & NSCopying & NSObjectProtocol), ORKTextChoice(text: "immer", value: 100 as NSCoding & NSCopying & NSObjectProtocol)]
@@ -367,61 +370,55 @@ public var SurveyTask: ORKOrderedTask {
 
     steps += [b11Form]
 
-//    //MARK: B12
-//
-//    let b12AnswerFormat = ORKSESAnswerFormat(topRungText: "bester denkbarer Gesundheitszustand",
-//                                             bottomRungText: "schlechtester denkbarer Gesundheitszustand")
-//
-//    let b121 = ORKFormItem(identifier: "b121",
-//                                          text: nil,
-//                                          answerFormat: b12AnswerFormat)
-//
-//    let b121Form = ORKFormStep(identifier: "b12Form", title: nil, text: "Dein Gesundheitszustand: Wenn du den besten denkbaren Gesundheitszustand mit 10 Punkten und den schlechtesten denkbaren mit 0 Punkten bewerten würdest: Wie viele Punkte würdest du deinem derzeitigen Gesundheitszustand vergeben?")
-//
-//    b121Form.formItems = [
-//        b121
-//    ]
-//
-//    steps += [b121Form]
-//
-//    //MARK: B13
-//
-//    let b131 = ORKFormItem(identifier: "b131", text: "... bist du körperlich erschöpft?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b132 = ORKFormItem(identifier: "b132", text: "... bist du emotional erschöpft?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b133 = ORKFormItem(identifier: "b133", text: "... fühlst du dich ausgelaugt?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b134 = ORKFormItem(identifier: "b134", text: "... musst du trotzdem lernen, obwohl du dich krank und unwohl fühlst?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b135 = ORKFormItem(identifier: "b135", text: "... kannst du während deiner Freizeit dein Studium nicht vergessen?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b13Form = ORKFormStep(identifier: "b13Form", title: nil, text: "Energie und psychisches Wohlbefinden: Bitte gebe für jede der Folgenden Aussagen an, inwieweit diese auf dich zutreffen. Wie häufig ...")
-//
-//    b13Form.formItems = [
-//        b131, b132, b133, b134, b135
-//    ]
-//
-//    steps += [b13Form]
-//
-//    //MARK: B14
-//
-//    let b141 = ORKFormItem(identifier: "b141", text: "Wenn ich lerne bin ich voller Energie", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b142 = ORKFormItem(identifier: "b142", text: "Ich bin von meinem Studium begeistert", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b143 = ORKFormItem(identifier: "b143", text: "Ich gehe völlig in meinem Studium auf", answerFormat: alwaysToNeverAnswerFormat)
-//
-//
-//    let b14Form = ORKFormStep(identifier: "b14Form", title: nil, text: "Wie oft treffen folgende Aussagen auf dich zu?")
-//
-//    b14Form.formItems = [
-//        b141, b142, b143
-//    ]
-//
-//    steps += [b14Form]
+    //MARK: B12
 
-    
+    let b121 = ORKFormItem(identifier: "b121", text: " Wenn du den besten denkbaren Gesundheitszustand mit 10 Punkten und den schlechtesten denkbaren mit 0 Punkten bewerten würdest: Wie viele Punkte würdest du deinem derzeitigen Gesundheitszustand vergeben?", answerFormat: healthAnswerFormat, optional: true)
+
+    let b121Form = ORKFormStep(identifier: "b12Form", title: nil, text: nil)
+
+    b121Form.formItems = [
+        b121
+    ]
+
+    steps += [b121Form]
+
+    //MARK: B13
+
+    let b131 = ORKFormItem(identifier: "b131", text: "... bist du körperlich erschöpft?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b132 = ORKFormItem(identifier: "b132", text: "... bist du emotional erschöpft?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b133 = ORKFormItem(identifier: "b133", text: "... fühlst du dich ausgelaugt?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b134 = ORKFormItem(identifier: "b134", text: "... musst du trotzdem lernen, obwohl du dich krank und unwohl fühlst?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b135 = ORKFormItem(identifier: "b135", text: "... kannst du während deiner Freizeit dein Studium nicht vergessen?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b13Form = ORKFormStep(identifier: "b13Form", title: nil, text: "Denke an deine letzten zwei Wochen, inwieweit treffen diese Aussagen auf dich zu. Wie häufig ...")
+
+    b13Form.formItems = [
+        b131, b132, b133, b134, b135
+    ]
+
+    steps += [b13Form]
+
+    //MARK: B14
+
+    let b141 = ORKFormItem(identifier: "b141", text: "Wenn ich lerne bin ich voller Energie", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b142 = ORKFormItem(identifier: "b142", text: "Ich bin von meinem Studium begeistert", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b143 = ORKFormItem(identifier: "b143", text: "Ich gehe völlig in meinem Studium auf", answerFormat: alwaysToNeverAnswerFormat)
+
+
+    let b14Form = ORKFormStep(identifier: "b14Form", title: nil, text: "Wie oft treffen folgende Aussagen auf dich zu?")
+
+    b14Form.formItems = [
+        b141, b142, b143
+    ]
+
+    steps += [b14Form]
+
     // Summary step
     
     let summaryStep = ORKCompletionStep(identifier: "SummaryStep")
