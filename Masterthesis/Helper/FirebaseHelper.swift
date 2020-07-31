@@ -72,8 +72,9 @@ class FirebaseHelper {
         ref.child(uuid).child("B11").setValue(["B111": b111, "B112" : b112, "B113" : b113, "B114" : b114, "B115" : b115, "B116": b116, "B11Average": b11Average])
     }
     
-    func saveDataB12(uuid: String, b121: Int, b12Average: Int) {
-        ref.child(uuid).child("B12").setValue(["B121": b121, "B12Average": b12Average])
+    func saveDataB12(uuid: String, b121: Int) {
+        let b121For100Scale = b121*10
+        ref.child(uuid).child("B12").setValue(["B121": b121For100Scale])
     }
     
     func saveDataB13(uuid: String, b131: Int, b132: Int, b133: Int, b134: Int, b135: Int, b13Average: Int) {

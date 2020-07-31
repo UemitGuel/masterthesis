@@ -29,9 +29,14 @@ class TaskViewController: UIViewController, HealthClientType {
         present(taskViewController, animated: true, completion: nil)
     }
     
+    @IBOutlet weak var thankYouLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureButton()
+        if defaults.bool(forKey: "SurveyFinished") {
+            disableSurveyButton()
+        }
 
         if defaults.bool(forKey: "stepDataSaved") == false {
             self.fillViewModelWithStepsData()
@@ -47,6 +52,14 @@ class TaskViewController: UIViewController, HealthClientType {
     
     func configureButton() {
         startStudyButton.layer.cornerRadius = 10
+    }
+    
+    func disableSurveyButton() {
+        startStudyButton.isEnabled = false
+        startStudyButton.alpha = 0.3
+        
+        thankYouLabel.isHidden = false
+        thankYouLabel.text = "Danke für die Teilnahme!\nDu kannst du App jetzt entweder löschen oder dich weiter umschauen."
     }
     
     func fillViewModelWithStepsData() {
@@ -319,10 +332,8 @@ class TaskViewController: UIViewController, HealthClientType {
 
         let b121Result = b12FormResult.result(forIdentifier: "b121") as! ORKScaleQuestionResult
         let b121 = b121Result.scaleAnswer?.intValue
-        
-        let averageB12FormResult = AverageCalculatorHelper.shared.getAverage([b121])
-        
-        FirebaseHelper.shared.saveDataB12(uuid: uuid, b121: b121 ?? -1, b12Average: averageB12FormResult)
+                
+        FirebaseHelper.shared.saveDataB12(uuid: uuid, b121: b121 ?? -1)
         
     }
     
@@ -378,6 +389,8 @@ extension TaskViewController: ORKTaskViewControllerDelegate{
             handleB12FormResults(taskViewController.result)
             handleB13FormResults(taskViewController.result)
             handleB14FormResults(taskViewController.result)
+            defaults.set(true, forKey: "SurveyFinished")
+            disableSurveyButton()
             taskViewController.dismiss(animated: true)
             break
         case .discarded:

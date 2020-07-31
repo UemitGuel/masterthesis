@@ -13,11 +13,11 @@ class ConsentDocument: ORKConsentDocument {
         
         let consentSectionTypes: [ORKConsentSectionType] = [
             .overview,
-//            .studySurvey,
-//            .timeCommitment,
-//            .privacy,
-//            .dataUse,
-//            .withdrawing
+            .studySurvey,
+            .timeCommitment,
+            .privacy,
+            .dataUse,
+            .withdrawing
         ]
         
         let consentSections: [ORKConsentSection] = consentSectionTypes.map { contentSectionType in

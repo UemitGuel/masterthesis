@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mxW-f0-Mux">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -117,14 +116,23 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
                                     <action selector="startStudyButtonTapped:" destination="W2b-dS-TWQ" eventType="touchUpInside" id="Dti-tn-haL"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQE-3r-4ng">
+                                <rect key="frame" x="20" y="508" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="yQE-3r-4ng" firstAttribute="leading" secondItem="aaF-sN-sRh" secondAttribute="leading" constant="20" id="HGU-NS-4oR"/>
                             <constraint firstItem="2dl-Tf-Z0r" firstAttribute="centerY" secondItem="rWV-FZ-aEW" secondAttribute="centerY" id="Kag-aB-zeY"/>
                             <constraint firstItem="2dl-Tf-Z0r" firstAttribute="leading" secondItem="aaF-sN-sRh" secondAttribute="leading" constant="20" id="mke-O1-xZS"/>
                             <constraint firstItem="aaF-sN-sRh" firstAttribute="trailing" secondItem="2dl-Tf-Z0r" secondAttribute="trailing" constant="20" id="t1T-0A-yXM"/>
+                            <constraint firstItem="aaF-sN-sRh" firstAttribute="trailing" secondItem="yQE-3r-4ng" secondAttribute="trailing" constant="20" id="v1H-JD-NRT"/>
                             <constraint firstItem="2dl-Tf-Z0r" firstAttribute="top" secondItem="aaF-sN-sRh" secondAttribute="top" constant="32" id="wfd-L8-nbX"/>
                             <constraint firstItem="2dl-Tf-Z0r" firstAttribute="centerY" secondItem="rWV-FZ-aEW" secondAttribute="centerY" id="wux-XU-eUO"/>
+                            <constraint firstItem="yQE-3r-4ng" firstAttribute="top" secondItem="2dl-Tf-Z0r" secondAttribute="bottom" constant="32" id="wvM-mr-DfL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aaF-sN-sRh"/>
                         <variation key="default">
@@ -137,6 +145,7 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
                     <navigationItem key="navigationItem" id="UKf-0L-B5N"/>
                     <connections>
                         <outlet property="startStudyButton" destination="2dl-Tf-Z0r" id="aTX-wo-y53"/>
+                        <outlet property="thankYouLabel" destination="yQE-3r-4ng" id="oHp-rV-eH5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xuy-AE-MKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
