@@ -169,62 +169,62 @@ public var SurveyTask: ORKOrderedTask {
     ]
 
     steps += [b2Form]
-//
-//    //MARK: B3
-//
-//    let b31 = ORKFormItem(identifier: "b31", text: "Hast du großen Einfluss auf die Entscheidungen, die dein Studium betreffen?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b32 = ORKFormItem(identifier: "b32", text: "Hast du Einfluss auf die Menge an Arbeit, die dir übertragen wird?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b33 = ORKFormItem(identifier: "b33", text: "Hast du Einfluss darauf, was du im Studium machst?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b34 = ORKFormItem(identifier: "b34", text: "Kannst du selber bestimmen, wann du eine Pause machst?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//    let b35 = ORKFormItem(identifier: "b35", text: "Kannst du mehr oder weniger frei entscheiden, wann du Urlaub machst?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//
-//    let b3Form = ORKFormStep(identifier: "b3Form", title: nil, text: "Die folgenden Fragen betreffen deine Einflussmöglichkeiten und ihren Spielraum bei der Arbeit.")
-//
-//    b3Form.formItems = [
-//        b31, b32, b33, b34, b35
-//    ]
-//
-//    steps += [b3Form]
-//
-//    //MARK: B4
-//
-//    let b41 = ORKFormItem(identifier: "b41", text: "Ist dein Studium abwechslungsreich?", answerFormat: alwaysToNeverAnswerFormat)
-//
-//
-//    let b4Form = ORKFormStep(identifier: "b4Form", title: nil, text: "Entwicklungsmöglichkeiten und die Bedeutung der Arbeit (Teil 1).")
-//
-//    b4Form.formItems = [
-//        b41
-//    ]
-//
-//    steps += [b4Form]
-//
-//    //MARK: B5
-//
-//    let b51 = ORKFormItem(identifier: "b51", text: "Hast du die Möglichkeit im Studium, neue Dinge zu erlernen?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b52 = ORKFormItem(identifier: "b52", text: "Kannst du deine Fertigkeiten oder dein Fachwissen im Studium auch anwenden?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b53 = ORKFormItem(identifier: "b53", text: "Findest du dein Studium sinnvoll?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b54 = ORKFormItem(identifier: "b54", text: "Hast du das Gefühl, dass dein Studium wichtig ist?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b55 = ORKFormItem(identifier: "b55", text: "Bist du Stolz, Teil deiner Universität zu sein?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b56 = ORKFormItem(identifier: "b56", text: "Erzählst du anderen gerne über dein Studium?", answerFormat: vastToSmallExtendAnswerFormat)
-//
-//    let b5Form = ORKFormStep(identifier: "b5Form", title: nil, text: "Entwicklungsmöglichkeiten und Bedeutung (Teil 2).")
-//
-//    b5Form.formItems = [
-//        b51, b52, b53, b54, b55, b56
-//    ]
-//
-//    steps += [b5Form]
+
+    //MARK: B3
+
+    let b31 = ORKFormItem(identifier: "b31", text: "Hast du großen Einfluss auf die Entscheidungen, die dein Studium betreffen?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b32 = ORKFormItem(identifier: "b32", text: "Hast du Einfluss auf die Menge an Arbeit, die dir übertragen wird?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b33 = ORKFormItem(identifier: "b33", text: "Hast du Einfluss darauf, was du im Studium machst?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b34 = ORKFormItem(identifier: "b34", text: "Kannst du selber bestimmen, wann du eine Pause machst?", answerFormat: alwaysToNeverAnswerFormat)
+
+    let b35 = ORKFormItem(identifier: "b35", text: "Kannst du mehr oder weniger frei entscheiden, wann du Urlaub machst?", answerFormat: alwaysToNeverAnswerFormat)
+
+
+    let b3Form = ORKFormStep(identifier: "b3Form", title: nil, text: "Die folgenden Fragen betreffen deine Einflussmöglichkeiten und ihren Spielraum bei der Arbeit.")
+
+    b3Form.formItems = [
+        b31, b32, b33, b34, b35
+    ]
+
+    steps += [b3Form]
+
+    //MARK: B4
+
+    let b41 = ORKFormItem(identifier: "b41", text: "Ist dein Studium abwechslungsreich?", answerFormat: alwaysToNeverAnswerFormat)
+
+
+    let b4Form = ORKFormStep(identifier: "b4Form", title: nil, text: "Entwicklungsmöglichkeiten und die Bedeutung der Arbeit (Teil 1).")
+
+    b4Form.formItems = [
+        b41
+    ]
+
+    steps += [b4Form]
+
+    //MARK: B5
+
+    let b51 = ORKFormItem(identifier: "b51", text: "Hast du die Möglichkeit im Studium, neue Dinge zu erlernen?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b52 = ORKFormItem(identifier: "b52", text: "Kannst du deine Fertigkeiten oder dein Fachwissen im Studium auch anwenden?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b53 = ORKFormItem(identifier: "b53", text: "Findest du dein Studium sinnvoll?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b54 = ORKFormItem(identifier: "b54", text: "Hast du das Gefühl, dass dein Studium wichtig ist?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b55 = ORKFormItem(identifier: "b55", text: "Bist du Stolz, Teil deiner Universität zu sein?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b56 = ORKFormItem(identifier: "b56", text: "Erzählst du anderen gerne über dein Studium?", answerFormat: vastToSmallExtendAnswerFormat)
+
+    let b5Form = ORKFormStep(identifier: "b5Form", title: nil, text: "Entwicklungsmöglichkeiten und Bedeutung (Teil 2).")
+
+    b5Form.formItems = [
+        b51, b52, b53, b54, b55, b56
+    ]
+
+    steps += [b5Form]
 //
 //    //MARK: B6
 //

@@ -28,6 +28,18 @@ class FirebaseHelper {
         ref.child(uuid).child("B2").setValue(["B21": b21, "B22" : b22, "B23" : b23, "B24" : b24, "B25" : b25, "B2Average": b2Average])
     }
     
+    func saveDataB3(uuid: String, b31: Int, b32: Int, b33: Int, b34: Int, b35: Int, b3Average: Int) {
+        ref.child(uuid).child("B3").setValue(["B31": b31, "B32" : b32, "B33" : b33, "B34" : b34, "B35" : b35,"B3Average": b3Average])
+    }
+    
+    func saveDataB4(uuid: String, b41: Int, b4Average: Int) {
+        ref.child(uuid).child("B4").setValue(["B41": b41,"B4Average": b4Average])
+    }
+    
+    func saveDataB5(uuid: String, b51: Int, b52: Int, b53: Int, b54: Int, b55: Int, b56: Int, b5Average: Int) {
+        ref.child(uuid).child("B5").setValue(["B51": b51, "B52" : b52, "B53" : b53, "B54" : b54, "B55" : b55, "B56": b56, "B5Average": b5Average])
+    }
+    
     func saveSteps(uuid: String, stepsLast30DaysAverage: Int, stepsLast60to30DaysAverage: Int, changeInPercentage: Double) {
         if changeInPercentage.isNaN {
             ref.child(uuid).child("Durschnittliche Schritte").setValue(["Letzten 30 Tage": Int(stepsLast30DaysAverage), "Letzten 60 bis 30 Tage": Int(stepsLast60to30DaysAverage), "Prozentuale Veränderung": 0])
