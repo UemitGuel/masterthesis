@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mxW-f0-Mux">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -206,9 +207,6 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
                                 <state key="normal" title="Studie abbrechen">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BPT-Mf-qyP" kind="unwind" unwindAction="unwindToWithdrawl:" id="Jd8-ZO-3lR"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frW-1c-xcd">
                                 <rect key="frame" x="20" y="508" width="374" height="56"/>
@@ -274,7 +272,7 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
         <scene sceneID="kbq-Yx-bsJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ubX-0G-VkH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Account" image="person.crop.circle" catalog="system" id="CfT-s6-017"/>
+                    <tabBarItem key="tabBarItem" title="Account" image="account" id="CfT-s6-017"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jml-sr-Owz">
                         <autoresizingMask key="autoresizingMask"/>
@@ -401,7 +399,7 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
         <scene sceneID="BOi-7P-01L">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="be0-Z5-04A" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Umfrage" image="doc.text" catalog="system" id="FHL-nd-mHa"/>
+                    <tabBarItem key="tabBarItem" title="Umfrage" image="survey" id="FHL-nd-mHa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WQa-ep-guV">
                         <autoresizingMask key="autoresizingMask"/>
@@ -419,7 +417,7 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
         <scene sceneID="vEt-kp-Hrg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="UsW-RI-dec" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dashboard" image="chart.bar" catalog="system" id="jzn-lB-ZTh"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="dashboard" id="jzn-lB-ZTh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gTh-8h-wkE">
                         <autoresizingMask key="autoresizingMask"/>
@@ -436,8 +434,8 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
     </scenes>
     <resources>
         <image name="Danke" width="2108" height="2482"/>
-        <image name="chart.bar" catalog="system" width="128" height="90"/>
-        <image name="doc.text" catalog="system" width="115" height="128"/>
-        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="account" width="24" height="24"/>
+        <image name="dashboard" width="24" height="24"/>
+        <image name="survey" width="24" height="24"/>
     </resources>
 </document>

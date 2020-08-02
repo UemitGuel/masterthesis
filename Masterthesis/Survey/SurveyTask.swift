@@ -168,7 +168,7 @@ public var SurveyTask: ORKOrderedTask {
     let b35 = ORKFormItem(identifier: "b35", text: "Kannst du mehr oder weniger frei entscheiden, wann du Urlaub machst?", answerFormat: alwaysToNeverAnswerFormat)
 
 
-    let b3Form = ORKFormStep(identifier: "b3Form", title: nil, text: "Die folgenden Fragen betreffen deine Einflussmöglichkeiten und ihren Spielraum bei der Arbeit.")
+    let b3Form = ORKFormStep(identifier: "b3Form", title: "Einflussmöglichkeiten", text: "Die folgenden Fragen betreffen deine Einflussmöglichkeiten und deinen Spielraum im Studium.")
 
     b3Form.formItems = [
         b31, b32, b33, b34, b35
@@ -181,7 +181,7 @@ public var SurveyTask: ORKOrderedTask {
     let b41 = ORKFormItem(identifier: "b41", text: "Ist dein Studium abwechslungsreich?", answerFormat: alwaysToNeverAnswerFormat)
 
 
-    let b4Form = ORKFormStep(identifier: "b4Form", title: nil, text: "Entwicklungsmöglichkeiten und die Bedeutung der Arbeit (Teil 1).")
+    let b4Form = ORKFormStep(identifier: "b4Form", title: "Entwicklungsmöglichkeiten", text: "Entwicklungsmöglichkeiten und die Bedeutung des Studiums (Teil 1).")
 
     b4Form.formItems = [
         b41
@@ -203,7 +203,7 @@ public var SurveyTask: ORKOrderedTask {
 
     let b56 = ORKFormItem(identifier: "b56", text: "Erzählst du anderen gerne über dein Studium?", answerFormat: vastToSmallExtendAnswerFormat)
 
-    let b5Form = ORKFormStep(identifier: "b5Form", title: nil, text: "Entwicklungsmöglichkeiten und Bedeutung (Teil 2).")
+    let b5Form = ORKFormStep(identifier: "b5Form", title: "Entwicklungsmöglichkeiten", text: "Entwicklungsmöglichkeiten und die Bedeutung des Studiums (Teil 2).")
 
     b5Form.formItems = [
         b51, b52, b53, b54, b55, b56
@@ -229,7 +229,7 @@ public var SurveyTask: ORKOrderedTask {
 
     let b68 = ORKFormItem(identifier: "b68", text: "Musst du manchmal Dinge tun, die dir unnötig erscheinen?", answerFormat: vastToSmallExtendAnswerFormat)
 
-    let b6Form = ORKFormStep(identifier: "b6Form", title: nil, text: "Nun einige Fragen zu Regelungen und Abläufen bei deinem Studium.")
+    let b6Form = ORKFormStep(identifier: "b6Form", title: "Organisation", text: "Nun einige Fragen zu Regelungen und Abläufen bei deinem Studium.")
 
     b6Form.formItems = [
         b61, b62, b63, b64, b65, b66, b67, b68
@@ -247,7 +247,7 @@ public var SurveyTask: ORKOrderedTask {
 
     let b74 = ORKFormItem(identifier: "b74", text: "... konflikte gut lösen?", answerFormat: vastToSmallExtendAnswerFormat)
 
-    let b7Form = ORKFormStep(identifier: "b7Form", title: nil, text: "Bitte schätze ein, in welchem Maße Dozierende bzw. Professoren/innen...")
+    let b7Form = ORKFormStep(identifier: "b7Form", title: "Betreuung", text: "Bitte schätze ein, in welchem Maße Dozierende bzw. Professoren/innen...")
 
     b7Form.formItems = [
         b71, b72, b73, b74
@@ -275,7 +275,7 @@ public var SurveyTask: ORKOrderedTask {
 
     let b89 = ORKFormItem(identifier: "b89", text: "Wie oft fühlst du dich von Dozierenden bzw. Professoren/innen zu Unrecht kritisiert, schikaniert oder vor anderen bloßgestellt?", answerFormat: alwaysToNeverAnswerFormat)
 
-    let b8Form = ORKFormStep(identifier: "b8Form", title: nil, text: "Die folgenden Fragen betreffen dein Verhältnis zu deinen Mitstudierenden und Dozierenden bzw. Professoren/innen.")
+    let b8Form = ORKFormStep(identifier: "b8Form", title: "Beziehungen", text: "Die folgenden Fragen betreffen dein Verhältnis zu deinen Mitstudierenden und Dozierenden bzw. Professoren/innen.")
 
     b8Form.formItems = [
         b81, b82, b83, b84, b85, b86, b87, b88, b89
@@ -293,7 +293,7 @@ public var SurveyTask: ORKOrderedTask {
 
     let b84a = ORKFormItem(identifier: "b84a", text: "Erfährt dein Einsatz im Studium Anerkennung und Wertschätzung von Dozierenden bzw. Professoren/innen?", answerFormat: vastToSmallExtendAnswerFormat)
 
-    let b8aForm = ORKFormStep(identifier: "b8aForm", title: nil, text: "Die nächsten Fragen beziehen sich nicht auf deine Lerntätigkeit, sondern auf das Studium an sich.")
+    let b8aForm = ORKFormStep(identifier: "b8aForm", title: "Studium", text: "Die nächsten Fragen beziehen sich nicht auf deine Lerntätigkeit, sondern auf das Studium an sich.")
 
     b8aForm.formItems = [
         b81a, b82a, b83a, b84a
@@ -308,7 +308,7 @@ public var SurveyTask: ORKOrderedTask {
     let b83b = ORKFormItem(identifier: "b83b", text: "Zu warmen oder zu kalten Temperaturen", answerFormat: alwaysToNeverAnswerFormat)
     let b84b = ORKFormItem(identifier: "b84b", text: "Mit störenden Umgebungsgeräuschen", answerFormat: alwaysToNeverAnswerFormat)
 
-    let b8bForm = ORKFormStep(identifier: "b8bForm", title: nil, text: "Denke an deine letzten zwei Wochen, in wie weit musstest du unter folgenden Umgebungsbedingungen lernen?")
+    let b8bForm = ORKFormStep(identifier: "b8bForm", title: "Umgebungsbedingungen", text: "Denke an deine letzten zwei Wochen, in wie weit musstest du unter folgenden Umgebungsbedingungen lernen?")
 
     b8bForm.formItems = [
         b81b,b82b,b83b,b84b
@@ -326,7 +326,7 @@ public var SurveyTask: ORKOrderedTask {
 
     let b94 = ORKFormItem(identifier: "b94", text: "... du nach deinem Studium einen Job mit geringem Einkommen finden wirst. ?", answerFormat: vastToSmallExtendAnswerFormat)
 
-    let b9Form = ORKFormStep(identifier: "b9Form", title: nil, text: "Machst du dir Sorgen, dass ...")
+    let b9Form = ORKFormStep(identifier: "b9Form", title: "Sorgen", text: "Machst du dir Sorgen, dass ...")
 
     b9Form.formItems = [
         b91, b92, b93, b94
@@ -340,7 +340,7 @@ public var SurveyTask: ORKOrderedTask {
 
     let b102 = ORKFormItem(identifier: "b102", text: "... dein Studium zu wechseln?", answerFormat: neverToEveryDayAnswerFormat)
 
-    let b10Form = ORKFormStep(identifier: "b10Form", title: nil, text: "Wie oft hast du im Laufe der letzten 12 Monate daran gedacht ...")
+    let b10Form = ORKFormStep(identifier: "b10Form", title: "Studium", text: "Wie oft hast du im Laufe der letzten 12 Monate daran gedacht ...")
 
     b10Form.formItems = [
         b101, b102
@@ -362,7 +362,7 @@ public var SurveyTask: ORKOrderedTask {
 
     let b116 = ORKFormItem(identifier: "b116", text: "... deinem Studium insgesamt, unter Berücksichtigung aller Umstände?", answerFormat: happyToNotHappyAnswerFormat)
 
-    let b11Form = ORKFormStep(identifier: "b11Form", title: nil, text: "Wenn du deine Studiums- Situation insgesamt betrachtest, wie zufrieden bist du mit ...")
+    let b11Form = ORKFormStep(identifier: "b11Form", title: "Zufriedenheit", text: "Wenn du deine Studiums- Situation insgesamt betrachtest, wie zufrieden bist du mit ...")
 
     b11Form.formItems = [
         b111, b112, b113, b114, b115, b116
@@ -374,7 +374,7 @@ public var SurveyTask: ORKOrderedTask {
 
     let b121 = ORKFormItem(identifier: "b121", text: " Wenn du den besten denkbaren Gesundheitszustand mit 10 Punkten und den schlechtesten denkbaren mit 0 Punkten bewerten würdest: Wie viele Punkte würdest du deinem derzeitigen Gesundheitszustand vergeben?", answerFormat: healthAnswerFormat, optional: true)
 
-    let b121Form = ORKFormStep(identifier: "b12Form", title: nil, text: nil)
+    let b121Form = ORKFormStep(identifier: "b12Form", title: "Gesundheitszustand", text: nil)
 
     b121Form.formItems = [
         b121
@@ -394,7 +394,7 @@ public var SurveyTask: ORKOrderedTask {
 
     let b135 = ORKFormItem(identifier: "b135", text: "... kannst du während deiner Freizeit dein Studium nicht vergessen?", answerFormat: alwaysToNeverAnswerFormat)
 
-    let b13Form = ORKFormStep(identifier: "b13Form", title: nil, text: "Denke an deine letzten zwei Wochen, inwieweit treffen diese Aussagen auf dich zu. Wie häufig ...")
+    let b13Form = ORKFormStep(identifier: "b13Form", title: "Erschöpfung", text: "Denke an deine letzten zwei Wochen, inwieweit treffen diese Aussagen auf dich zu. Wie häufig ...")
 
     b13Form.formItems = [
         b131, b132, b133, b134, b135
@@ -411,7 +411,7 @@ public var SurveyTask: ORKOrderedTask {
     let b143 = ORKFormItem(identifier: "b143", text: "Ich gehe völlig in meinem Studium auf", answerFormat: alwaysToNeverAnswerFormat)
 
 
-    let b14Form = ORKFormStep(identifier: "b14Form", title: nil, text: "Wie oft treffen folgende Aussagen auf dich zu?")
+    let b14Form = ORKFormStep(identifier: "b14Form", title: "Leidenschaft", text: "Wie oft treffen folgende Aussagen auf dich zu?")
 
     b14Form.formItems = [
         b141, b142, b143
