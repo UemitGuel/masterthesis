@@ -25,7 +25,7 @@ class ConsentDocument: ORKConsentDocument {
             switch contentSectionType {
             case .overview:
                 consentSection.title = "Worum geht es in der Studie?"
-                let summary = "App-basierte Studien haben den Vorteil, dass sie herkömmliche Umfragen durch reale Gesundheitsdaten erweitern können. Das könnte dazu führen, dass sonst verborgen gebliebene Zusammenhänge festgestellt werden können.\nUm diese These zu überprüfen möchte ich zum einen mit einer Umfrage die psychische Belastung von Studierenden in Stress-Situationen erfassen und zum anderen untersuchen, ob die Stress-Situation einen signifikanten Effekt auf die täglich zurückgelegten Schritte hatte."
+                let summary = "App-basierte Studien haben den Vorteil, dass sie herkömmliche Umfragen durch reale Gesundheitsdaten erweitern können. Das könnte dazu führen, dass sonst verborgen gebliebene Zusammenhänge festgestellt werden können.\nUm diese These zu überprüfen, möchte ich zum einen mit einer Umfrage die psychische Belastung von Studierenden in Stress-Situationen erfassen und zum anderen untersuchen, ob die Stress-Situation einen signifikanten Effekt auf die täglich zurückgelegten Schritte hatte."
                 consentSection.summary = summary
                 consentSection.content = summary
             case .privacy:
@@ -40,7 +40,7 @@ class ConsentDocument: ORKConsentDocument {
                 consentSection.content = summary
             case .timeCommitment:
                 consentSection.title = "Dauer"
-                let summary = "Die Umfrage sollte nicht länger als 10-15 minuten dauern."
+                let summary = "Die Umfrage sollte nicht länger als 15-20 minuten dauern."
                 consentSection.summary = summary
                 consentSection.content = summary
                 

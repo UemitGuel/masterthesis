@@ -89,7 +89,7 @@ public var SurveyTask: ORKOrderedTask {
     let a15 = ORKFormItem(identifier: "a15", text: "Wie viele Stunden pro Woche arbeitest du nebenbei ungefähr? (Nebenjob, Werksstudent, Ehrenamtlich, etc.)", answerFormat: hoursAnswerFormat, optional: true)
     let a16 = ORKFormItem(identifier: "a16", text: "Wie viele Stunden pro Woche lernst du ungefähr?", answerFormat: hoursAnswerFormat, optional: true)
     
-    let a1Form = ORKFormStep(identifier: "a1Form", title: "Person& Studium", text: nil)
+    let a1Form = ORKFormStep(identifier: "a1Form", title: "Person & Studium", text: nil)
     
     a1Form.formItems = [
         a11, a12, a13, a14, a15, a16
@@ -245,7 +245,7 @@ public var SurveyTask: ORKOrderedTask {
 
     let b73 = ORKFormItem(identifier: "b73", text: "... das Fach/Vorlesung/Übung gut planen?", answerFormat: vastToSmallExtendAnswerFormat)
 
-    let b74 = ORKFormItem(identifier: "b74", text: "... konflikte gut lösen?", answerFormat: vastToSmallExtendAnswerFormat)
+    let b74 = ORKFormItem(identifier: "b74", text: "... Konflikte gut lösen?", answerFormat: vastToSmallExtendAnswerFormat)
 
     let b7Form = ORKFormStep(identifier: "b7Form", title: "Betreuung", text: "Bitte schätze ein, in welchem Maße Dozierende bzw. Professoren/innen...")
 
@@ -324,7 +324,7 @@ public var SurveyTask: ORKOrderedTask {
 
     let b93 = ORKFormItem(identifier: "b93", text: "... es schwierig für dich wäre, eine Alternative zu finden, wenn du dieses Studium nicht schaffen würdest?", answerFormat: vastToSmallExtendAnswerFormat)
 
-    let b94 = ORKFormItem(identifier: "b94", text: "... du nach deinem Studium einen Job mit geringem Einkommen finden wirst. ?", answerFormat: vastToSmallExtendAnswerFormat)
+    let b94 = ORKFormItem(identifier: "b94", text: "... du nach deinem Studium einen Job mit geringem Einkommen finden wirst?", answerFormat: vastToSmallExtendAnswerFormat)
 
     let b9Form = ORKFormStep(identifier: "b9Form", title: "Sorgen", text: "Machst du dir Sorgen, dass ...")
 
