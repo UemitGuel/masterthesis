@@ -7,7 +7,7 @@ class TaskViewController: UIViewController, HealthClientType {
     
     let defaults = UserDefaults.standard
     
-    var uuid: String = "Example 1"
+    var uuid: String = UUID().uuidString
 //        if let currentDeviceID = UIDevice.current.identifierForVendor?.uuidString {
 //            return currentDeviceID
 //        } else {
@@ -76,7 +76,6 @@ class TaskViewController: UIViewController, HealthClientType {
                 print(changeInPercentageRounded)
                 self.defaults.set(changeInPercentageRounded, forKey: StepsEnum.changeInPercentage.rawValue)
                 
-                FirebaseHelper.shared.saveSteps(uuid: self.uuid, stepsLast30DaysAverage: stepsLast30daysInt, stepsLast60to30DaysAverage: stepsLast60to30daysInt, changeInPercentage: changeInPercentageRounded)
                 self.defaults.set(true, forKey: "stepDataSaved")
             }
         }
@@ -389,6 +388,10 @@ extension TaskViewController: ORKTaskViewControllerDelegate{
             handleB12FormResults(taskViewController.result)
             handleB13FormResults(taskViewController.result)
             handleB14FormResults(taskViewController.result)
+            let last30 = defaults.integer(forKey: StepsEnum.stepsLast30days.rawValue)
+            let last60to30 = defaults.integer(forKey: StepsEnum.stepsLast60to30days.rawValue)
+            let changeInPercentage = defaults.double(forKey: StepsEnum.changeInPercentage.rawValue)
+            FirebaseHelper.shared.saveSteps(uuid: self.uuid, stepsLast30DaysAverage: last30, stepsLast60to30DaysAverage: last60to30, changeInPercentage: changeInPercentage)
             defaults.set(true, forKey: "SurveyFinished")
             disableSurveyButton()
             taskViewController.dismiss(animated: true)
