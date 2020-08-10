@@ -207,6 +207,9 @@ Alles weitere zur Studie wird in den nächsten Schritten ausführlich erklärt, 
                                 <state key="normal" title="Studie abbrechen">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BPT-Mf-qyP" kind="unwind" unwindAction="unwindToWithdrawl:" id="6vW-4q-iAt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frW-1c-xcd">
                                 <rect key="frame" x="20" y="508" width="374" height="56"/>

@@ -32,6 +32,7 @@ class PersonalViewController: UIViewController {
     
     @IBOutlet weak var withdrawStudy: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureButton()
