@@ -40,7 +40,7 @@ class ConsentDocument: ORKConsentDocument {
                 consentSection.content = summary
             case .timeCommitment:
                 consentSection.title = "Dauer"
-                let summary = "Die Umfrage sollte nicht länger als 15-20 minuten dauern."
+                let summary = "Die Umfrage sollte nicht länger als 10-15 minuten dauern."
                 consentSection.summary = summary
                 consentSection.content = summary
                 
