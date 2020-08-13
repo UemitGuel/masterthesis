@@ -35,7 +35,7 @@ class ConsentDocument: ORKConsentDocument {
                 consentSection.content = summary
             case .dataUse:
                 consentSection.title = "Datennutzung"
-                let summary = "Die gesammelten Daten werden anonymisiert der Fakultät für Arbeitswissenschaften der RWTH Aachen übergeben und dort mindestens 10 Jahre aufbewahrt."
+                let summary = "Die gesammelten Daten werden anonymisiert dem Institut für Arbeitswissenschaften der RWTH Aachen übergeben und dort mindestens 10 Jahre aufbewahrt."
                 consentSection.summary = summary
                 consentSection.content = summary
             case .timeCommitment:
