@@ -14,7 +14,4 @@ and I think this kind of bringing technology and science together is a big oppor
 
 ☕️ | 🗿| 🌋 | 🗿| ☕️
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-![IMG_9211_Original](https://user-images.githubusercontent.com/47325422/115111072-caad9000-9f7e-11eb-942e-58a14f5f24f0.jpg) | ![IMG_9499_Original](https://user-images.githubusercontent.com/47325422/115111081-d4cf8e80-9f7e-11eb-8a3a-b7f08003e07c.PNG)
-| ![IMG_9215_Original](https://user-images.githubusercontent.com/47325422/115111085-d9944280-9f7e-11eb-8bec-165063cb10a9.PNG)
-| ![IMG_9497_Original](https://user-images.githubusercontent.com/47325422/115111090-e022ba00-9f7e-11eb-869d-4ea886e73efc.PNG)
-| ![IMG_9518_Original](https://user-images.githubusercontent.com/47325422/115111092-e44ed780-9f7e-11eb-8e87-fb324bc3bc20.PNG)
+![IMG_9211_Original](https://user-images.githubusercontent.com/47325422/115111072-caad9000-9f7e-11eb-942e-58a14f5f24f0.jpg) | ![IMG_9499_Original](https://user-images.githubusercontent.com/47325422/115111081-d4cf8e80-9f7e-11eb-8a3a-b7f08003e07c.PNG) | ![IMG_9215_Original](https://user-images.githubusercontent.com/47325422/115111085-d9944280-9f7e-11eb-8bec-165063cb10a9.PNG) | ![IMG_9497_Original](https://user-images.githubusercontent.com/47325422/115111090-e022ba00-9f7e-11eb-869d-4ea886e73efc.PNG) | ![IMG_9518_Original](https://user-images.githubusercontent.com/47325422/115111092-e44ed780-9f7e-11eb-8e87-fb324bc3bc20.PNG)
